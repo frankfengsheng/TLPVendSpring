@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    
+<!--  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#55ffffff"
+        android:gravity="right"
+        android:padding="5dp"
+        android:textSize="22sp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ff0000"
+        android:textSize="22sp"
+         />
+    
+   
+</RelativeLayout>-->
+
+<LinearLayout 
+    android:layout_marginTop="50dp"
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    >
+ <VideoView
+    android:id="@+id/video"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    />
+    </LinearLayout>
+    
+
+<RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    >
+   <android.support.v4.view.ViewPager
+       android:id="@+id/vp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    />
+   
+   <!-- <TextView
+        android:id="@+id/vp_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="左右滑动"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+       /> -->
+   <LinearLayout
+            android:id="@+id/ll_points"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:orientation="horizontal" 
+            android:gravity="center"
+            android:background="#33000000"
+            >
+        </LinearLayout>
+   </RelativeLayout>
+    
+
+ <!--<HorizontalScrollView
+     android:id="@+id/hsv"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:fillViewport="true"
+       android:scrollbars="none"
+       android:fadingEdge="none"
+       android:descendantFocusability="blocksDescendants"
+       >
+
+  
+  <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="fill_parent"
+       android:id="@+id/grid1"
+       android:orientation="horizontal"
+       android:gravity="center"
+       >
+
+      <GridView
+          android:id="@+id/grid"
+          android:layout_width="2000dp"
+          android:layout_height="fill_parent"
+          android:listSelector="#00000000"
+          android:numColumns="20"
+          android:verticalSpacing="20dp"
+          android:horizontalSpacing="10dp"
+          >
+      </GridView>
+      
+   </LinearLayout>
+   </HorizontalScrollView> -->
+   
+ 
+  
+
+</LinearLayout>

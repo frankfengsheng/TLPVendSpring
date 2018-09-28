@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/mmtitle_bg" >
+
+        <Button
+            android:id="@+id/update_back"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="10px"
+            android:text="@string/back"
+            style="@style/menubutton"
+            android:onClick="update_back"
+            />
+
+        <TextView
+			android:text="@string/update_program"
+            style="@style/menutop"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/lrmarginson1"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/aisle_text"
+            android:text="@string/update_current_ersion"
+            />
+
+        <TextView
+            android:id="@+id/update_curVer"
+            style="@style/aisle_edittext"
+            />
+        
+        <TextView
+            android:layout_marginTop="50px"
+            style="@style/aisle_text"
+            android:text="@string/update_latest_version"
+            />
+
+        <TextView
+            android:id="@+id/update_newVer"
+            style="@style/aisle_edittext"
+            />
+
+        <TextView
+            android:id="@+id/update_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/lrmarginson1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/updatepro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            android:paddingBottom="5px"
+            android:paddingTop="5px"
+            android:text="@string/update_to_update"
+            style="@style/menubutton"
+            android:onClick="update_pro"
+            />
+    </LinearLayout>
+
+</LinearLayout>

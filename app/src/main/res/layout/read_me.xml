@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@mipmap/blue_trans_bg"
+     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/read_me_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whitesmoke"
+                android:gravity="left"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/read_me_back"
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:layout_marginTop="50px"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:background="@drawable/button_circle_style"
+                android:text="@string/back"
+                android:textColor="@color/whitesmoke"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

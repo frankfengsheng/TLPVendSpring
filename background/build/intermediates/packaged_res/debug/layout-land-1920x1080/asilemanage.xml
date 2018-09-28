@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mmtitle_bg" >
+
+        <Button
+            android:id="@+id/aisle_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="18dp"
+            android:text="@string/back"
+            style="@style/menubutton"  />
+
+        <TextView
+            style="@style/menutop"
+            android:text="@string/aislemanage"
+            />
+    </RelativeLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:orientation="vertical" >
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmargin"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_name" />
+
+				 <RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					>
+					<LinearLayout
+						android:id="@+id/aisle_linear"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_centerInParent="true"
+						>
+
+						<EditText
+							android:id="@+id/aisle_num1"
+							style="@style/aisle_edittext"
+							android:layout_width="100dp"
+							android:singleLine="true"
+							android:numeric="integer"
+							android:textColor="@color/text_color_dialog_title"
+						   />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="5dp"
+							android:text="——"
+							android:textColor="@color/text_color_dialog_title"
+							android:textSize="25sp" />
+
+						<EditText
+							android:id="@+id/aisle_num2"
+							style="@style/aisle_edittext"
+							android:layout_width="100dp"
+							android:inputType="number"
+							android:singleLine="true"
+							android:focusable="true"
+							 />
+					</LinearLayout>
+
+				</RelativeLayout>
+			</LinearLayout>
+
+		   <LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/product_name" />
+
+				<EditText
+					android:id="@+id/product_name_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/type_name_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_goods_type" />
+
+				<Spinner
+					android:id="@+id/type_name_edit"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:background="@drawable/circlebuttonstyle"
+					android:padding="5dp"
+					android:textColorHint = "@color/text_background"
+					android:gravity="center"
+					android:textSize="25sp"
+					android:layout_marginTop="10dp"
+					/>
+				<Button
+					android:layout_marginTop="10dp"
+					android:id="@+id/add_type"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/btn_selector"
+					android:paddingBottom="5dp"
+					android:paddingTop="5dp"
+					android:text="@string/aisle_add_type"
+					style="@style/menubutton" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+					<TextView
+						android:id="@+id/aisle_slot_price"
+						style="@style/aisle_text"
+						android:text="@string/product_price" />
+
+					<EditText
+						android:id="@+id/product_price_edit"
+						style="@style/aisle_edittext"
+						android:singleLine="true"
+						android:inputType="numberDecimal"
+						/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				 style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/product_num" />
+
+				<EditText
+					android:id="@+id/product_num_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					 />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				 style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_num" />
+
+				<EditText
+					android:id="@+id/aisle_num_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_heat_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					android:id="@+id/aisle_heat_time"
+					style="@style/aisle_text"
+					android:text="@string/aisle_heat_time" />
+
+				<EditText
+					android:id="@+id/heat_time_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_row_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					android:id="@+id/aisle_row"
+					style="@style/aisle_text"
+					android:text="@string/aisle_row" />
+
+				<EditText
+					android:id="@+id/aisle_row_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_col_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					android:id="@+id/aisle_col"
+					style="@style/aisle_text"
+					android:text="@string/aisle_col" />
+
+				<EditText
+					android:id="@+id/aisle_col_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_pull_back_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					android:id="@+id/aisle_pull_back"
+					style="@style/aisle_text"
+					android:text="@string/aisle_pull_back" />
+
+				<EditText
+					android:id="@+id/aisle_pull_back_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_goods_spec_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_goods_spec" />
+
+				<EditText
+					android:id="@+id/aisle_goods_spec_edit"
+					style="@style/aisle_edittext"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_goods_capacity_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:visibility="gone"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_goods_capacity" />
+
+				<EditText
+					android:id="@+id/aisle_goods_capacity_edit"
+					style="@style/aisle_edittext"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_goods_content_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_goods_content" />
+
+				<EditText
+					android:id="@+id/aisle_goods_content_edit"
+					style="@style/aisle_edittext"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_goods_code_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_goods_code" />
+
+				<EditText
+					android:id="@+id/aisle_goods_code_edit"
+					style="@style/aisle_edittext"
+					android:singleLine="true"
+					android:inputType="number"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_state" />
+
+
+				<RelativeLayout
+					android:id="@+id/aisle_state_relative"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+				   >
+
+					<EditText
+						android:id="@+id/aisle_state_edit"
+						style="@style/aisle_edittext1"
+						android:editable="false"
+						android:singleLine="true"
+						android:hint="@string/choosedata" />
+
+					<TextView
+						android:layout_width="1dp"
+						android:layout_height="fill_parent"
+						android:layout_alignBottom="@+id/aisle_state_edit"
+						android:layout_marginRight="8dp"
+						android:layout_toLeftOf="@+id/aisle_state_btn"
+						android:background="@color/text_background" />
+
+					<Button
+						android:id="@+id/aisle_state_btn"
+						android:layout_width="45dp"
+						android:layout_height="30dp"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_marginRight="6dp"
+						android:background="@mipmap/fni" />
+				</RelativeLayout>
+			</LinearLayout>
+
+			<com.tcn.uicommon.button.ButtonEdit
+				android:id="@+id/aisle_category"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
+				android:layout_marginBottom="10dp"
+				style="@style/lrmarginss">
+
+			</com.tcn.uicommon.button.ButtonEdit>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/product_pic" />
+
+
+				 <RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					>
+					<LinearLayout
+						android:id="@+id/pic_linear"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_centerInParent="true"
+						>
+
+					  <ImageView
+							android:id="@+id/aisle_image"
+							android:layout_width="100dp"
+							android:layout_height="100dp"
+							/>
+					</LinearLayout>
+
+					<Button
+							android:id="@+id/aisle_pics"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical"
+							android:background="@drawable/btn_selector"
+							android:layout_alignParentRight="true"
+							android:layout_centerVertical="true"
+							android:paddingBottom="5dp"
+							android:paddingLeft="14dp"
+							android:paddingRight="14dp"
+							android:paddingTop="5dp"
+							android:text="@string/aisle_gallery"
+						   style="@style/menubutton"/>
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/aisle_slot_ad_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				style="@style/lrmarginss"
+				android:layout_marginTop="20px"
+				android:orientation="vertical" >
+
+				<TextView
+					style="@style/aisle_text"
+					android:text="@string/aisle_map_advert" />
+
+
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					>
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:layout_centerInParent="true"
+						>
+
+						<ImageView
+							android:id="@+id/aisle_slot_ad"
+							android:layout_width="100dp"
+							android:layout_height="100dp"
+							/>
+					</LinearLayout>
+
+					<Button
+						android:id="@+id/aisle_btn_ad"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:background="@drawable/btn_selector"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:paddingBottom="5dp"
+						android:paddingLeft="14dp"
+						android:paddingRight="14dp"
+						android:paddingTop="5dp"
+						android:text="@string/aisle_gallery"
+						style="@style/menubutton"/>
+				</RelativeLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:gravity="center"
+				android:orientation="horizontal" >
+
+				<Button
+					android:id="@+id/aisle_start_test"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:background="@drawable/btn_selector"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:paddingBottom="5dp"
+					android:paddingLeft="14dp"
+					android:paddingRight="14dp"
+					android:paddingTop="5dp"
+					android:layout_marginLeft="80dp"
+					android:layout_marginRight="80dp"
+					android:layout_marginTop="10dp"
+					android:text="@string/aisle_start_test"
+					style="@style/menubutton"/>
+
+				<Button
+					android:id="@+id/aisle_clear_fault"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:background="@drawable/btn_selector"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:paddingBottom="5dp"
+					android:paddingLeft="14dp"
+					android:paddingRight="14dp"
+					android:paddingTop="5dp"
+					android:layout_marginLeft="80dp"
+					android:layout_marginRight="80dp"
+					android:layout_marginTop="10dp"
+					android:text="@string/backgroound_clear_fault"
+					style="@style/menubutton"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:gravity="center"
+				android:orientation="horizontal" >
+
+				<Button
+					android:id="@+id/aisle_confirm"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/btn_selector"
+					android:paddingBottom="10dp"
+					android:paddingTop="10dp"
+					android:text="@string/backgroound_ensureof"
+					style="@style/menubutton" />
+			</LinearLayout>
+
+			<Button
+				android:layout_width="fill_parent"
+				android:layout_height="1dp"
+				android:layout_marginTop="300dp"
+				android:visibility="invisible"
+				/>
+		</LinearLayout>
+
+	</ScrollView>
+</LinearLayout>

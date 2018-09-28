@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paper_machine"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coin_machine"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_machine"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+
+    <Button
+        android:id="@+id/cleardata"
+        style="@style/menu_button"
+        android:text="@string/clear_data"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector"
+        />
+
+</LinearLayout>

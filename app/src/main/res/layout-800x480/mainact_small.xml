@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title_bar_layout"
+        layout="@layout/info_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="35px" />
+
+    <include
+        android:id="@+id/main_advert_layout"
+        layout="@layout/advert_video_image"
+        android:layout_width="match_parent"
+        android:layout_height="270px"
+        android:layout_below="@id/main_title_bar_layout" />
+
+    <LinearLayout
+        android:id="@+id/main_goods_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_advert_layout"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25px"
+            android:background="@android:color/white" />
+
+        <include
+            layout="@layout/goods_layout"
+            android:layout_width="match_parent"
+            android:layout_height="370px" />
+
+        <include
+            android:id="@+id/main_function_bar_layout"
+            layout="@layout/function_bar_small"
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/advert_video_image_standby"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_title_bar_layout" />
+
+    <include
+        android:id="@+id/main_click_buy_layout"
+        layout="@layout/click_buy_layout_small"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20px" />
+</RelativeLayout>

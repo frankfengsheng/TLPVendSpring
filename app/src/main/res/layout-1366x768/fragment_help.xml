@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/blue_trans_bg"
+   >
+
+    <com.tcn.uicommon.viewpager.AutoScrollViewPager
+        android:id="@+id/viewpager_demo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70px"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        />
+
+    <RadioGroup
+        android:id="@+id/m_radiogroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20px"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        >
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/help_back"
+        android:layout_width="100px"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="35px"
+        android:layout_marginBottom="10px"
+        android:background="@drawable/button_circle_style"
+        android:text="@string/back"
+        android:textColor="@color/whitesmoke"
+        android:textSize="30sp" />
+</RelativeLayout>

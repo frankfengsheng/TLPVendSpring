@@ -1,0 +1,515 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <style name="menu_button" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">5px</item>
+        <item name="android:paddingTop">5px</item>
+        <item name="android:paddingLeft">10px</item>
+        <item name="android:paddingRight">10px</item>
+        <item name="android:textSize">@dimen/btn_bkg_menu_tz</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="menu_page_button" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#99ffffff</item>
+        <item name="android:padding">10px</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- 单个菜单中的textview文本设置 -->
+    <style name="aisle_text" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">@dimen/aisle_text_tz</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <!-- 单个菜单中的edittext文本设置 -->
+    <style name="aisle_edittext" >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@drawable/circlebuttonstyle</item>
+        <item name="android:padding">5px</item>
+        <item name="android:textColorHint">@color/text_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/aisle_edit_text_tz</item>
+        <item name="android:layout_marginTop">10px</item>
+    </style>
+
+    <!-- 单个菜单中的edittext文本设置 仅登录和货道管理-->
+    <style name="aisle_edittext1" >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">@drawable/circlebuttonstyle</item>
+        <item name="android:padding">5px</item>
+        <item name="android:textColorHint">@color/text_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/aisle_edit_text_tz</item>
+    </style>
+    <!-- 控件离屏幕两边距离-->
+    <style  name="lrmargin">
+        <item name="android:layout_marginLeft">@dimen/btn_layout_lrmargin_left</item>
+        <item name="android:layout_marginRight">@dimen/btn_layout_lrmargin_right</item>
+    </style>
+
+    <!-- 控件离屏幕两边距离-->
+    <style  name="lrmarginson3">
+        <item name="android:layout_marginLeft">@dimen/lrmarginson3</item>
+        <item name="android:layout_marginRight">@dimen/lrmarginson3</item>
+    </style>
+
+    <!-- edit控件离屏幕两边距离+距离上个控件距离-->
+    <style  name="lrmarginson"  parent="lrmargin">
+        <item name="android:layout_marginTop">@dimen/lrmarginson</item>
+    </style>
+
+    <!-- edit控件离屏幕两边距离+距离上个控件距离-->
+    <style  name="lrmarginss"  parent="lrmargin">
+        <item name="android:layout_marginTop">@dimen/lrmarginss</item>
+    </style>
+
+    <!--按钮 控件离屏幕两边距离+距离上个控件距离-->
+    <style  name="lrmarginson1"  parent="lrmargin">
+        <item name="android:layout_marginTop">@dimen/lrmarginson1</item>
+    </style>
+
+    <!--距离上个控件距离-->
+    <style  name="lrmarginson2" >
+        <item name="android:layout_marginTop">@dimen/lrmarginson2</item>
+    </style>
+
+    <!-- 菜单上方字体-->
+    <style  name="menutop">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/tv_bkg_menu_tz</item>
+    </style>
+
+    <!-- 菜单按钮字体-->
+    <style  name="menubutton">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/btn_bkg_menu_tz</item>
+    </style>
+
+    <style  name="menubutton_20">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/btn_bkg_menu_tz_20</item>
+    </style>
+
+    <style  name="menu_button_style">
+        <item name="android:textColor">@color/limegreen</item>
+        <item name="android:textSize">@dimen/btn_bkg_menu_tz</item>
+    </style>
+
+    <!-- 单个菜单中的textview文本设置 -->
+    <style name="error" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/bk_error_tz</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+
+    <!-- mofang -->
+    <style name="aisle_text_mana" >
+        <item name="android:layout_width">100px</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:padding">5px</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="aisle_edittext_mana" >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/text_right</item>
+        <item name="android:padding">5px</item>
+        <item name="android:textColorHint">@color/text_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- mofang -->
+
+    <style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/filled_box</item>
+    </style>
+
+    <!-- aaaa -->
+
+    <style name="aisle_txt_manag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_dialog_title</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="aisle_linear_manag">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="aisle_edit_manag">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_color_dialog</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:background">@drawable/circlebuttonstyle</item>
+    </style>
+
+    <!-- aaaa -->
+
+    <style name="Dialog_bocop">
+        <item name="android:windowBackground">@color/bocop_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+
+    </style>
+
+    <style name="out_put_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">1px</item>
+        <item name="android:paddingLeft">16px</item>
+        <item name="android:paddingRight">16px</item>
+        <item name="android:lines">1</item>
+        <item name="android:alpha">255</item>
+        <item name="android:hint">请输入取货密码</item>
+        <item name="android:maxLength">9</item>
+        <item name="android:textSize">@dimen/keyboard_enter</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:background">#50ffffff</item>
+    </style>
+    <style name="input">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/keyboard_input</item>
+        <item name="android:layout_margin">1px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#50ffffff</item>
+    </style>
+
+    <style name="ll_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="enter">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/keyboard_enter</item>
+        <item name="android:layout_margin">1px</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#50ffffff</item>
+    </style>
+
+    <!--  。。。。。。。。。。。。。。。。。。大屏样式 start。。。。。。。。。。。。。。。。。。-->
+    <style  name="function_bar">
+        <item name="android:layout_width">@dimen/function_bar_w</item>
+        <item name="android:layout_height">@dimen/function_bar_h</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:textSize">@dimen/function_bar_text_size</item>
+    </style>
+
+    <style  name="function_bar_shop"  parent="function_bar">
+        <item name="android:layout_marginLeft">100px</item>
+        <item name="android:textColor">@color/layout1</item>
+        <item name="android:text">@string/ui_shopping</item>
+        <item name="android:background">@drawable/button_function_shop_large_style</item>
+    </style>
+
+    <style  name="function_bar_keyboard"  parent="function_bar">
+        <item name="android:layout_marginLeft">@dimen/function_bar_margin</item>
+        <item name="android:textColor">@color/transparentBlack</item>
+        <item name="android:text">@string/ui_keyboard</item>
+        <item name="android:background">@drawable/button_function_keyboard_large_style</item>
+    </style>
+
+    <style  name="function_bar_help"  parent="function_bar">
+        <item name="android:layout_marginLeft">@dimen/function_bar_margin</item>
+        <item name="android:textColor">@color/transparentBlack</item>
+        <item name="android:text">@string/ui_help</item>
+        <item name="android:background">@mipmap/help_unselected</item>
+    </style>
+
+    <style  name="function_bar_login"  parent="function_bar">
+        <item name="android:layout_marginLeft">@dimen/function_bar_margin</item>
+        <item name="android:textColor">@color/transparentBlack</item>
+        <item name="android:text">@string/ui_login</item>
+        <item name="android:background">@mipmap/help_unselected</item>
+    </style>
+
+    <style  name="keyboard_input_time">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_input_time_height</item>
+        <item name="android:padding">@dimen/keyboard_input_time_padding</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style  name="keyboard_input_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_input_text_height</item>
+        <item name="android:layout_marginLeft">@dimen/keyboard_input_text_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_input_text_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/keyboard_input_text_margin_top</item>
+        <item name="android:textSize">@dimen/keyboard_input_text_size</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:background">@drawable/edittext_simple_style</item>
+    </style>
+
+    <style  name="keyboard_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_height</item>
+        <item name="android:layout_marginLeft">@dimen/keyboard_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_margin_right</item>
+        <item name="android:layout_marginTop">@dimen/keyboard_margin_top</item>
+        <item name="android:textSize">@dimen/keyboard_number_text_size</item>
+        <item name="android:background">@mipmap/key_bkg</item>
+    </style>
+
+    <style  name="keyboard">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/keyboard_number_text_size</item>
+    </style>
+
+    <style  name="keyboard_number_0"  parent="keyboard">
+        <item name="android:text">0</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_1"  parent="keyboard">
+        <item name="android:text">1</item>
+        <item name="android:background">@drawable/button_circle_top_left_style</item>
+    </style>
+
+    <style  name="keyboard_number_2"  parent="keyboard">
+        <item name="android:text">2</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_3"  parent="keyboard">
+        <item name="android:text">3</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_4"  parent="keyboard">
+        <item name="android:text">4</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_5"  parent="keyboard">
+        <item name="android:text">5</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_6"  parent="keyboard">
+        <item name="android:text">6</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_7"  parent="keyboard">
+        <item name="android:text">7</item>
+        <item name="android:background">@drawable/button_circle_bottom_left_style</item>
+    </style>
+
+    <style  name="keyboard_number_8"  parent="keyboard">
+        <item name="android:text">8</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_9"  parent="keyboard">
+        <item name="android:text">9</item>
+        <item name="android:background">@drawable/button_green_style</item>
+    </style>
+
+    <style  name="keyboard_number_cancel"  parent="keyboard">
+        <item name="android:text">@string/backgroound_cancel</item>
+        <item name="android:background">@drawable/button_circle_top_right_style</item>
+    </style>
+
+    <style  name="keyboard_number_sure"  parent="keyboard">
+        <item name="android:text">@string/backgroound_ensure</item>
+        <item name="android:background">@drawable/button_circle_bottom_right_style</item>
+    </style>
+
+    <style  name="keyboard_back">
+        <item name="android:layout_width">@dimen/keyboard_back_width</item>
+        <item name="android:layout_height">@dimen/keyboard_back_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_back_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/keyboard_back_margin_bottom</item>
+        <item name="android:background">@drawable/button_circle_style</item>
+        <item name="android:text">@string/back</item>
+        <item name="android:textColor">@color/whitesmoke</item>
+        <item name="android:textSize">@dimen/keyboard_back_text_size</item>
+    </style>
+
+
+    <!--  。。。。。。。。。。。。。。。。。。大屏样式 end。。。。。。。。。。。。。。。。。。-->
+
+
+    <!--  。。。。。。。。。。。。。。。。。7寸屏样式 start。。。。。。。。。。。。。。。。。-->
+    <style  name="function_bar_small">
+        <item name="android:layout_width">@dimen/function_bar_w_small</item>
+        <item name="android:layout_height">@dimen/function_bar_h_small</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/function_bar_text_size_small</item>
+    </style>
+
+    <style  name="function_bar_keyboard_small"  parent="function_bar_small">
+        <item name="android:layout_marginLeft">@dimen/function_bar_margin_small</item>
+        <item name="android:textColor">@color/whitesmoke</item>
+        <item name="android:text">@string/ui_keyboard</item>
+        <item name="android:background">@drawable/button_selector_back</item>
+    </style>
+
+    <style  name="function_bar_help_small"  parent="function_bar_small">
+        <item name="android:layout_marginLeft">@dimen/function_bar_margin_small</item>
+        <item name="android:textColor">@color/whitesmoke</item>
+        <item name="android:text">@string/ui_help</item>
+        <item name="android:background">@drawable/shape_rext_round_gray</item>
+    </style>
+
+    <style  name="keyboard_input_time_small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_input_time_height_small</item>
+        <item name="android:padding">@dimen/keyboard_input_time_padding_small</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style  name="keyboard_input_text_small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_input_text_height_small</item>
+        <item name="android:layout_marginLeft">@dimen/keyboard_input_text_margin_left_small</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_input_text_margin_right_small</item>
+        <item name="android:layout_marginTop">@dimen/keyboard_input_text_margin_top_small</item>
+        <item name="android:textSize">@dimen/keyboard_input_text_size_small</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">#141414</item>
+        <item name="android:background">@drawable/edittext_simple_style_land</item>
+    </style>
+
+    <style  name="keyboard_layout_small">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/keyboard_height_small</item>
+        <item name="android:layout_marginLeft">@dimen/keyboard_margin_left_small</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_margin_right_small</item>
+        <item name="android:layout_marginTop">@dimen/keyboard_margin_top_small</item>
+        <item name="android:textSize">@dimen/keyboard_number_text_size_small</item>
+    </style>
+
+    <style  name="keyboard_small">
+        <item name="android:layout_marginLeft">@dimen/keyboard_number_margin_left_small</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_number_margin_right_small</item>
+        <item name="android:layout_marginTop">@dimen/keyboard_number_margin_top_small</item>
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:textSize">@dimen/keyboard_number_text_size_small</item>
+        <item name="android:background">@drawable/button_circle_new</item>
+    </style>
+
+    <style  name="keyboard_number_0_small"  parent="keyboard_small">
+        <item name="android:text">0</item>
+    </style>
+
+    <style  name="keyboard_number_1_small"  parent="keyboard_small">
+        <item name="android:text">1</item>
+    </style>
+
+    <style  name="keyboard_number_2_small"  parent="keyboard_small">
+        <item name="android:text">2</item>
+    </style>
+
+    <style  name="keyboard_number_3_small"  parent="keyboard_small">
+        <item name="android:text">3</item>
+
+    </style>
+
+    <style  name="keyboard_number_4_small"  parent="keyboard_small">
+        <item name="android:text">4</item>
+    </style>
+
+    <style  name="keyboard_number_5_small"  parent="keyboard_small">
+        <item name="android:text">5</item>
+    </style>
+
+    <style  name="keyboard_number_6_small"  parent="keyboard_small">
+        <item name="android:text">6</item>
+    </style>
+
+    <style  name="keyboard_number_7_small"  parent="keyboard_small">
+        <item name="android:text">7</item>
+    </style>
+
+    <style  name="keyboard_number_8_small"  parent="keyboard_small">
+        <item name="android:text">8</item>
+    </style>
+
+    <style  name="keyboard_number_9_small"  parent="keyboard_small">
+        <item name="android:text">9</item>
+    </style>
+
+    <style  name="keyboard_number_cancel_small"  parent="keyboard_small">
+        <item name="android:text">@string/backgroound_cancel</item>
+        <item name="android:textSize">@dimen/keyboard_number_char_text_size_small</item>
+    </style>
+
+    <style  name="keyboard_number_sure_small"  parent="keyboard_small">
+        <item name="android:text">@string/backgroound_ensure</item>
+        <item name="android:textSize">@dimen/keyboard_number_char_text_size_small</item>
+
+    </style>
+
+    <style  name="keyboard_back_small">
+        <item name="android:layout_width">@dimen/keyboard_back_width</item>
+        <item name="android:layout_height">@dimen/keyboard_back_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginRight">@dimen/keyboard_back_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/keyboard_back_margin_bottom</item>
+        <item name="android:background">@drawable/button_selector_back</item>
+        <item name="android:text">@string/back</item>
+        <item name="android:textColor">@color/whitesmoke</item>
+        <item name="android:textSize">@dimen/keyboard_back_text_size</item>
+    </style>
+    <!--  。。。。。。。。。。。。。。。。。7寸屏样式 end。。。。。。。。。。。。。。。。。-->
+
+</resources>
