@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/main_bar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@color/black"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		>
+		<TextView
+			android:id="@+id/main_machine_id"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textSize="22sp"
+			android:background="#10ffffff" />
+
+		<TextView
+			android:id="@+id/main_balance"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_toRightOf="@id/main_machine_id"
+			android:layout_marginRight="20dp"
+			android:visibility="gone"
+			android:gravity="center"
+			android:textSize="22sp"/>
+
+		<TextView
+			android:id="@+id/main_temperature"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_toRightOf="@id/main_machine_id"
+			android:layout_marginRight="20dp"
+			android:gravity="center"
+			android:textSize="22sp"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/main_time"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="55dp"
+			android:gravity="center"
+			android:textSize="22sp"
+			/>
+
+		<ImageView
+			android:id="@+id/main_signal"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:layout_alignParentRight="true" />
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/main_screen_full_layout"
+		android:layout_width="match_parent"
+		android:layout_height="1820px"
+		android:background="@mipmap/background"
+		android:layout_below="@id/main_bar_layout"
+		android:visibility="gone"
+		>
+
+		<LinearLayout
+			android:id="@+id/main_screen_full_goods_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:id="@+id/main_AdRelLayout_full"
+				android:layout_width="match_parent"
+				android:layout_height="1670px">
+
+				<FrameLayout
+					android:id="@+id/main_framelayout_full"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					>
+				</FrameLayout>
+
+				<com.tcn.uicommon.shimmer.ShimmerTextView
+					android:id="@+id/shimmer_tv_full"
+					android:text="@string/ui_loading"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="#444"
+					android:textSize="50sp"
+					android:layout_centerInParent="true"
+					android:layout_gravity="center"/>
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="150px"
+				android:orientation="horizontal"
+				>
+
+				<Button
+					android:id="@+id/main_btn_shopp_full"
+					android:layout_width="160px"
+					android:layout_height="130px"
+					android:text="@string/ui_shopping"
+					android:textColor="@color/layout1"
+					android:background="@mipmap/shop_selected"
+					android:gravity="bottom|center_horizontal"
+					android:layout_marginLeft="150px"
+					android:layout_gravity="top"
+					android:textSize="32sp" />
+
+				<Button
+					android:id="@+id/main_btn_activities_full"
+					android:layout_width="160px"
+					android:layout_height="130px"
+					android:text="@string/ui_keyboard"
+					android:textColor="@color/transparentBlack"
+					android:background="@mipmap/key_unselected"
+					android:gravity="bottom|center_horizontal"
+					android:layout_marginLeft="150px"
+					android:layout_gravity="top"
+					android:textSize="32sp" />
+
+				<Button
+					android:id="@+id/main_btn_show_full"
+					android:layout_width="160px"
+					android:layout_height="130px"
+					android:text="@string/ui_help"
+					android:textColor="@color/transparentBlack"
+					android:background="@mipmap/help_unselected"
+					android:gravity="bottom|center_horizontal"
+					android:layout_marginLeft="150px"
+					android:layout_gravity="top"
+					android:textSize="32sp" />
+
+			</LinearLayout>
+		</LinearLayout>
+
+		<SurfaceView
+			android:id="@+id/main_video_full"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+		<SurfaceView
+			android:id="@+id/main_image_full"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+
+		<com.tcn.uicommon.shimmer.ShimmerTextView
+			android:id="@+id/main_shimmer_buy_full"
+			android:text="@string/ui_click_and_buy"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/red"
+			android:textSize="40sp"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="10dp"
+			android:background="#00ffffff" />
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/main_topAdLayout"
+		android:layout_width="match_parent"
+		android:layout_height="608dp"
+		android:layout_below="@id/main_bar_layout"
+		>
+		<SurfaceView
+			android:id="@+id/video"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+		<SurfaceView
+			android:id="@+id/image"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
+
+	</RelativeLayout>
+
+
+	<LinearLayout
+		android:id="@+id/main_half_screen"
+		android:layout_width="match_parent"
+		android:layout_height="1212dp"
+		android:orientation="vertical"
+		android:layout_below="@id/main_topAdLayout"
+		android:background="@mipmap/background"
+		>
+
+		<RelativeLayout
+			android:id="@+id/main_AdRelLayout"
+			android:layout_width="match_parent"
+			android:layout_height="1062dp"
+			android:layout_gravity="center"
+			android:gravity="center"
+			>
+
+			<FrameLayout
+				android:id="@+id/main_framelayout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				>
+			</FrameLayout>
+
+			<com.tcn.uicommon.shimmer.ShimmerTextView
+				android:id="@+id/shimmer_tv"
+				android:text="@string/ui_loading"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#444"
+				android:textSize="50sp"
+				android:layout_centerInParent="true"
+				android:layout_gravity="center"/>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:id="@+id/main_layout_bar"
+			android:layout_width="match_parent"
+			android:layout_height="150px"
+			android:orientation="horizontal"
+			>
+
+			<Button
+				android:id="@+id/main_btn_shopp"
+				android:layout_width="160px"
+				android:layout_height="130px"
+				android:text="@string/ui_shopping"
+				android:textColor="@color/layout1"
+				android:background="@mipmap/shop_selected"
+				android:gravity="bottom|center_horizontal"
+				android:layout_marginLeft="150px"
+				android:layout_gravity="top"
+				android:textSize="32sp" />
+
+			<Button
+				android:id="@+id/main_btn_activities"
+				android:layout_width="160px"
+				android:layout_height="130px"
+				android:text="@string/ui_keyboard"
+				android:textColor="@color/transparentBlack"
+				android:background="@mipmap/key_unselected"
+				android:gravity="bottom|center_horizontal"
+				android:layout_marginLeft="150px"
+				android:layout_gravity="top"
+				android:textSize="32sp" />
+
+			<Button
+				android:id="@+id/main_btn_show"
+				android:layout_width="160px"
+				android:layout_height="130px"
+				android:text="@string/ui_help"
+				android:textColor="@color/transparentBlack"
+				android:background="@mipmap/help_unselected"
+				android:gravity="bottom|center_horizontal"
+				android:layout_marginLeft="150px"
+				android:layout_gravity="top"
+				android:textSize="32sp" />
+
+			<Button
+				android:id="@+id/main_btn_category"
+				android:layout_width="80px"
+				android:layout_height="80px"
+				android:text="@string/ui_categories"
+				android:textColor="@color/transparentBlack"
+				android:gravity="center"
+				android:layout_marginLeft="30px"
+				android:layout_gravity="bottom"
+				android:visibility="gone"
+				android:background="@drawable/button_circle_style"
+				android:layout_marginBottom="30px"
+				android:textSize="26sp" />
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<SurfaceView
+		android:id="@+id/main_screen_image"
+		android:layout_width="match_parent"
+		android:layout_height="1820px"
+		android:gravity="center"
+		android:layout_centerInParent="true"
+		android:visibility="gone"/>
+
+	<RelativeLayout
+		android:id="@+id/main_textSurface_layout"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_alignParentBottom="true"
+		>
+		<com.tcn.uicommon.view.TextSurfaceView
+			android:id="@+id/main_text_sfv"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:background="@color/black"
+			/>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/viewGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewGroup_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewGroup"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/viewGroup"
+        android:layout_centerHorizontal="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="9"
+            >
+
+            <com.tcn.uicommon.recycleview.PageRecyclerView
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20px"
+                android:layout_centerInParent="true"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/select_page_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/select_pre"
+                android:layout_width="80px"
+                android:layout_height="40px"
+                android:text="@string/ui_page_pre"
+                android:textSize="18sp"
+                android:background="@drawable/button_circle_style"/>
+
+            <TextView
+                android:id="@+id/select_page"
+                android:layout_width="80px"
+                android:layout_height="40px"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/select_next"
+                android:layout_width="80px"
+                android:layout_height="30px"
+                android:text="@string/ui_page_next"
+                android:textSize="18sp"
+                android:background="@drawable/button_circle_style"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

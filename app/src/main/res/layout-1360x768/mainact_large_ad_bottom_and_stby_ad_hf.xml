@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<include
+		android:id="@+id/main_title_bar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="35px"
+		layout="@layout/info_title_bar"/>
+
+	<LinearLayout
+		android:id="@+id/main_goods_layout"
+		android:layout_width="match_parent"
+		android:layout_height="858px"
+		android:orientation="vertical"
+		android:layout_below="@id/main_title_bar_layout"
+		android:background="@mipmap/background"
+		>
+
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="752px"
+			layout="@layout/goods_layout" />
+
+		<include
+			android:id="@+id/main_function_bar_layout"
+			android:layout_width="match_parent"
+			android:layout_height="100px"
+			layout="@layout/function_bar"
+			/>
+
+	</LinearLayout>
+
+	<com.tcn.uicommon.view.TextSurfaceView
+		android:id="@+id/main_text_sfv"
+		android:layout_width="match_parent"
+		android:layout_height="35px"
+		android:background="@color/black"
+		android:layout_marginTop="893px"
+		/>
+
+	<include
+		android:id="@+id/main_advert_layout"
+		android:layout_width="match_parent"
+		android:layout_height="432px"
+		layout="@layout/advert_video_image"
+		android:layout_below="@id/main_text_sfv"/>
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="858px"
+		layout="@layout/advert_video_image_standby"
+		android:layout_below="@id/main_title_bar_layout"/>
+
+	<include
+		android:id="@+id/main_click_buy_layout"
+		android:layout_width="match_parent"
+		android:layout_height="100px"
+		layout="@layout/click_buy_layout"
+		android:layout_marginTop="800px"
+		android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

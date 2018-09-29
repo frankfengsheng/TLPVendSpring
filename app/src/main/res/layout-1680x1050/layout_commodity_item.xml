@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/item_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_vertical">
+
+
+
+    <ImageView
+        android:id="@+id/imgprice"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:background="@mipmap/pay"
+        android:layout_marginTop="200px"
+        android:layout_centerHorizontal="true"/>
+
+	<ImageView
+		android:id="@+id/img"
+		android:layout_width="245px"
+		android:layout_height="245px"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="5px"
+		android:src="@mipmap/default_ticket_poster_pic"
+		/>
+
+
+	<TextView
+		android:id="@+id/textcoilId"
+		android:layout_width="40px"
+		android:layout_height="36px"
+		android:textSize="18sp"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="32px"
+		android:layout_marginLeft="62px"
+		android:gravity="center"
+		android:background="@color/black"
+		android:layout_below="@id/img"/>
+
+    <TextView
+        android:id="@+id/textprice"
+        android:layout_width="wrap_content"
+        android:layout_height="36px"
+        android:textSize="20sp"
+        android:layout_marginTop="32px"
+		android:layout_marginLeft="5px"
+        android:typeface="sans"
+        android:textStyle="bold"
+		android:gravity="center"
+        android:layout_toRightOf="@id/textcoilId"
+        android:layout_below="@id/img"/>
+
+</RelativeLayout>

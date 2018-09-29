@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@mipmap/blue_trans_bg">
+
+    <include
+        layout="@layout/lucky_bigwheel"
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:layout_marginTop="2px"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/keyboard_qrcode_tips"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600px"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>`
+
+    <ImageView
+        android:id="@+id/keyboard_qrcode"
+        android:layout_width="180px"
+        android:layout_height="180px"
+        android:layout_marginTop="2px"
+        android:layout_below="@id/keyboard_qrcode_tips"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/time_textview"
+        style="@style/keyboard_input_time"
+        android:layout_marginTop="782px"
+        />
+
+    <TextView
+        android:id="@+id/out_put"
+        style="@style/keyboard_input_text"
+        android:layout_marginTop="1px"
+        android:layout_below="@id/time_textview"/>`
+
+    <include
+        layout="@layout/keyboard_layout"
+        style="@style/keyboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="320px"
+        android:layout_below="@id/out_put"
+        android:layout_marginTop="10px"
+        />
+
+    <Button
+        android:id="@+id/key_board_back"
+        style="@style/keyboard_back"
+        android:layout_marginBottom="2px"/>
+
+</RelativeLayout>

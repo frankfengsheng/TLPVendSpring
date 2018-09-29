@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background" >
+    
+     
+           <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/mmtitle_bg"
+        >
+        
+          <Button
+            android:id="@+id/check_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="18dp"
+            android:text="@string/back"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+         
+    <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/prooutrecord"
+            android:padding="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="25sp"
+             />
+    
+    </RelativeLayout>
+    
+</LinearLayout>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:background="@android:color/white">
+
+	<ImageView
+		android:id="@+id/pay_goods_picture"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="60px"
+		android:layout_width="270px"
+		android:layout_height="270px"/>
+
+	<!--文字介绍-->
+	<RelativeLayout
+		android:layout_width="450px"
+		android:layout_height="300px"
+		android:layout_marginTop="50px"
+		android:layout_marginRight="10px"
+		android:layout_toRightOf="@id/pay_goods_picture"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="20px"
+		>
+		<TextView
+			android:layout_marginLeft="5px"
+			android:id="@+id/pay_goods_name"
+			android:text="名称:上好佳上好上佳"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:maxLines="1"
+			android:textSize="30sp"
+			/>
+		<ImageView
+			android:id="@+id/pay_goods_name_line"
+			android:src="#b6b6b6"
+			android:layout_marginTop="10px"
+			android:layout_below="@id/pay_goods_name"
+			android:layout_width="match_parent"
+			android:layout_height="1px" />
+		<TextView
+			android:layout_marginLeft="5px"
+			android:id="@+id/pay_goods_price"
+			android:text="价格:15元"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/pay_goods_name_line"
+			android:layout_marginTop="15px"
+			android:textColor="@color/black"
+			android:textSize="30sp"
+			/>
+		<ImageView
+			android:id="@+id/pay_goods_price_line"
+			android:src="#b6b6b6"
+			android:layout_marginTop="10px"
+			android:layout_below="@id/pay_goods_price"
+			android:layout_width="match_parent"
+			android:layout_height="1px" />
+		<TextView
+			android:layout_marginLeft="5px"
+			android:id="@+id/pay_goods_slotno"
+			android:text="货道号:001"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/pay_goods_price_line"
+			android:layout_marginTop="15px"
+			android:textColor="@color/black"
+			android:textSize="30sp"
+			/>
+		<ImageView
+			android:id="@+id/pay_goods_slotno_line"
+			android:src="#b6b6b6"
+			android:layout_marginTop="10px"
+			android:layout_below="@id/pay_goods_slotno"
+			android:layout_width="match_parent"
+			android:layout_height="1px" />
+
+		<TextView
+			android:id="@+id/pay_goods_introduction"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/pay_goods_slotno_line"
+			android:layout_marginTop="15px"
+			android:textColor="@color/black"
+			android:textSize="30sp"
+			android:visibility="gone"
+			/>
+	</RelativeLayout>
+
+
+
+
+	<LinearLayout
+		android:layout_marginTop="40px"
+		android:id="@+id/pay_qrcode_linear"
+		android:layout_marginLeft="30px"
+		android:layout_marginRight="10px"
+		android:layout_width="match_parent"
+		android:layout_height="400px"
+		android:layout_below="@id/pay_goods_picture"
+		android:orientation="horizontal"
+		>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="320px"
+			android:layout_height="match_parent">
+			<TextView
+				android:id="@+id/pay_tips"
+				android:layout_marginTop="150px"
+				android:gravity="center_horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/pay_tips_default"
+				android:textColor="#b6b6b6"
+				android:textSize="25sp"
+				/>
+			<LinearLayout
+				android:layout_marginTop="20px"
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:gravity="center"
+				android:layout_height="wrap_content">
+				<ImageView
+					android:visibility="gone"
+					android:id="@+id/alilogo"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@mipmap/alilogo"
+					/>
+				<ImageView
+					android:id="@+id/wxlogo"
+					android:visibility="gone"
+					android:layout_marginLeft="30px"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@mipmap/wxlogo"
+					/>
+				<ImageView
+					android:id="@+id/jdlogo"
+					android:visibility="gone"
+					android:layout_marginLeft="30px"
+					android:layout_width="40px"
+					android:layout_height="40px"
+					android:background="@mipmap/jdlogo"
+					/>
+			</LinearLayout>
+		</LinearLayout>
+		<!--加载中-->
+		<RelativeLayout
+			android:id="@+id/pay_qrcode_load_layout_wx"
+			android:layout_width="0px"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			>
+
+			<ImageView
+				android:id="@+id/pay_logo_wx"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:background="@mipmap/wxlogo"
+				/>
+
+			<ImageView
+				android:id="@+id/pay_loading_wx"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:background="@mipmap/fm_play_page_playing_loading" />
+
+			<TextView
+				android:id="@+id/pay_loading_tips_wx"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="@string/notify_loading"
+				android:textColor="@color/whitesmoke"
+				android:textSize="20sp"
+				android:gravity="center"
+				/>
+
+		</RelativeLayout>
+		<!--二维码-->
+		<RelativeLayout
+			android:id="@+id/pay_qrcode_layout_wx"
+			android:layout_width="0px"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:visibility="gone"
+			>
+			<TextView
+				android:id="@+id/pay_qrcode_tips_wx"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="3px"
+				android:text="@string/ui_pay_scan_qrcode"
+				android:textColor="@color/whitesmoke"
+				android:textSize="28sp"
+				android:layout_centerHorizontal="true"
+				android:gravity="center_horizontal"
+				android:visibility="gone"
+				/>
+			<ImageView
+				android:id="@+id/pay_qrcode_wx"
+				android:layout_width="280px"
+				android:layout_height="280px"
+				android:layout_centerInParent="true"
+				/>
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:id="@+id/pay_qrcode_load_layout_ali"
+			android:layout_width="0px"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:visibility="gone"
+			>
+
+			<ImageView
+				android:id="@+id/pay_logo_ali"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:background="@mipmap/alilogo"
+				/>
+
+			<ImageView
+				android:id="@+id/pay_loading_ali"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:background="@mipmap/fm_play_page_playing_loading" />
+
+			<TextView
+				android:id="@+id/pay_loading_tips_ali"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="@string/notify_loading"
+				android:textColor="@color/whitesmoke"
+				android:textSize="20sp"
+				android:gravity="center"
+				/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/pay_qrcode_layout_ali"
+			android:layout_width="0px"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:visibility="gone"
+			>
+
+			<TextView
+				android:id="@+id/pay_qrcode_tips_ali"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="3px"
+				android:text="@string/ui_pay_scan_qrcode"
+				android:textColor="@color/whitesmoke"
+				android:textSize="28sp"
+				android:layout_centerHorizontal="true"
+				android:gravity="center_horizontal"
+				android:visibility="gone"
+				/>
+
+			<ImageView
+				android:id="@+id/pay_qrcode_ali"
+				android:layout_width="280px"
+				android:layout_height="280px"
+				android:layout_centerInParent="true"
+				/>
+		</RelativeLayout>
+
+
+	</LinearLayout>
+
+
+	<TextView
+		android:id="@+id/pay_time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="10px"
+		android:textColor="@color/whitesmoke"
+		android:visibility="gone"
+		android:textSize="32sp" />
+
+	<Button
+		android:id="@+id/pay_back"
+		android:layout_width="210px"
+		android:layout_height="75px"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginRight="35px"
+		android:layout_marginBottom="25px"
+		android:background="@drawable/button_selector_back"
+		android:text="@string/back"
+		android:textColor="@color/whitesmoke"
+		android:textSize="25sp" />
+</RelativeLayout>

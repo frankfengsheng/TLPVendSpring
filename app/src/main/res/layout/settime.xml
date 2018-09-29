@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/timelinear"   
+    android:gravity="center" 
+       >
+    
+    <TextView
+        android:id="@+id/time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        />
+
+    <DatePicker 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" >
+    </DatePicker>
+
+    <Button
+        android:id="@+id/time_confirmtem"
+        style="@style/menu_button"
+        android:text="@string/backgroound_ensure"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_selector"
+        />
+    
+    
+
+</LinearLayout>

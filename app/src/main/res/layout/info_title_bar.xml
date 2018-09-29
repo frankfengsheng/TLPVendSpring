@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:gravity="center_vertical">
+
+	<TextView
+		android:id="@+id/title_bar_machine_id"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_vertical"
+		android:textSize="@dimen/title_bar_text_size"
+		android:layout_alignParentRight="true"/>
+
+	<TextView
+		android:id="@+id/title_bar_balance"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="@dimen/title_bar_balance_margin"
+		android:gravity="center"
+		android:visibility="gone"
+		android:textSize="@dimen/title_bar_text_size"/>
+
+	<TextView
+		android:id="@+id/title_bar_temperature"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="@dimen/title_bar_temperature_margin"
+		android:gravity="center"
+		android:textSize="@dimen/title_bar_text_size" />
+
+	<TextView
+		android:id="@+id/title_bar_time"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="@dimen/title_bar_time_margin"
+		android:gravity="center"
+		android:textSize="@dimen/title_bar_text_size"
+		/>
+
+	<ImageView
+		android:id="@+id/title_bar_signal"
+		android:layout_width="@dimen/title_bar_signal_w_h"
+		android:layout_height="@dimen/title_bar_signal_w_h"
+		android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

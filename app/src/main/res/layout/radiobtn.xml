@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rb_linear"
+    android:gravity="center" >
+    
+    
+    <TextView
+        android:id="@+id/rb_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:text="@string/rb_textcontent"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+              />
+    
+    <TextView
+        android:id="@+id/rb_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_marginTop="10dp"
+              />
+    
+    
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RadioButton 
+	         android:id="@+id/rb_yes"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="@string/yes"
+	          android:layout_marginTop="20dp"
+            />
+         <RadioButton 
+	         android:id="@+id/rb_no"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="@string/no"
+	          android:layout_marginTop="20dp"
+            />
+    </RadioGroup>
+    
+    <Button
+             android:id="@+id/rb_btn"
+	         style="@style/menu_button"
+	         android:text="@string/backgroound_ensure"
+	         android:background="@drawable/btn_selector"
+	          android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

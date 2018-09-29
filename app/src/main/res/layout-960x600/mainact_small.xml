@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@android:color/white"
+	>
+
+	<include
+		android:id="@+id/main_title_bar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="46.5px"
+		layout="@layout/info_title_bar"/>
+
+	<include
+		android:id="@+id/main_advert_layout"
+		android:layout_width="match_parent"
+		android:layout_height="337.5px"
+		layout="@layout/advert_video_image"
+		android:layout_below="@id/main_title_bar_layout"/>
+
+	<LinearLayout
+		android:layout_marginTop="30px"
+		android:id="@+id/main_goods_layout"
+		android:layout_width="match_parent"
+		android:layout_height="638px"
+		android:orientation="vertical"
+		android:layout_below="@id/main_advert_layout"
+		android:background="@android:color/white"
+		>
+
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="500px"
+			layout="@layout/goods_layout" />
+
+		<include
+			android:id="@+id/main_function_bar_layout"
+			android:layout_width="match_parent"
+			android:layout_height="100px"
+			layout="@layout/function_bar_small"
+			/>
+
+	</LinearLayout>
+
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		layout="@layout/advert_video_image_standby"
+		android:layout_below="@id/main_title_bar_layout"/>
+
+	<include
+		android:id="@+id/main_click_buy_layout"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="150px"
+		layout="@layout/click_buy_layout_small"
+		android:layout_marginBottom="20px"
+		android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

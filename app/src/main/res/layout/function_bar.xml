@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal">
+
+	<Button
+		android:id="@+id/function_bar_btn_shopp"
+		style="@style/function_bar_shop"/>
+
+	<Button
+		android:id="@+id/function_bar_btn_keyboard"
+		style="@style/function_bar_keyboard" />
+
+	<Button
+		android:id="@+id/function_bar_btn_help"
+		style="@style/function_bar_help" />
+
+	<Button
+		android:id="@+id/function_bar_btn_login"
+		style="@style/function_bar_login" />
+</LinearLayout>

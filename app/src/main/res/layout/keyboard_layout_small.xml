@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/number1"
+            style="@style/keyboard_number_1_small"
+            />
+
+        <Button
+            android:id="@+id/number2"
+            style="@style/keyboard_number_2_small"
+            />
+
+        <Button
+            android:id="@+id/number3"
+            style="@style/keyboard_number_3_small"
+            />
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/keyboard_number_cancel_small"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/number4"
+            style="@style/keyboard_number_4_small"
+            />
+
+        <Button
+            android:id="@+id/number5"
+            style="@style/keyboard_number_5_small"
+            />
+
+        <Button
+            android:id="@+id/number6"
+            style="@style/keyboard_number_6_small"
+            />
+
+        <Button
+            android:id="@+id/number0"
+            style="@style/keyboard_number_0_small"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/number7"
+            style="@style/keyboard_number_7_small"/>
+
+        <Button
+            android:id="@+id/number8"
+            style="@style/keyboard_number_8_small"
+            />
+
+        <Button
+            android:id="@+id/number9"
+            style="@style/keyboard_number_9_small"
+            />
+
+        <Button
+            android:id="@+id/enter"
+            style="@style/keyboard_number_sure_small"
+            />
+    </LinearLayout>
+
+</LinearLayout>

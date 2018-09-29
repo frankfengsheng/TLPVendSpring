@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/number1"
+            style="@style/keyboard_number_1"
+            />
+
+        <Button
+            android:id="@+id/number2"
+            style="@style/keyboard_number_2"
+            />
+
+        <Button
+            android:id="@+id/number3"
+            style="@style/keyboard_number_3"
+            />
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/keyboard_number_cancel"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/number4"
+            style="@style/keyboard_number_4"
+            />
+
+        <Button
+            android:id="@+id/number5"
+            style="@style/keyboard_number_5"
+            />
+
+        <Button
+            android:id="@+id/number6"
+            style="@style/keyboard_number_6"
+            />
+
+        <Button
+            android:id="@+id/number0"
+            style="@style/keyboard_number_0"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/number7"
+            style="@style/keyboard_number_7"/>
+
+        <Button
+            android:id="@+id/number8"
+            style="@style/keyboard_number_8"
+            />
+
+        <Button
+            android:id="@+id/number9"
+            style="@style/keyboard_number_9"
+            />
+
+        <Button
+            android:id="@+id/enter"
+            style="@style/keyboard_number_sure"
+            />
+    </LinearLayout>
+
+</LinearLayout>

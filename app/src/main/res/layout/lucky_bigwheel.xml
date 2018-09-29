@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_centerHorizontal="true"
+	android:layout_alignParentBottom="true"
+	android:gravity="center_horizontal">
+
+	<com.tcn.uicommon.view.BitWheelView
+		android:id="@+id/id_luckypan"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		/>
+
+	<ImageView
+		android:id="@+id/id_start_btn"
+		android:layout_width="600px"
+		android:layout_height="600px"
+		android:src="@drawable/lucky_start"
+		android:layout_centerInParent="true"
+		/>
+
+</RelativeLayout>
