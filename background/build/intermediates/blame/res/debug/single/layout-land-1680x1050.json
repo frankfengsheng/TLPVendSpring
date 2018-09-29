@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\asilemanage.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\asilemanage.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\information.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\information.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\menu_list_item.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\menu_list_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\pay.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\pay.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\loginmenu.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\loginmenu.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\layout-land-1680x1050\\main_menu.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\layout-land-1680x1050\\main_menu.xml"
+    }
+]

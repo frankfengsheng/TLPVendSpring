@@ -1,0 +1,446 @@
+[
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\pay_tuopai.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\pay_tuopai.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\scan_btn_gb_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\scan_btn_gb_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\switch_btn_slip.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\switch_btn_slip.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\btn_menu_close_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\btn_menu_close_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\wxlogo.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\wxlogo.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_2.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_2.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jwq.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jwq.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\buy_click_rotate.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\buy_click_rotate.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\dot.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\dot.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\search_button.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\search_button.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jwp.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jwp.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\tcn.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\tcn.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\page_indicator_unfocused.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\page_indicator_unfocused.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\btn_menu_open_default.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\btn_menu_open_default.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_0.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_0.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_1.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_1.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_2_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_2_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_4.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_4.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\app_creditcard.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\app_creditcard.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_4_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_4_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\title_bar_bg.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\title_bar_bg.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\default_ticket_poster_pic.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\default_ticket_poster_pic.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ktv_btn_rensheng_left_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ktv_btn_rensheng_left_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\menu_settings.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\menu_settings.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\background.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\background.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\shopping.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\shopping.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key_unselected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key_unselected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\page_indicator_focused.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\page_indicator_focused.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\horn.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\horn.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key_bkg.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key_bkg.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jwy.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jwy.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ecommerce.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ecommerce.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_settings_ethernet_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_settings_ethernet_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\pricelabel.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\pricelabel.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bar.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\bar.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\fm_play_page_playing_loading.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\fm_play_page_playing_loading.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lyric_search_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\lyric_search_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\downbtn.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\downbtn.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\btn_bg.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\btn_bg.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\switch_bkg_switch.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\switch_bkg_switch.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_1_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_1_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key_bg11.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key_bg11.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\lock.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\shop_unselected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\shop_unselected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\setting_login_btn_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\setting_login_btn_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\comm_ic_loading_icon.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\comm_ic_loading_icon.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_3.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_3.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_0.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_0.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\blue_trans_bg.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\blue_trans_bg.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\document.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\document.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\app_wx.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\app_wx.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\kg_mv_page_hand_up_down.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\kg_mv_page_hand_up_down.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_3.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_3.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\background_s.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\background_s.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\upbtn.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\upbtn.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\shibai.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\shibai.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_card.jpg",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_card.jpg"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_1.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_1.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\shop_selected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\shop_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_3_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_3_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_0_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_0_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\wx.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\wx.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\xuanz.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\xuanz.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\pay.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\pay.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_1_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_1_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\fni.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\fni.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\tools.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\tools.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_4_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_4_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_0_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_0_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\appicon_push.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\appicon_push.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_signal_full_2_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_signal_full_2_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_2.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_2.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\alilogo.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\alilogo.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key_bg.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key_bg.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\buy_click.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\buy_click.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jww.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jww.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\download.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\download.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ktv_btn_rensheng_left_default.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ktv_btn_rensheng_left_default.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\btn_menu_open_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\btn_menu_open_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\help_unselected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\help_unselected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\iconkk.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\iconkk.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\add.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\add.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\play_loading_02.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\play_loading_02.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\kg_mv_page_arrow_left_right.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\kg_mv_page_arrow_left_right.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\longdot.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\longdot.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\help_selected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\help_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_settings_ethernet.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_settings_ethernet.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\search_button_clicked.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\search_button_clicked.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_4.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_4.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\gxp.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\gxp.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\fx_edit_bg_on.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\fx_edit_bg_on.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock1.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\lock1.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ktv_btn_rensheng_right_default.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ktv_btn_rensheng_right_default.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\login.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\login.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\key_selected.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\key_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\app_fund.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\app_fund.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\group_arrow_down.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\group_arrow_down.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\wifiapp.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\wifiapp.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ktv_btn_rensheng_right_pressed.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ktv_btn_rensheng_right_pressed.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jwx.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jwx.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\txl_interception_block.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\txl_interception_block.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\floatting_icon.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\floatting_icon.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\input_send_button.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\input_send_button.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jdlogo.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jdlogo.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_qs_wifi_full_3_b.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ic_qs_wifi_full_3_b.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\clear.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\clear.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ktv_zone_fans_follow_bg_normal.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\ktv_zone_fans_follow_bg_normal.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\juy.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\juy.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\jwo.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\jwo.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\settings.png",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\mipmap-xhdpi-v4\\settings.png"
+    }
+]

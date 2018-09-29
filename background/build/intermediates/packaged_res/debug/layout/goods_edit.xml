@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <com.tcn.uicommon.titlebar.Titlebar
+        android:id="@+id/goods_manage_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+    </com.tcn.uicommon.titlebar.Titlebar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10px"
+                >
+                <ImageView
+                    android:id="@+id/goods_image"
+                    android:layout_width="200px"
+                    android:layout_height="200px" />
+
+                <Button
+                    android:id="@+id/goods_btn_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector"
+                    style="@style/menubutton"
+                    android:gravity="center"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:text="@string/pics"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_name"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"/>
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_code"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_price"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"
+                    android:clickable="false"/>
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_type"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_stock"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"
+                    android:clickable="false"/>
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_status"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/goods_introduce"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/goods_btn_slotno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_selector"
+                style="@style/menubutton"
+                android:layout_gravity="left"
+                android:layout_marginLeft="80px"
+                android:layout_marginTop="30px"
+                android:visibility="gone"
+                android:text="@string/slot_info_modify_slot_info"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

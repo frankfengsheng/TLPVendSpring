@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\xml\\debug_preferences.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\xml\\debug_preferences.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\xml\\serial_port_preferences.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\xml\\serial_port_preferences.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\background\\build\\intermediates\\res\\merged\\debug\\xml\\number_input.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\background\\src\\main\\res\\xml\\number_input.xml"
+    }
+]

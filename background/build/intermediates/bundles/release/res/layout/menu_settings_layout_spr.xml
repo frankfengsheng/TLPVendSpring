@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+
+    <com.tcn.uicommon.titlebar.Titlebar
+        android:id="@+id/menu_setttings_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bk_layout_height"
+        >
+
+    </com.tcn.uicommon.titlebar.Titlebar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_setttings_titlebar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonSwitch
+                    android:id="@+id/menu_spr_light_check"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginson">
+
+                </com.tcn.uicommon.button.ButtonSwitch>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_query_slot"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_query_fault"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_clear_fault"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_self_check"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_reset"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_heat_cool"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_temp"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_glass_heat_enable"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_glass_heat_disable"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_open_led"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_close_led"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_buzzer_open"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_buzzer_close"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_slot_spring"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_slot_belts"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_slot_spring_all"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_slot_belts_all"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_single_slot"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_double_slot"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bk_layout_height"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_set_single_slot_all"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+
+                <com.tcn.uicommon.button.ButtonEditSelectD
+                    android:id="@+id/menu_spr_test_mode"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/bk_layout_height"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEditSelectD>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

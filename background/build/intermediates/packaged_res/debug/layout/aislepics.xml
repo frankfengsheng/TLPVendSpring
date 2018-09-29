@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background" >
+    
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/mmtitle_bg"
+          android:text="@string/pics"
+          android:textSize="@dimen/aisle_tk_tz"
+          android:textColor="@color/text_color"
+          android:padding="5px"
+          android:gravity="center"
+          />
+          
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/aisle_mlr"
+        android:layout_marginRight="@dimen/aisle_mlr"
+        >
+              <EditText
+		                android:id="@+id/search"
+		                style="@style/aisle_edittext"
+		                android:layout_width="match_parent"
+		                android:layout_height="@dimen/aisle_edt_height"
+		                android:singleLine="true"
+		                android:textColor="@color/text_color_dialog_title"
+		               />
+              
+              <Button
+                  android:id="@+id/search_btn"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/search_selector"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignBottom="@+id/search"
+                  android:onClick="search"
+                  android:textColor="@color/whitesmoke"
+                  />
+        
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/pics_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginLeft="@dimen/aisle_grd_lrm"
+        android:layout_marginRight="@dimen/aisle_grd_lrm"
+        android:layout_marginTop="@dimen/aisle_grd_mtop"
+        android:layout_weight="4"
+        android:horizontalSpacing="20px"
+        android:numColumns="3"
+        android:verticalSpacing="20px" >
+    </GridView>
+     
+    <LinearLayout
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:orientation="horizontal"
+        android:gravity="center" >
+              <LinearLayout
+        		android:layout_weight="1"
+        		android:layout_width="0px"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+        		android:gravity="center"
+         		> 
+    			<Button 
+        			android:id="@+id/pics_confirm"
+        			style="@style/menu_button"
+        			android:text="@string/backgroound_ensureof"
+        			android:background="@drawable/btn_selector"
+        		/>
+    		</LinearLayout>
+    		<LinearLayout
+        		android:layout_weight="1"
+        		android:layout_width="0px"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+        		android:gravity="center" > 
+    			<Button 
+        			android:id="@+id/pics_back"
+        			style="@style/menu_button"
+        			android:text="@string/back"
+        			android:background="@drawable/btn_selector"
+        		/>
+    	    </LinearLayout>
+     </LinearLayout>  
+
+</LinearLayout>

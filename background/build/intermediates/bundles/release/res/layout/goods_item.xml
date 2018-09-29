@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/item_goods_img"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:src="@mipmap/default_ticket_poster_pic"
+        />
+
+    <TextView
+        android:id="@+id/item_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/goods_item_price"
+        android:background="@drawable/right_circle"
+        android:textColor="@color/whitesmoke"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+</LinearLayout>

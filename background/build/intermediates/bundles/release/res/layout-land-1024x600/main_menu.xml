@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+       >
+   
+     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/mmtitle_bg"
+        >
+        
+          <Button
+            android:id="@+id/btn_back"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="10px"
+            android:text="@string/back"
+            style="@style/menubutton" />
+         
+    <TextView
+            android:text="@string/menu"
+             style="@style/menutop"
+             />
+    
+    <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="10px"
+            android:text="@string/exit"
+           style="@style/menubutton" />
+    
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10px"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@color/main_background"
+            >
+
+        <GridView
+            android:id="@+id/menu_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00000000"
+            android:numColumns="3"
+            android:layout_margin="30px"
+            android:verticalSpacing="50px" >
+        </GridView>
+        
+    </RelativeLayout>
+    
+   <!--<RelativeLayout
+            android:layout_weight="0.5"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:gravity="center"
+            android:id="@+id/btn_relative"
+             >
+
+            <Button
+                android:id="@+id/page1"
+                style="@style/menu_page_button"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/page2"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page1"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/page3"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page2"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/page4"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page3"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/page5"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page4"
+                android:text="@string/five" />
+            
+              <Button
+                android:id="@+id/page6"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page5"
+                android:text="@string/six" />
+              <Button
+                android:id="@+id/page7"
+                style="@style/menu_page_button"
+                android:layout_marginLeft="5px"
+                android:layout_toRightOf="@+id/page6"
+                android:text="@string/seven" />
+        </RelativeLayout>  --> 
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" 
+    >
+
+    <com.tcn.uicommon.titlebar.Titlebar
+        android:id="@+id/menu_func_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        >
+
+    </com.tcn.uicommon.titlebar.Titlebar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/lrmarginson2"
+            android:orientation="vertical" >
+
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/func_ship_fail_count_lock"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginBottom="10px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/func_app_vend_enable"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/func_show_by_goods_code"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <LinearLayout
+                android:id="@+id/func_show_by_goods_code_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson3"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/func_card_key_set"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                style="@style/lrmarginss"
+                android:visibility="gone">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/func_close_delay_set"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                style="@style/lrmarginss"
+                android:visibility="gone">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+            <Button
+                android:id="@+id/func_coin_prestorage"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20px"
+                android:layout_height="80px"
+                style="@style/lrmarginss"
+                android:visibility="gone">
+
+            </Button>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson1"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/func_confirm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector"
+                    android:paddingBottom="10px"
+                    android:paddingTop="10px"
+                    android:text="@string/backgroound_ensureof"
+                    style="@style/menubutton"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

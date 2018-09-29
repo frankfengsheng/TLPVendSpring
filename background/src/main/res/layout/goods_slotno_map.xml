@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@mipmap/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        >
+        <TextView
+            android:id="@+id/goods_slotno_map_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/goods_slotno_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            style="@style/menubutton"
+            android:text="@string/backgroound_ensure"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/goods_slotno_map_tips"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:text="@string/slot_info_modify_tips_map_tips"/>
+
+    <GridView
+        android:id="@+id/goods_slotno_map_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:verticalSpacing="50px"
+        android:horizontalSpacing="20px"
+        android:numColumns="5"
+        android:layout_gravity="center"
+        android:gravity="center">
+    </GridView>
+
+</LinearLayout>

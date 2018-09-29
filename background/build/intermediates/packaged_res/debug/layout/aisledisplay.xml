@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background" >
+    
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@drawable/mmtitle_bg"
+        >
+        
+          <Button
+            android:id="@+id/aisledisplay_back"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:text="@string/back"
+            android:textColor="@color/text_color"
+            style="@style/menubutton" />
+         
+        <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/aislemanage"
+            android:textColor="@color/text_color"
+            style="@style/menutop"
+             />
+
+        <Button
+            android:id="@+id/aisle_display_add_show_slotno"
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10px"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:text="@string/aisle_add_need_number"
+            android:textColor="@color/text_color"
+            style="@style/menubutton"
+            android:onClick="add"
+            />
+
+    </RelativeLayout>
+    
+      <LinearLayout
+           android:id="@+id/loadlinear"
+			 android:layout_width="fill_parent"
+			 android:layout_height="fill_parent"
+			 android:orientation="vertical"
+			 android:gravity="center"
+			 android:visibility="gone" 
+          >
+          <ImageView
+              android:id="@+id/loadimg"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/fm_play_page_playing_loading"
+              />
+          <TextView
+               android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/ui_loading"
+              android:textSize="30sp"
+              android:layout_marginTop="20px"
+              android:textColor="@color/text_color_blue"
+              />
+      </LinearLayout>
+      
+      <RelativeLayout
+        android:id="@+id/vplinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/displayvp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" 
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10px"
+            android:paddingBottom="50px"
+            >
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+            >
+            <Button
+                android:id="@+id/prepage"
+                style="@style/menu_button"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/playupselector"
+                android:onClick="prepage"
+                 />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+            >
+            <TextView
+                 android:id="@+id/nowpage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/text_color_blue"
+                 android:text="1"
+                 android:textSize="30sp"
+                />
+            
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/black"
+                 android:text="/"
+                 android:textSize="30sp"
+                />
+             <TextView
+                 android:id="@+id/allpage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/black"
+                 android:text="10"
+                 android:textSize="30sp"
+                />
+            </LinearLayout>
+           <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+            >
+            <Button
+                android:id="@+id/nextpage"
+                style="@style/menu_button"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:background="@drawable/playdownselector"
+                android:onClick="nextpage"
+              />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
