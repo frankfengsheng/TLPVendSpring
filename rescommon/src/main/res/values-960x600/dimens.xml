@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="function_bar_margin_small">75px</dimen>
+    <dimen name="function_bar_w_small">180px</dimen>
+    <dimen name="function_bar_h_small">60px</dimen>
+
+
+    <dimen name="loading_goods_text_size">34sp</dimen>
+
+    <!-- Default title bar info margins and text size-->
+    <dimen name="title_bar_text_size">16sp</dimen>
+    <dimen name="title_bar_balance_margin">210px</dimen>
+    <dimen name="title_bar_temperature_margin">292px</dimen>
+    <dimen name="title_bar_time_margin">45px</dimen>
+    <dimen name="title_bar_signal_w_h">45px</dimen>
+
+    <dimen name="btn_layout_lrmargin_left">80dp</dimen>
+    <dimen name="btn_layout_lrmargin_right">80dp</dimen>
+
+    <dimen name="btn_edit_name_text_size">26sp</dimen>
+    <dimen name="btn_edit_select_text_size">25sp</dimen>
+    <dimen name="btn_edit_query_text_size">20sp</dimen>
+    <dimen name="btn_edit_display_text_size">20sp</dimen>
+    <dimen name="btn_edit_text_size">22sp</dimen>
+
+    <dimen name="btn_bkg_mg_tz">20sp</dimen>
+    <dimen name="btn_bkg_menu_tz">25sp</dimen>
+    <dimen name="btn_bkg_menu_tz_20">20sp</dimen>
+    <dimen name="tv_bkg_menu_tz">30sp</dimen>
+    <dimen name="main_menu_grid_mtop">100px</dimen>
+    <dimen name="main_menu_vspan">50px</dimen>
+    <dimen name="main_menu_item_img">150px</dimen>
+    <dimen name="main_menu_item_tv_mtop">20px</dimen>
+    <dimen name="main_menu_item_tz">26sp</dimen>
+
+    <dimen name="aisle_text_tz">30sp</dimen>
+    <dimen name="aisle_edit_text_tz">25sp</dimen>
+
+    <dimen name="bk_error_tz">20sp</dimen>
+
+    <dimen name="lrmarginson3">120px</dimen>
+    <dimen name="lrmarginson">40px</dimen>
+    <dimen name="lrmarginss">10px</dimen>
+    <dimen name="lrmarginson1">80px</dimen>
+    <dimen name="lrmarginson2">80px</dimen>
+
+    <dimen name="keyboard_enter">50sp</dimen>
+    <dimen name="keyboard_input">70sp</dimen>
+
+    <dimen name="bk_layout_height">100px</dimen>
+
+    <dimen name="aisle_tk_tz">25sp</dimen>
+    <dimen name="aisle_mlr">80px</dimen>
+    <dimen name="aisle_edt_height">54px</dimen>
+    <dimen name="aisle_grd_lrm">20px</dimen>
+    <dimen name="aisle_grd_mtop">50px</dimen>
+
+    <dimen name="goods_item_price">14sp</dimen>
+
+    <dimen name="btn_batch_25">25sp</dimen>
+    <dimen name="btn_batch_20">20sp</dimen>
+
+    <dimen name="layout_px_50">40px</dimen>
+
+    <dimen name="bk_tz_26">26sp</dimen>
+</resources>

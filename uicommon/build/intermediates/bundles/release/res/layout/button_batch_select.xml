@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/btn_batch_select_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/btn_batch_25"
+        android:gravity="right"
+        android:layout_marginBottom="5px"/>
+
+    <EditText
+        android:id="@+id/btn_batch_select_edit"
+        android:layout_width="150px"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_batch_25"
+        android:gravity="center"
+        android:padding="5px"
+        android:layout_marginLeft="10px"
+        android:textColorHighlight="@color/text_background"
+        android:background="@drawable/circlebuttonstyle"
+        android:layout_toRightOf="@id/btn_batch_select_name"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_batch_select_name"
+        android:orientation="horizontal"
+        android:layout_marginTop="5px"
+        android:background="@drawable/circlebuttonstyle">
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5px"
+            >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/btn_batch_select_text_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5px"
+                    android:textColor="@color/text_color_dialog_title"
+                    android:textSize="@dimen/btn_batch_20"
+                    android:text="@string/slot_info_modify_slot_start_no"/>
+
+                <EditText
+                    android:id="@+id/btn_batch_input_start"
+                    style="@style/aisle_edittext"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_dialog_title"
+                    android:layout_marginBottom="5px"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5px"
+                android:gravity="center"
+                android:text="——"
+                android:layout_gravity="bottom"
+                android:textColor="@color/text_color_dialog_title"
+                android:textSize="@dimen/btn_batch_20" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/btn_batch_select_text_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5px"
+                    android:textColor="@color/text_color_dialog_title"
+                    android:textSize="@dimen/btn_batch_20"
+                    android:text="@string/slot_info_modify_slot_end_no"/>
+
+                <EditText
+                    android:id="@+id/btn_batch_input_end"
+                    style="@style/aisle_edittext"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_marginBottom="5px"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_batch_btn_left"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:text="@string/menu_save"/>
+
+        <Button
+            android:id="@+id/btn_batch_btn_right"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:text="@string/slot_info_modify_select"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

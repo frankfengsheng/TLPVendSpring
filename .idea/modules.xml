@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VendSpring.iml" filepath="$PROJECT_DIR$/VendSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/background/background.iml" filepath="$PROJECT_DIR$/background/background.iml" />
+      <module fileurl="file://$PROJECT_DIR$/funcommon/funcommon.iml" filepath="$PROJECT_DIR$/funcommon/funcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rescommon/rescommon.iml" filepath="$PROJECT_DIR$/rescommon/rescommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uicommon/uicommon.iml" filepath="$PROJECT_DIR$/uicommon/uicommon.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="E:\AndroidWorkspace\VendSpring\uicommon\src\main\res"/><source path="E:\AndroidWorkspace\VendSpring\uicommon\build\generated\res\rs\release"/><source path="E:\AndroidWorkspace\VendSpring\uicommon\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="E:\AndroidWorkspace\VendSpring\uicommon\src\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="E:\AndroidWorkspace\VendSpring\uicommon\src\main\res"><file name="button_batch_select" path="E:\AndroidWorkspace\VendSpring\uicommon\src\main\res\layout\button_batch_select.xml" qualifiers="" type="layout"/><file path="E:\AndroidWorkspace\VendSpring\uicommon\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="TcnLayout">
+        <attr name="orientation"/>
+        <attr format="reference" name="tcn_icon"/>
+        <attr format="string" name="text"/>
+        <attr format="dimension" name="tcn_text_size"/>
+        <attr format="integer" name="tcn_text_color"/>
+        <attr format="dimension" name="tcn_space"/>
+    </declare-styleable><attr name="orientation">
+        <enum name="horizontal" value="0"/>
+        <enum name="vertical" value="1"/>
+    </attr></file></source><source path="E:\AndroidWorkspace\VendSpring\uicommon\build\generated\res\rs\release"/><source path="E:\AndroidWorkspace\VendSpring\uicommon\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="E:\AndroidWorkspace\VendSpring\uicommon\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="TcnLayout"><attr name="orientation"/><attr format="reference" name="tcn_icon"/><attr format="string" name="text"/><attr format="dimension" name="tcn_text_size"/><attr format="integer" name="tcn_text_color"/><attr format="dimension" name="tcn_space"/></declare-styleable></configuration></mergedItems></merger>

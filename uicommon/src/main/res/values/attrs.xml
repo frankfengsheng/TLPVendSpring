@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="orientation">
+        <enum name="horizontal"     value="0" />
+        <enum name="vertical"    value="1" />
+    </attr>
+    
+    <declare-styleable name="TcnLayout">
+        <attr name="orientation"></attr>
+        <attr name="tcn_icon"         format="reference" />
+        <attr name="text"         format="string" />
+        <attr name="tcn_text_size"     format="dimension" />
+        <attr name="tcn_text_color"    format="integer" />
+        <attr name="tcn_space"         format="dimension" />
+    </declare-styleable> 
+</resources>

@@ -1,0 +1,1 @@
+include ':app', ':rescommon', ':uicommon', ':funcommon', ':background'
