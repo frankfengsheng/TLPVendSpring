@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+        config {
+
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '28.0.2'
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile files('libs/eventbus-2.4.0.jar')
+    compile files('libs/fastjson-1.1.26.jar')
+    compile files('libs/microlog4android-1.0.0.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/core.jar')
+    compile files('libs/commons-net-3.3.jar')
+    compile project(':rescommon')
+    //retrofit+RxJava依赖包
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.1'
+
+
+
+}

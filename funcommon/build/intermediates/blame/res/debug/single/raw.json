@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\debug\\raw\\take.wav",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\src\\main\\res\\raw\\take.wav"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\debug\\raw\\welcom.wav",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\src\\main\\res\\raw\\welcom.wav"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\debug\\raw\\sonic.wav",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\src\\main\\res\\raw\\sonic.wav"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\debug\\raw\\shuidi.wav",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\src\\main\\res\\raw\\shuidi.wav"
+    }
+]
