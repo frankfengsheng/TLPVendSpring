@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <com.tcn.uicommon.titlebar.Titlebar
+        android:id="@+id/goods_replsh_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        >
+    </com.tcn.uicommon.titlebar.Titlebar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10px"
+        >
+        <ImageView
+            android:id="@+id/goods_replsh"
+            android:layout_width="200px"
+            android:layout_height="200px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5px"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/goods_repl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/goods_repl_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/goods_repl_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/goods_btn_replsh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            style="@style/menubutton"
+            android:gravity="center"
+            android:layout_marginRight="20px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:text="@string/menu_replishment_select_goods"/>
+    </LinearLayout>
+
+    <com.tcn.uicommon.button.ButtonBatchSelect
+        android:id="@+id/goods_modify_replsh"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        style="@style/lrmarginss"
+        android:layout_marginTop="10px">
+
+    </com.tcn.uicommon.button.ButtonBatchSelect>
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="20px"
+        android:id="@+id/goods_replsh_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20px"
+        >
+
+        <Button
+            android:id="@+id/goods_replsh_prepage"
+            style="@style/menu_button"
+            android:background="@drawable/playupselector"
+            android:onClick="goods_prepage"
+            />
+
+        <TextView
+            android:id="@+id/goods_replsh_page_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="1/5"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/goods_replsh_nextpage"
+            style="@style/menu_button"
+            android:background="@drawable/playupselector"
+            android:onClick="goods_nextpage"
+            />
+    </LinearLayout>
+
+</LinearLayout>

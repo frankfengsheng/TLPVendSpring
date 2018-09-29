@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/mmtitle_bg" >
+
+        <Button
+            android:id="@+id/pay_back"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:background="@drawable/weixin_selector_btn_back"
+            android:padding="10px"
+            android:text="@string/back"
+            style="@style/menubutton"/>
+
+        <TextView
+            style="@style/menutop"
+            android:text="@string/pay"
+            />
+        <Button
+            android:id="@+id/pay_confirm"
+            style="@style/menubutton"
+            android:layout_width="100px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="@drawable/btn_selector"
+            android:padding="10px"
+            android:text="@string/backgroound_ensureof"
+     />
+
+    </RelativeLayout>
+
+    <ScrollView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+        >
+    
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+        >
+    
+            <LinearLayout
+                android:layout_marginTop="10px"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     style="@style/lrmargin"
+                     >
+
+                    <TextView
+                        style="@style/aisle_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/cashpay"
+                        android:drawablePadding="10px"
+                        android:drawableLeft="@mipmap/app_fund"
+                         />
+
+                    <com.tcn.uicommon.view.MySlipSwitch
+                        android:id="@+id/cashpay_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+                
+               <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     style="@style/lrmarginson"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/aisle_text"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/pospay"
+                        android:drawablePadding="10px"
+                         android:drawableLeft="@mipmap/app_creditcard" />
+
+                    <com.tcn.uicommon.view.MySlipSwitch
+                        android:id="@+id/pospay_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/pay_pos_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/lrmargin"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/pay_macht_id_txt"
+                            style="@style/aisle_text"
+                            android:text="@string/pos_merchant_number" />
+
+                        <EditText
+                            android:id="@+id/pay_macht_id_edit"
+                            style="@style/aisle_edittext"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/lrmargin"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/pay_term_id_txt"
+                            style="@style/aisle_text"
+                            android:text="@string/pos_term_id" />
+
+                        <EditText
+                            android:id="@+id/pay_term_id_edit"
+                            style="@style/aisle_edittext"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/lrmargin"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/pay_auth_sn_txt"
+                            style="@style/aisle_text"
+                            android:text="@string/pos_ciphertext" />
+
+                        <EditText
+                            android:id="@+id/pay_auth_sn_edit"
+                            style="@style/aisle_edittext"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    >
+
+                    <Button
+                        android:id="@+id/ic_card_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/btn_menu_close_pressed"
+                        android:layout_marginLeft="40px"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible"
+                        />
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        style="@style/lrmargin"
+                        >
+
+                        <TextView
+                            style="@style/aisle_text"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/ic_card_pay"
+                            android:drawablePadding="10px"
+                            android:drawableLeft="@mipmap/ic_card" />
+
+                        <com.tcn.uicommon.view.MySlipSwitch
+                            android:id="@+id/ic_card_pay_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ic_card_pay_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/lrmarginson3"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    >
+
+                    <Button
+                        android:id="@+id/pay_ecommerce_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/btn_menu_close_pressed"
+                        android:layout_marginLeft="40px"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible"
+                        />
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        style="@style/lrmargin"
+                        >
+
+                        <TextView
+                            style="@style/aisle_text"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/pay_ecommerce"
+                            android:drawablePadding="10px"
+                            android:drawableLeft="@mipmap/ecommerce" />
+
+                        <com.tcn.uicommon.view.MySlipSwitch
+                            android:id="@+id/pay_ecommerce_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/pay_ecommerce_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/lrmarginson3"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/pay_wx_relative_layout"
+                     android:layout_width="fill_parent"
+	                 android:layout_height="wrap_content"
+	                 android:layout_marginTop="40px"
+                    >
+                    
+                    <Button
+                        android:id="@+id/wx_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/btn_menu_close_pressed"
+                        android:layout_marginLeft="40px"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible"
+                        />
+		                <RelativeLayout
+		                    android:layout_width="fill_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_centerVertical="true"
+		                    style="@style/lrmargin"
+		                    >
+		
+		                    <TextView
+		                        style="@style/aisle_text"
+		                        android:layout_alignParentLeft="true"
+		                        android:text="@string/weixinpay"
+		                        android:drawablePadding="10px"
+		                         android:drawableLeft="@mipmap/wx" />
+		
+		                    <com.tcn.uicommon.view.MySlipSwitch
+		                        android:id="@+id/weixinpay_switch"
+		                        android:layout_width="wrap_content"
+		                        android:layout_height="wrap_content"
+		                        android:layout_alignParentRight="true" />
+		                </RelativeLayout>
+                 </RelativeLayout>
+
+                 <LinearLayout
+                    android:id="@+id/weixinpay_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/lrmarginson3"
+                    android:orientation="vertical" >
+                 </LinearLayout>
+                
+                 <RelativeLayout
+                     android:id="@+id/pay_alipay_relative_layout"
+                     android:layout_width="fill_parent"
+	                 android:layout_height="wrap_content"
+	                  android:layout_marginTop="40px"
+                    >
+                    
+                    <Button
+                        android:id="@+id/ali_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/btn_menu_close_pressed"
+                        android:layout_marginLeft="40px"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible"
+                        />
+                    
+	                <RelativeLayout
+	                    android:id="@+id/ali"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_centerVertical="true"
+	                    style="@style/lrmargin"
+	                    >
+	
+	                    <TextView
+	                        android:id="@+id/ali_txt"
+	                        style="@style/aisle_text"
+	                        android:layout_alignParentLeft="true"
+	                        android:text="@string/alipay" 
+	                        android:drawablePadding="10px"
+	                         android:drawableLeft="@mipmap/wifiapp"/>
+	
+	                    <com.tcn.uicommon.view.MySlipSwitch
+	                        android:id="@+id/alipay_switch"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_alignParentRight="true" />
+	                </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/alipay_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/lrmarginson3"
+                    android:orientation="vertical" >
+                </LinearLayout>
+        
+            </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            >
+
+            <Button
+                android:id="@+id/pay_machqrcode_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_menu_close_pressed"
+                android:layout_marginLeft="40px"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                style="@style/lrmargin"
+                >
+
+                <TextView
+                    style="@style/aisle_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/pay_machqrcode" />
+
+                <com.tcn.uicommon.view.MySlipSwitch
+                    android:id="@+id/pay_machqrcode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_machqrcode_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/lrmarginson3"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <com.tcn.uicommon.button.ButtonSwitch
+            android:id="@+id/pay_jingdong_switch"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            style="@style/lrmarginss"
+            android:layout_marginTop="40px">
+
+        </com.tcn.uicommon.button.ButtonSwitch>
+
+        <com.tcn.uicommon.button.ButtonSwitch
+            android:id="@+id/pay_passive_scan_switch"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            style="@style/lrmarginss"
+            android:layout_marginBottom="10px">
+
+        </com.tcn.uicommon.button.ButtonSwitch>
+
+        <com.tcn.uicommon.button.ButtonSwitch
+            android:id="@+id/info_union_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            style="@style/lrmarginss">
+
+        </com.tcn.uicommon.button.ButtonSwitch>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_mid"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_tid"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_instMid"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_msgSrc"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_systemId"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+        <com.tcn.uicommon.button.ButtonEdit
+            android:id="@+id/info_union_key"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginBottom="10px"
+            style="@style/lrmarginss"
+            android:layout_marginLeft="100px">
+
+        </com.tcn.uicommon.button.ButtonEdit>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+
+        </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>

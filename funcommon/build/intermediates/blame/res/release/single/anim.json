@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\flip_horizontal_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\flip_horizontal_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\myim.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\myim.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\appear_top_left_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\appear_top_left_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\drawroll_ani_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\drawroll_ani_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\alpha_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\alpha_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\drawroll_ani_out.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\drawroll_ani_out.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\appear_bottom_right_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\appear_bottom_right_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\push_righ_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\push_righ_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\out_translate_top.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\out_translate_top.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\push_left_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\push_left_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\fade_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\alpha_scale_rotate.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\alpha_scale_rotate.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\anim_pay.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\anim_pay.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\mi_laucher_scale_out.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\mi_laucher_scale_out.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\welcome.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\welcome.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\in_translate_top.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\in_translate_top.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\unzoom_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\unzoom_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\mi_laucher_scale_in.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\mi_laucher_scale_in.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\imganim.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\imganim.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\flip_horizontal_out.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\flip_horizontal_out.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\timechange.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\timechange.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\res\\merged\\release\\anim\\push_left_out.xml",
+        "source": "E:\\AndroidWorkspace\\VendSpring\\funcommon\\build\\intermediates\\exploded-aar\\VendSpring\\rescommon\\unspecified\\res\\anim\\push_left_out.xml"
+    }
+]

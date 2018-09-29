@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+
+    <com.tcn.uicommon.titlebar.Titlebar
+        android:id="@+id/menu_setttings_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        >
+
+    </com.tcn.uicommon.titlebar.Titlebar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_drop_sensor_whole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_setttings_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_enable_bill_escrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_enable_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_give_change_direct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_glass_demist_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_no_sale_give_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_app_vend_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_record_full_closing_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_low_change_disable_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_with_coffee_vend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_show_option_for_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_no_donate_item_stop_or_not"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_pay_out_bill_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_pay_by_remote_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_alarm_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_power_off_on_warn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonSwitch
+                android:id="@+id/menu_light_off_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lrmarginson">
+
+            </com.tcn.uicommon.button.ButtonSwitch>
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/menu_temperature_first"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginBottom="10px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/menu_temperature_second"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginBottom="10px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/menu_heat_cool_first"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginBottom="10px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+            <com.tcn.uicommon.button.ButtonEdit
+                android:id="@+id/menu_heat_cool_second"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginBottom="10px"
+                style="@style/lrmarginss">
+
+            </com.tcn.uicommon.button.ButtonEdit>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_clear_fault"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_pre_coin"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_bill_type_enable_all"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_bill_type_disable_all"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_coin_type_enable_all"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+
+                <com.tcn.uicommon.button.ButtonEdit
+                    android:id="@+id/menu_coin_type_disable_all"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_weight="1"
+                    style="@style/lrmarginss">
+
+                </com.tcn.uicommon.button.ButtonEdit>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
