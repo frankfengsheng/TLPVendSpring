@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.v4.app.ActivityCompat;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.animation.Animation;
@@ -237,10 +236,7 @@ public class UICommon {
         }
     }
 
-    public void reqPermission(Activity activity,String permissions)
-    {
-        ActivityCompat.requestPermissions(activity,TcnVendIF.getInstance().getPermission(permissions),126);
-    }
+
 
     public void setSurfaceViewAdvertVideo(SurfaceView surfaceView) {
         if (null == surfaceView) {

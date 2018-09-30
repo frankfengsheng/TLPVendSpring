@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -12,9 +11,6 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Toast;
-
-import com.tcn.background.Entity.TLPLoginBean;
-import com.tcn.background.TLPAisleDisplayActivity;
 import com.tcn.background.controller.UIComBack;
 import com.tcn.funcommon.TcnCommon;
 import com.tcn.funcommon.TcnConstant;
@@ -27,12 +23,15 @@ import com.tcn.funcommon.media.ImageController;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.funcommon.vend.controller.VendEventInfo;
 import com.tcn.vendspring.MainAct;
-import com.tcn.vendspring.MyAplication;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.bean.TLPGoodsInfoBean;
+import com.tcn.vendspring.netUtil.RetrofitClient;
+import com.tcn.vendspring.netUtil.TLPApiServices;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -253,10 +252,7 @@ public class TlpUICommon {
         }
     }
 
-    public void reqPermission(Activity activity,String permissions)
-    {
-        ActivityCompat.requestPermissions(activity,TcnVendIF.getInstance().getPermission(permissions),126);
-    }
+
 
     public void setSurfaceViewAdvertVideo(SurfaceView surfaceView) {
         if (null == surfaceView) {
@@ -662,19 +658,17 @@ public class TlpUICommon {
         return mNameList;
     }
 
-    public interface RxGetGoodsInfoService{
-        @FormUrlEncoded
-        @POST("api/User/login")
-        Call<TLPGoodsInfoBean> getgoods( @Field("machine_code")String machine_code);
-    }
-
+    /**
+     * 获取设备端展示商品
+     * @param context
+     * @return
+     */
     public TLPGoodsInfoBean GetGoodsInfo(final Context context){
-        Retrofit retrofit = new Retrofit.Builder() .baseUrl("http://app.51mengshou.com/").
-                addConverterFactory(GsonConverterFactory.create())
-                .client(new OkHttpClient())
-                .build();
-        RxGetGoodsInfoService loginInfoPost=retrofit.create(RxGetGoodsInfoService.class);
-        Call<TLPGoodsInfoBean> call=loginInfoPost.getgoods("10020030011");
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        Call<TLPGoodsInfoBean> call=loginInfoPost.getgoods(map);
         call.enqueue(new Callback<TLPGoodsInfoBean>() {
             @Override
             public void onResponse(Call<TLPGoodsInfoBean> call, Response<TLPGoodsInfoBean> response) {
