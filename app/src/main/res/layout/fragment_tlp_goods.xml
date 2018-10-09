@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.tlp.vendspring.fragment.TlpBannerFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="19"
+        android:gravity="center"
+        android:background="@color/black">
+        <com.tcn.uicommon.recycleview.PageRecyclerView
+            android:id="@+id/tlp_rcy_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/select_page_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/select_pre"
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:text="@string/ui_page_pre"
+            android:textSize="14sp"
+            android:background="@drawable/button_circle_style"/>
+
+        <TextView
+            android:id="@+id/select_page"
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/select_next"
+            android:layout_width="70px"
+            android:layout_height="40px"
+            android:text="@string/ui_page_next"
+            android:textSize="14sp"
+            android:background="@drawable/button_circle_style"/>
+    </LinearLayout>
+</LinearLayout>

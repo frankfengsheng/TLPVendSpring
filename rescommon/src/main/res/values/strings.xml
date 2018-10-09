@@ -755,4 +755,5 @@
     <string name="card_has_req_consum">已刷卡</string>
     <string name="tlp_pay_by_wechat">请用微信支付</string>
     <string name="tlp_pay_no_back">支付时请不要返回</string>
+    <string name="tlp_equipment_number">设备号</string>
 </resources>

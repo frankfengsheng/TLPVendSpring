@@ -52,6 +52,7 @@ import com.tcn.vendspring.keyboard.FragmentVerify;
 import com.tcn.vendspring.pay.DialogPay;
 import com.tcn.vendspring.pay.TlpDialogPay;
 import com.tcn.vendspring.shopping.FragmentSelection;
+import com.tlp.vendspring.TLPMainActivity;
 
 import controller.TlpUICommon;
 import controller.UICommon;
@@ -78,26 +79,20 @@ public class MainAct extends TcnMainActivity {
 	private LinearLayout m_function_bar_layout = null;
 	private TextView m_main_machine_id = null;
 	private ImageView main_signal = null;
-
 	private SurfaceView m_surface_advert_video;
 	private SurfaceView m_surface_advert_image;
 	private SurfaceView m_surface_standby_video = null;
 	private SurfaceView m_surface_standby_image = null;
-
 	private TextSurfaceView m_TextSurfaceView = null;
-
 	private FragmentManager m_fragmentManager;
 	private FragmentSelection m_fragmentSelection;
 	private FragmentVerify m_fragmentVerify;
-
 	private Button m_ButtonShopp = null;
 	private Button m_ButtonKeyboard = null;
 	private Button m_ButtonHelp = null;
 	private Button m_ButtonLogin=null;//自修改增加一个暂时登录按钮。
-
 	private RelativeLayout m_click_buy_layout = null;
 	private TextView m_image_click_buy = null;
-
 	private OutDialog m_OutDialog = null;
 	private LoadingDialog m_LoadingDialog = null;
 	private TlpDialogPay m_DialogPay = null;
@@ -106,15 +101,12 @@ public class MainAct extends TcnMainActivity {
 	private ShopSuccessDialog m_shopSuccessDialog;
 	private UsbProgressDialog m_upProgress;
 
-
 	@SuppressLint({ "NewApi", "CommitTransaction" })
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		TcnVendIF.getInstance().LoggerDebug(TAG, "onCreate() start");
-
 		initCreatView();
-
 		TcnVendIF.getInstance().registerListener(m_vendListener);
 		if (TcnVendIF.getInstance().isServiceRunning()){
 			TcnVendIF.getInstance().LoggerDebug(TAG, "onCreate() isServiceRunning");
@@ -130,13 +122,11 @@ public class MainAct extends TcnMainActivity {
 		TcnVendIF.getInstance().registerListener(m_vendListener);
 		m_bHasData = false;
 		initView();
-
 		TcnVendIF.getInstance().queryImagePathList();
 		initTitleBar();
 		initShowBitmap();
 		initTextAd();
 		m_listData_count = 0;
-
 		m_listData_count = TcnVendIF.getInstance().getAliveCoilCount();
 		if((TcnVendIF.getInstance().getAliveCoil() != null) && (m_listData_count > 0) && (!TcnVendIF.getInstance().getAliveCoil().isEmpty())) {
 			m_handler.removeMessages(ALIVE_COIL_GOODS);
@@ -340,10 +330,10 @@ public class MainAct extends TcnMainActivity {
 	}
 
 	private void initCreatView() {
+
 		UICommon.getInstance().setContentViewMainActivity(MainAct.this);
 		UIComBack.getInstance().setContext(getApplication());
 		UICommon.getInstance().setApplication((VendApplication) getApplication());
-
 		TcnVendIF.getInstance().hideSystemBar();
 		TcnShareUseData.getInstance().setMainActivityCreated(true);
 
@@ -356,39 +346,29 @@ public class MainAct extends TcnMainActivity {
 		main_signal = (ImageView) findViewById(R.id.title_bar_signal);
 
 		/***********************************  Title bar end ***********************************/
-
-
-
 		/***********************************  advert start ***********************************/
 
 		m_surface_advert_video = (SurfaceView) findViewById(R.id.advert_video);
 		UICommon.getInstance().setSurfaceViewAdvertVideo(m_surface_advert_video);
-
 		m_surface_advert_image = (SurfaceView) findViewById(R.id.advert_image);
 		UICommon.getInstance().setSurfaceViewAdvertImage(m_surface_advert_image);
-
 		m_surface_standby_video = (SurfaceView) findViewById(R.id.advert_video_standby);
 		UICommon.getInstance().setSurfaceViewStandbyVideo(m_surface_standby_video);
-
 		m_surface_standby_image = (SurfaceView) findViewById(R.id.advert_image_standby);
 		UICommon.getInstance().setSurfaceViewStandbyImage(m_surface_standby_image);
 
 		/***********************************  advert end ***********************************/
 
-
-
 		m_GoodsLayout = (LinearLayout) findViewById(R.id.main_goods_layout);//这个是下半块区域的总布局
-
 		m_function_bar_layout  = (LinearLayout) findViewById(R.id.main_function_bar_layout);
-
 
 		/***********************************  function start ***********************************/
 
 		m_ButtonShopp = (Button) findViewById(R.id.function_bar_btn_shopp);
+
 		if (m_ButtonShopp != null) {
 			m_ButtonShopp.setOnClickListener(m_ClickListener);
 		}
-
 		m_ButtonKeyboard = (Button) findViewById(R.id.function_bar_btn_keyboard);
 		m_ButtonKeyboard.setOnClickListener(m_ClickListener);
 		
@@ -993,9 +973,11 @@ public class MainAct extends TcnMainActivity {
 				startActivity(intent);*/
 
 			}else  if(R.id.main_text_sfv==id){
-				TlpUICommon.getInstance().GetGoodsInfo(getApplicationContext());
+				/*TlpUICommon.getInstance().GetGoodsInfo(getApplicationContext());
                 Intent intent=new Intent(getApplicationContext(),LoginMenu.class);
-                startActivity(intent);
+                startActivity(intent);*/
+				Intent intent=new Intent(getApplicationContext(), TLPMainActivity.class);
+				startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
 			else {

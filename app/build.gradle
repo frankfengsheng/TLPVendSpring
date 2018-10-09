@@ -16,7 +16,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             android.applicationVariants.all {
-                /*  variant ->
+                    /*  variant ->
                 variant.outputs.each { output ->
                     output.outputFile = new File(output.outputFile.parent, "vendspring" + "-" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk");
                 }
@@ -29,24 +29,27 @@ android {
                             def version = "v${versionName}-${versionCode}"
                             def endIndex = outputFile.name.indexOf('.apk')
                             def apkName = outputFile.name.substring(0, endIndex);
-                           /* def fileName = "${apkName}_${version}_${buildTime()}_${revision()}.apk"
+                            /* def fileName = "${apkName}_${version}_${buildTime()}_${revision()}.apk"
                             //output.outputFile = new File(outputFile.parent, fileName)
                             outputFileName = fileName*/
                         }
                     }
-
             }
-
             debug {
             }
         }
     }
-
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         testCompile 'junit:junit:4.12'
         compile 'com.android.support:appcompat-v7:23.4.0'
         compile 'com.android.support:design:23.4.0'
+        //轮播图
+        compile 'com.youth.banner:banner:1.4.9'
         compile project(':background')
     }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
 }

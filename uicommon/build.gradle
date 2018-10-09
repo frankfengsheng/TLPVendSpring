@@ -36,4 +36,5 @@ dependencies {
     compile files('libs/glide-3.6.1.jar')
     compile project(':rescommon')
     compile files('libs/textlibrary.jar')
+
 }
