@@ -52,7 +52,7 @@ public class ShelfMangerActivity extends Activity implements View.OnClickListene
         btn_shop_onsale.setOnClickListener(this);
         recyclerView= (RecyclerView) findViewById(R.id.ry_shelf_manager);
         recyclerView.addItemDecoration(new RecycleViewDivider(
-                getApplicationContext(), LinearLayoutManager.VERTICAL, 10, getResources().getColor(R.color.text_gray)));
+                getApplicationContext(), LinearLayoutManager.VERTICAL, 2, getResources().getColor(R.color.text_gray)));
 
 
         GetShelfInfo(getApplicationContext());
