@@ -76,7 +76,6 @@ public class FragmentSelection extends Fragment {
 		m_view = inflater.inflate(UICommon.getInstance().getSelectionLayout(), container, false);
 		TcnVendIF.getInstance().LoggerDebug(TAG, "onCreateView()");
 		m_Context = this.getActivity();
-
 		m_RecyclerView = (PageRecyclerView) m_view.findViewById(R.id.vp);
 		if (null == m_RecyclerView) {
 			TcnVendIF.getInstance().LoggerError(TAG, "onCreateView() m_RecyclerView is null");
@@ -604,7 +603,6 @@ public class FragmentSelection extends Fragment {
 		}
 
 	}
-
 	private Handler m_handler = new Handler() {
 
 		@Override

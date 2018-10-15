@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.tcn.background.Entity.TLPLoginBean;
+import com.tcn.background.Entity.MSLoginBean;
 import com.tcn.background.Entity.WeatherEntity;
 
 import okhttp3.OkHttpClient;
@@ -25,7 +25,6 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import rx.Observable;
 
 
 public class TLPAisleDisplayActivity extends Activity implements View.OnClickListener{
@@ -67,7 +66,7 @@ public class TLPAisleDisplayActivity extends Activity implements View.OnClickLis
     public interface RxLoginService{
         @FormUrlEncoded
         @POST("api/User/login")
-        Call<TLPLoginBean> login(@Field("tel") long tel, @Field("pwd")String pwd, @Field("machine_code") String machine_code);
+        Call<MSLoginBean> login(@Field("tel") long tel, @Field("pwd")String pwd, @Field("machine_code") String machine_code);
     }
 
     private void doLogin(){
@@ -77,18 +76,18 @@ public class TLPAisleDisplayActivity extends Activity implements View.OnClickLis
                 .client(new OkHttpClient())
                 .build();
         RxLoginService loginInfoPost=retrofit.create(RxLoginService.class);
-        Call<TLPLoginBean> call=loginInfoPost.login(Long.parseLong(tel),"123123","");
-        call.enqueue(new Callback<TLPLoginBean>() {
+        Call<MSLoginBean> call=loginInfoPost.login(Long.parseLong(tel),"123123","");
+        call.enqueue(new Callback<MSLoginBean>() {
             @Override
-            public void onResponse(Call<TLPLoginBean> call, Response<TLPLoginBean> response) {
-                TLPLoginBean bean=response.body();
+            public void onResponse(Call<MSLoginBean> call, Response<MSLoginBean> response) {
+                MSLoginBean bean=response.body();
                 Toast.makeText(TLPAisleDisplayActivity.this,response.body().toString()+"",Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "response == " + bean.getData().getName());
 
             }
 
             @Override
-            public void onFailure(Call<TLPLoginBean> call, Throwable t) {
+            public void onFailure(Call<MSLoginBean> call, Throwable t) {
                 Log.e("TAG", "Throwable : " + t);
             }
         });

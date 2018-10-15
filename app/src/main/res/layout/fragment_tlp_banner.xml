@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tlp.vendspring.fragment.TlpBannerFragment">
+    tools:context="com.tlp.vendspring.fragment.MSBannerFragment">
 
     <com.youth.banner.Banner
         android:id="@+id/banner"

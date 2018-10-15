@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/item_layout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:gravity="center_vertical"
 	android:background="@color/white">
-
-
-
-
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="15dp">
 	<ImageView
 		android:id="@+id/img"
 		android:layout_width="200px"
 		android:layout_height="200px"
 		android:layout_centerHorizontal="true"
 		android:src="@mipmap/default_ticket_poster_pic"
+		android:scaleType="fitXY"
 		/>
 
 
@@ -44,5 +45,5 @@
 		android:gravity="center"
         android:layout_below="@+id/textname"
 		/>
-
-</RelativeLayout>
+	</RelativeLayout>
+</LinearLayout>

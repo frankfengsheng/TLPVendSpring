@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.tcn.vendspring.R;
-import com.tlp.vendspring.TLPMainActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -19,17 +18,17 @@ import com.youth.banner.loader.ImageLoader;
 import java.util.ArrayList;
 
 
-public class TlpBannerFragment extends Fragment  implements OnBannerListener {
+public class MSBannerFragment extends Fragment  implements OnBannerListener {
     private Banner banner;
     private View contentView;
     private ArrayList<String> list_path;
     private ArrayList<String> list_title;
 
-    public TlpBannerFragment() {
+    public MSBannerFragment() {
         // Required empty public constructor
     }
-    public static TlpBannerFragment newInstance(String param1, String param2) {
-        TlpBannerFragment fragment = new TlpBannerFragment();
+    public static MSBannerFragment newInstance(String param1, String param2) {
+        MSBannerFragment fragment = new MSBannerFragment();
         Bundle args = new Bundle();
 
         return fragment;
@@ -98,4 +97,5 @@ public class TlpBannerFragment extends Fragment  implements OnBannerListener {
             Glide.with(context).load((String) path).into(imageView);
         }
     }
+
 }

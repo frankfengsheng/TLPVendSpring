@@ -43,7 +43,7 @@
     <style name="aisle_edittext1" >
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:background">@drawable/circlebuttonstyle</item>
+        <item name="android:background">@drawable/button_circle_type</item>
         <item name="android:padding">5px</item>
         <item name="android:textColorHint">@color/text_background</item>
         <item name="android:gravity">center</item>
@@ -511,5 +511,9 @@
         <item name="android:textSize">@dimen/keyboard_back_text_size</item>
     </style>
     <!--  。。。。。。。。。。。。。。。。。7寸屏样式 end。。。。。。。。。。。。。。。。。-->
-
+    <style  name="vervial_line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/text_color_gray</item>
+    </style>
 </resources>

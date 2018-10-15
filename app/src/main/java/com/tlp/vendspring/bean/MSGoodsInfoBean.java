@@ -1,8 +1,8 @@
-package com.tcn.vendspring.bean;
+package com.tlp.vendspring.bean;
 
 import java.util.List;
 
-public class TLPGoodsInfoBean {
+public class MSGoodsInfoBean {
 
 
     /**

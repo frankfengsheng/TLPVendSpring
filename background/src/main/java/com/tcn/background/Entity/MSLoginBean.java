@@ -1,6 +1,6 @@
 package com.tcn.background.Entity;
 
-public class TLPLoginBean {
+public class MSLoginBean {
 
 
     /**

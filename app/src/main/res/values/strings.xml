@@ -5,4 +5,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_admin_manger">AdminMangerActivity</string>
+    <string name="title_activity_shelf_manger">ShelfManger</string>
 </resources>

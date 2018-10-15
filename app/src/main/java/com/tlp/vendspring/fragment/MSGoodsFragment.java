@@ -12,44 +12,42 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.tcn.funcommon.TcnConstant;
+import com.tcn.funcommon.db.Goods_info;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
-import com.tcn.uicommon.TcnUtility;
-import com.tcn.uicommon.recycleview.AutoGridLayoutManager;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
 import com.tcn.vendspring.R;
-import com.tcn.vendspring.bean.TLPGoodsInfoBean;
-import com.tcn.vendspring.shopping.FragmentSelection;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
-import com.youth.banner.listener.OnBannerListener;
-import com.youth.banner.loader.ImageLoader;
+import com.tlp.vendspring.bean.MSGoodsInfoBean;
+import com.tcn.vendspring.netUtil.RetrofitClient;
+import com.tlp.vendspring.MSUIUtils;
+import com.tlp.vendspring.netutil.TLPApiServices;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import controller.TlpUICommon;
-import controller.UICommon;
-import controller.UIGoodsInfo;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 
-public class TlpGoodsFragment extends Fragment {
+public class MSGoodsFragment extends Fragment {
     private View contentView;
     private PageRecyclerView pageRecyclerView;
     private PageRecyclerView.PageAdapter pageAdapter;
     private TextView mTvPageSize;
     private LinearLayout select_pager_layout;
-    private TLPGoodsInfoBean goodsInfoBean;
+    private MSGoodsInfoBean goodsInfoBean;
     private PageAdapterCallBack m_PageAdapterCallBack ;
-    public TlpGoodsFragment() {
+
+    private Goods_info goods_info;
+
+    public MSGoodsFragment() {
         // Required empty public constructor
     }
-    public static TlpGoodsFragment newInstance(String param1, String param2) {
-        TlpGoodsFragment fragment = new TlpGoodsFragment();
+    public static MSGoodsFragment newInstance(String param1, String param2) {
+        MSGoodsFragment fragment = new MSGoodsFragment();
         Bundle args = new Bundle();
 
         return fragment;
@@ -73,12 +71,13 @@ public class TlpGoodsFragment extends Fragment {
         mTvPageSize= (TextView) contentView.findViewById(R.id.select_page);
         m_PageAdapterCallBack = new PageAdapterCallBack();
         initPage();
+        //网络获取
+        GetGoodsInfo(getActivity().getApplicationContext());
+
     }
 
 
     private class PageAdapterCallBack implements PageRecyclerView.CallBack {
-
-        private UIGoodsInfo mInfo = null;
 
         int res = 0;
 
@@ -88,16 +87,19 @@ public class TlpGoodsFragment extends Fragment {
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(0, parent, false);
-            view.setOnTouchListener(null);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tlp_layout_commodity_item_goods, parent, false);
+
             return new PageHolder(view);
         }
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
-            ((PageHolder)holder).textname.setText("绿茶");
-            TcnVendIF.getInstance().displayImage("http://00.minipic.eastday.com/20170823/20170823144739_d41d8cd98f00b204e9800998ecf8427e_2.jpeg", ((PageHolder) holder).imageGoods, R.mipmap.default_ticket_poster_pic);
+            ((PageHolder)holder).textname.setText(goodsInfoBean.getData().get(position).getGoods_name());
+            ((PageHolder)holder).textprice.setText(goodsInfoBean.getData().get(position).getPrice_sales());
+           // Glide.with(getActivity()).load("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2621483064,3869409487&fm=27&gp=0.jpg").into(((PageHolder) holder).imageGoods);
+            MSUIUtils.getInstance().displayImage(goodsInfoBean.getData().get(position).getGoods_url(), ((PageHolder) holder).imageGoods, R.mipmap.default_ticket_poster_pic,getActivity());
+
         }
 
         @Override
@@ -135,22 +137,16 @@ public class TlpGoodsFragment extends Fragment {
 
     private void initPage(){
         pageRecyclerView= (PageRecyclerView) contentView.findViewById(R.id.tlp_rcy_goods);
-        mTvPageSize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"xxxxxx",Toast.LENGTH_SHORT).show();
-            }
-        });
+        pageRecyclerView.setCanScroll(false);
+        pageRecyclerView.setCustomized(true);
         //上一页下一页布局
         select_pager_layout= (LinearLayout) contentView.findViewById(R.id.select_page_layout);
         //设置行列数
-        pageRecyclerView.setPageSize(3,3);
+        pageRecyclerView.setPageSize(3,4);
         pageRecyclerView.setHasFixedSize(true);
 
         m_PageAdapterCallBack.setItemLayout(TlpUICommon.getInstance().getSelectionItemLayout());
-        pageAdapter = pageRecyclerView.new PageAdapter(TlpUICommon.getInstance().isPageDisplay(),30, TlpUICommon.getInstance().getRecyclerViewWidth(),
-                TlpUICommon.getInstance().getRecyclerViewHeight(),m_PageAdapterCallBack);
-        pageRecyclerView.setAdapter(pageAdapter);
+        pageAdapter = pageRecyclerView.new PageAdapter(0,m_PageAdapterCallBack);
         pageAdapter.setDataList(30);
 
     }
@@ -199,7 +195,31 @@ public class TlpGoodsFragment extends Fragment {
         pageAdapter.removeCallBack();
     }
 
+    /**
+     * 获取设备端展示商品
+     * @param context
+     * @return
+     */
+    public MSGoodsInfoBean GetGoodsInfo(final Context context){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        Call<MSGoodsInfoBean> call=loginInfoPost.getgoods(map);
+        call.enqueue(new Callback<MSGoodsInfoBean>() {
+            @Override
+            public void onResponse(Call<MSGoodsInfoBean> call, Response<MSGoodsInfoBean> response) {
+                goodsInfoBean=response.body();
+                pageAdapter.setDataList(goodsInfoBean.getData().size());
+               /* Log.i("TLPJSON",response.body().getMsg());
+                Toast.makeText(context,response.body().getStatus()+response.body().getData().get(0).getGoods_name()+"",Toast.LENGTH_SHORT).show();*/
+            }
 
+            @Override
+            public void onFailure(Call<MSGoodsInfoBean> call, Throwable t) {
 
-
+            }
+        });
+        return null;
+    }
 }

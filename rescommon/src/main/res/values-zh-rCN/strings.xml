@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">童乐派自动售货机</string>
+    <string name="app_name">猛兽自动售货机</string>
     <string name="tcn_welcome">欢迎使用中吉自动售货机，请选择商品！</string>
-    <string name="tcn_log">童乐派自动售货机</string>
+    <string name="tcn_log">猛兽自动售货机</string>
     <string name="ui_shopping">购物</string>
     <string name="ui_select_pickup">选/取货</string>
     <string name="ui_demo">演示</string>

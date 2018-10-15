@@ -24,24 +24,19 @@ import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.funcommon.vend.controller.VendEventInfo;
 import com.tcn.vendspring.MainAct;
 import com.tcn.vendspring.R;
-import com.tcn.vendspring.bean.TLPGoodsInfoBean;
+import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tcn.vendspring.netUtil.RetrofitClient;
-import com.tcn.vendspring.netUtil.TLPApiServices;
+import com.tlp.vendspring.netutil.TLPApiServices;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.POST;
 
 /**
  * Created by Administrator on 2016/12/17.
@@ -663,22 +658,22 @@ public class TlpUICommon {
      * @param context
      * @return
      */
-    public TLPGoodsInfoBean GetGoodsInfo(final Context context){
+    public MSGoodsInfoBean GetGoodsInfo(final Context context){
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
         map.put("machine_code","10020030011");
-        Call<TLPGoodsInfoBean> call=loginInfoPost.getgoods(map);
-        call.enqueue(new Callback<TLPGoodsInfoBean>() {
+        Call<MSGoodsInfoBean> call=loginInfoPost.getgoods(map);
+        call.enqueue(new Callback<MSGoodsInfoBean>() {
             @Override
-            public void onResponse(Call<TLPGoodsInfoBean> call, Response<TLPGoodsInfoBean> response) {
-                TLPGoodsInfoBean goodsInfoBean=response.body();
+            public void onResponse(Call<MSGoodsInfoBean> call, Response<MSGoodsInfoBean> response) {
+                MSGoodsInfoBean goodsInfoBean=response.body();
                 Log.i("TLPJSON",response.body().getMsg());
                 Toast.makeText(context,response.body().getStatus()+response.body().getData().get(0).getGoods_name()+"",Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<TLPGoodsInfoBean> call, Throwable t) {
+            public void onFailure(Call<MSGoodsInfoBean> call, Throwable t) {
 
             }
         });

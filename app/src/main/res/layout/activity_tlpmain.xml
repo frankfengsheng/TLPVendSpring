@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <RelativeLayout
+        android:id="@+id/tlp_rl_main_titlebar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
+        android:layout_height="50px">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,16 +21,14 @@
     <LinearLayout
         android:id="@+id/tlp_ly_advertisement_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_height="608px"
         android:orientation="vertical">
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/tlp_ly_goods"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_height="1212px"
         android:orientation="vertical"
         android:background="@color/white">
 

@@ -29,7 +29,6 @@ import android.widget.Toast;
 
 import com.tcn.background.LoginMenu;
 import com.tcn.background.SerialPortSetting;
-import com.tcn.background.TLPAisleDisplayActivity;
 import com.tcn.background.controller.UIComBack;
 import com.tcn.funcommon.NetWorkUtil;
 import com.tcn.funcommon.TcnCommon;
@@ -49,12 +48,10 @@ import com.tcn.uicommon.view.TextSurfaceView;
 import com.tcn.vendspring.help.DialogHelp;
 import com.tcn.vendspring.keyboard.DialogVerify;
 import com.tcn.vendspring.keyboard.FragmentVerify;
-import com.tcn.vendspring.pay.DialogPay;
 import com.tcn.vendspring.pay.TlpDialogPay;
 import com.tcn.vendspring.shopping.FragmentSelection;
-import com.tlp.vendspring.TLPMainActivity;
+import com.tlp.vendspring.MSMainActivity;
 
-import controller.TlpUICommon;
 import controller.UICommon;
 import controller.VendApplication;
 import controller.VendService;
@@ -344,6 +341,7 @@ public class MainAct extends TcnMainActivity {
 		m_main_temperature = (TextView) findViewById(R.id.title_bar_temperature);
 		m_main_time = (TextView) findViewById(R.id.title_bar_time);
 		main_signal = (ImageView) findViewById(R.id.title_bar_signal);
+		m_main_machine_id.setOnClickListener(m_ClickListener);
 
 		/***********************************  Title bar end ***********************************/
 		/***********************************  advert start ***********************************/
@@ -976,10 +974,13 @@ public class MainAct extends TcnMainActivity {
 				/*TlpUICommon.getInstance().GetGoodsInfo(getApplicationContext());
                 Intent intent=new Intent(getApplicationContext(),LoginMenu.class);
                 startActivity(intent);*/
-				Intent intent=new Intent(getApplicationContext(), TLPMainActivity.class);
+				Intent intent=new Intent(getApplicationContext(), MSMainActivity.class);
 				startActivity(intent);
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
-            }
+            }else if(R.id.title_bar_machine_id==id){
+				Intent intent=new Intent(getApplicationContext(),LoginMenu.class);
+				startActivity(intent);
+			}
 			else {
 
 			}

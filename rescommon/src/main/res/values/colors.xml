@@ -358,4 +358,5 @@
     <color name="text_color_dialog_title">#4e5d72</color>
     <color name="text_color_blue">#4fc1e9</color>
     <color name="holo_blue">#FF33E5B5</color>
+    <color name="text_color_gray">#ADADAD</color>
 </resources>

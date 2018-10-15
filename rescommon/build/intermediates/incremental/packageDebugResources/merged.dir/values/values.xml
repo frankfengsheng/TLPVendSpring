@@ -188,6 +188,7 @@
     <color name="text_color_blue">#4fc1e9</color>
     <color name="text_color_dialog">#6F6868</color>
     <color name="text_color_dialog_title">#4e5d72</color>
+    <color name="text_color_gray">#ADADAD</color>
     <color name="text_gray">#4F4F4F</color>
     <color name="texttitlecolor">#f4ae00</color>
     <color name="thistle">#D8BFD8</color>
@@ -512,6 +513,16 @@
     <string name="menu_with_coffee_vend">带咖啡机</string>
     <string name="modify">修改</string>
     <string name="moneytxt">钱币：</string>
+    <string name="ms_admin_menu_title">菜单</string>
+    <string name="ms_login_phone">帐号</string>
+    <string name="ms_login_pwd">密码</string>
+    <string name="ms_menu_aisle_management">货道管理</string>
+    <string name="ms_menu_exit">退出售货机</string>
+    <string name="ms_menu_goods_managment">商品管理</string>
+    <string name="ms_menu_shelf_management">货架管理</string>
+    <string name="ms_shelf_management_clear_shop">清空货物</string>
+    <string name="ms_shelf_management_replenish_shop">补货</string>
+    <string name="ms_shelf_management_shop_onsale">商品上架</string>
     <string name="name">名称：</string>
     <string name="new_psw">新密码</string>
     <string name="no">否</string>
@@ -965,7 +976,7 @@
     <style name="aisle_edittext1">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:background">@drawable/circlebuttonstyle</item>
+        <item name="android:background">@drawable/button_circle_type</item>
         <item name="android:padding">5px</item>
         <item name="android:textColorHint">@color/text_background</item>
         <item name="android:gravity">center</item>
@@ -1355,5 +1366,10 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:gravity">center_vertical|right</item>
         <item name="android:background">#50ffffff</item>
+    </style>
+    <style name="vervial_line">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/text_color_gray</item>
     </style>
 </resources>
