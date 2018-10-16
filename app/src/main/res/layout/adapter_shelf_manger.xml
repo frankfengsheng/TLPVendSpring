@@ -87,7 +87,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="@dimen/ms_shelf_manger_adapter_title_size"
-            android:text="@string/ms_shelf_management_replenish_shop"/>
+            android:textStyle="bold"
+            android:text="@string/ms_shelf_management_clear_shop"/>
         <TextView
             style="@style/vervial_line" />
         <TextView
@@ -98,6 +99,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="@dimen/ms_shelf_manger_adapter_title_size"
+            android:textStyle="bold"
             android:text="@string/ms_shelf_management_replenish_shop"/>
     </LinearLayout>
 </LinearLayout>

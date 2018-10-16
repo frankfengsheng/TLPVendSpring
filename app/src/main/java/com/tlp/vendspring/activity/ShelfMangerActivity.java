@@ -13,9 +13,11 @@ import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.adapter.RecycleShelfMangerAdapter;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
+import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
 import com.tlp.vendspring.netutil.MSUserUtils;
 import com.tlp.vendspring.netutil.TLPApiServices;
+import com.tlp.vendspring.netutil.ToastUtil;
 import com.tlp.vendspring.view.RecycleViewDivider;
 
 import java.util.HashMap;
@@ -111,6 +113,53 @@ public class ShelfMangerActivity extends Activity implements View.OnClickListene
             public void onItemClick(View view) {
                 int position=recyclerView.getChildAdapterPosition(view);
             }
+
+            @Override
+            public void onClearClick(View view) {
+                int position=recyclerView.getChildAdapterPosition(view);
+                ClearShelfInfo(getApplicationContext(),shelfMangerInfoBean.getData().get(position).getChannel_start(),
+                        shelfMangerInfoBean.getData().get(position).getChannel_end());
+            }
+
+            @Override
+            public void onReplenishMentcClick(View view) {
+                int position=recyclerView.getChildAdapterPosition(view);
+
+            }
         });
     }
+
+    /**
+     * 清空货架
+     * @param context
+     * @return
+     */
+    public void ClearShelfInfo(final Context context,String start,String end){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("channel_start",start);
+        map.put("channel_start",end);
+        map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
+        Call<MsClearShelfInfoBean> call=loginInfoPost.clearShelfInfo(map);
+        call.enqueue(new Callback<MsClearShelfInfoBean>() {
+            @Override
+            public void onResponse(Call<MsClearShelfInfoBean> call, Response<MsClearShelfInfoBean> response) {
+                //shelfMangerInfoBean=response.body();
+               MsClearShelfInfoBean clearShelfInfoBean=response.body();
+               if(clearShelfInfoBean.getStatus()==200){
+                   ToastUtil.showToast(context,"清空成功");
+                   GetShelfInfo(context);
+               }
+
+            }
+
+            @Override
+            public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
+
+            }
+        });
+    }
+
 }

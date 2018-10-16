@@ -34,6 +34,18 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
                 itemclickListenner.onItemClick(v);
             }
         });
+        myHolder.tv_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemclickListenner.onClearClick(v);
+            }
+        });
+        myHolder.tv_replenish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemclickListenner.onReplenishMentcClick(v);
+            }
+        });
         return myHolder;
     }
 
@@ -79,5 +91,7 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
     }
    public static interface OnItemclickListenner{
         void onItemClick(View view);
+        void onClearClick(View view);
+        void onReplenishMentcClick(View view);
     }
 }
