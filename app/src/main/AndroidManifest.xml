@@ -78,12 +78,16 @@
             android:label="@string/title_activity_tlpmain" />
         <activity android:name="com.tlp.vendspring.activity.MSLoginMenu" />
         <activity
-            android:name="com.tlp.vendspring.activity.MSAdminMangerActivity"
+            android:name="com.tlp.vendspring.activity.admin.MSAdminMangerActivity"
             android:label="@string/title_activity_admin_manger" />
         <activity
-            android:name="com.tlp.vendspring.activity.ShelfMangerActivity"
+            android:name="com.tlp.vendspring.activity.admin.ShelfMangerActivity"
             android:label="@string/title_activity_shelf_manger"></activity>
-        <activity android:name="com.tlp.vendspring.activity.ShopEditorActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.admin.ShopEditorActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.admin.ShopOnSaleActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.admin.AisleMangerActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.admin.AisleEditorActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.ReplenishmentEditorActivity"/>
     </application>
 
 </manifest>

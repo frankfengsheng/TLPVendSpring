@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.tlp.vendspring.activity.ShelfMangerActivity">
+    tools:context="com.tlp.vendspring.activity.admin.ShelfMangerActivity">
     <include
         layout="@layout/ms_title_bar"/>
     <LinearLayout

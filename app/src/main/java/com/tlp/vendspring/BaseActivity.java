@@ -39,7 +39,7 @@ public class BaseActivity extends FragmentActivity {
     /**
      * 跳转到下一个页面
       */
-    public void nextView(Class<?> next) {
+    public void nextView(Context context,Class<?> next) {
         Intent intent = new Intent(context, next);
         startActivity(intent);
     }

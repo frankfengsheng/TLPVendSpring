@@ -1,5 +1,6 @@
 package com.tlp.vendspring.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class MsShelfMangerInfoBean {
@@ -39,7 +40,7 @@ public class MsShelfMangerInfoBean {
         this.data = data;
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable {
         /**
          * goods_name : 可口可乐
          * goods_model : 500ml

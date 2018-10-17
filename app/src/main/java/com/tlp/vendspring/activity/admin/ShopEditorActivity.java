@@ -1,4 +1,4 @@
-package com.tlp.vendspring.activity;
+package com.tlp.vendspring.activity.admin;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -42,7 +42,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
     private String[] shop_arr;
     private MsShelfGoodInfoBean shelfGoodInfoBean;
     private String goodId,goodType,goodGuige,goodPrice,goodBaozhiqi,capacity;
-
+    MsShelfMangerInfoBean.DataBean dataBean;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +53,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
     }
     private void init_view()
     {
+        dataBean= (MsShelfMangerInfoBean.DataBean) getIntent().getSerializableExtra("dateBean");
         btn_save= (Button) findViewById(R.id.btn_save);
         btn_cancle= (Button) findViewById(R.id.btn_cancle);
         edt_start= (EditText) findViewById(R.id.ms_edt_shop_edit_aisle_start);
@@ -63,13 +64,20 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
         tv_aislecapacity= (TextView) findViewById(R.id.ms_tv_aisle_capacity);
         sp_type= (Spinner) findViewById(R.id.ms_sp_shop_type);
         sp_shop= (Spinner) findViewById(R.id.ms_sp_shop);
-
         btn_save.setOnClickListener(this);
         btn_cancle.setOnClickListener(this);
+        initData();
         GetGoodTypeInfo(getApplicationContext());
         GetGoodsInfo(getApplicationContext());
     }
-
+    private void initData(){
+        if(dataBean!=null){
+            String start=dataBean.getChannel_start();
+            String end=dataBean.getChannel_end();
+            edt_start.setText(start);
+            edt_end.setText(end);
+        }
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -211,6 +219,17 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
 
             }
         });
+        //根据上个页面传过来数据，设置sp
+        if(dataBean!=null) {
+            int selectedPosition = 0;
+            for (int i = 0; i < shelfGoodInfoBean.getData().size(); i++) {
+                if(dataBean.getGoods_id().equals(shelfGoodInfoBean.getData().get(i).getGoods_id())){
+                    selectedPosition=i;
+                    break;
+                }
+            }
+            sp_shop.setSelection(selectedPosition);
+        }
 
     }
 

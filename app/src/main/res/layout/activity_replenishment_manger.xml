@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    tools:context="com.tlp.vendspring.activity.admin.MSAdminMangerActivity">
+    <include
+        layout="@layout/ms_title_bar"/>
+
+    <Button
+        android:id="@+id/ms_admin_menu_btn_shelf_manger"
+        android:layout_width="@dimen/ms_menu_btn_width"
+        android:layout_height="@dimen/ms_menu_btn_heigh"
+        android:layout_marginTop="@dimen/ms_menu_btn_margin_top"
+        android:textSize="@dimen/ms_menu_btn_text_size"
+        android:textStyle="bold"
+        android:text="@string/ms_menu_shelf_management"
+        android:background="@color/background"/>
+    <Button
+        android:id="@+id/ms_admin_menu_btn_aisle_manger"
+        android:layout_width="@dimen/ms_menu_btn_width"
+        android:layout_height="@dimen/ms_menu_btn_heigh"
+        android:layout_marginTop="@dimen/ms_menu_btn_margin_top"
+        android:textSize="@dimen/ms_menu_btn_text_size"
+        android:textStyle="bold"
+        android:text="@string/ms_menu_aisle_management"
+        android:background="@color/background"/>
+    <Button
+        android:id="@+id/ms_admin_menu_btn_inventory_change"
+        android:layout_width="@dimen/ms_menu_btn_width"
+        android:layout_height="@dimen/ms_menu_btn_heigh"
+        android:layout_marginTop="@dimen/ms_menu_btn_margin_top"
+        android:textSize="@dimen/ms_menu_btn_text_size"
+        android:textStyle="bold"
+        android:text="@string/ms_menu_inventory_change"
+        android:background="@color/background"/>
+
+</LinearLayout>

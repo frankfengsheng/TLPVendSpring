@@ -1,8 +1,6 @@
 package com.tlp.vendspring.activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,6 +16,7 @@ import com.tcn.funcommon.vend.controller.VendEventInfo;
 import com.tcn.uicommon.view.TcnMainActivity;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
+import com.tlp.vendspring.activity.admin.MSAdminMangerActivity;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.netutil.MSUserUtils;
 import com.tlp.vendspring.netutil.TLPApiServices;

@@ -762,6 +762,8 @@
     <string name="ms_menu_shelf_management">货架管理</string>
     <string name="ms_menu_aisle_management">货道管理</string>
     <string name="ms_menu_goods_managment">商品管理</string>
+    <string name="ms_menu_inventory_change">库存修改</string>
+    <string name="ms_menu_a_key_replenishment">一键补货</string>
     <string name="ms_menu_exit">退出售货机</string>
     <string name="ms_shelf_management_shop_onsale">商品上架</string>
     <string name="ms_shelf_management_clear_shop">清空货物</string>
@@ -774,4 +776,10 @@
     <string name="ms_aisle_capacity">货道容量</string>
     <string name="ms_save">保存</string>
     <string name="ms_cancle">取消</string>
+    <string name="ms_aisle_number">货道号</string>
+    <string name="ms_aisle_state">货道状态</string>
+    <string name="ms_aisle_start_using">启用</string>
+    <string name="ms_aisle_stop_using">禁用</string>
+    <string name="ms_reset">重置</string>
+    <string name="ms_clear_inventory">清空库存</string>
 </resources>

@@ -70,7 +70,14 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
             @Override
             public void onClick(View v) {
                 int pos=holder.getLayoutPosition();
-                itemclickListenner.onClearClick(v,pos);
+                itemclickListenner.onReplenishMentcClick(v,pos);
+            }
+        });
+        holder.tv_one_key.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=holder.getLayoutPosition();
+                itemclickListenner.onOneKeyClick(v,pos);
             }
         });
     }
@@ -82,7 +89,7 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
 
     class   MyHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
-        TextView tv_title,tv_price,tv_stock,tv_aisle,tv_inventory,tv_clear,tv_replenish;
+        TextView tv_title,tv_price,tv_stock,tv_aisle,tv_inventory,tv_clear,tv_replenish,tv_one_key;
         public MyHolder(View itemView) {
             super(itemView);
             imageView= (ImageView) itemView.findViewById(R.id.ms_iv_shelfmanger_adapter);
@@ -93,6 +100,7 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
             tv_inventory= (TextView) itemView.findViewById(R.id.ms_tv_shelf_manger_adapter_inventory);
             tv_clear= (TextView) itemView.findViewById(R.id.ms_tv_shelf_manger_clear);
             tv_replenish= (TextView) itemView.findViewById(R.id.ms_tv_shelf_manger_replenish_goods);
+            tv_one_key= (TextView) itemView.findViewById(R.id.ms_tv_shelf_manger_one_key_replenishment);
         }
 
     }
@@ -100,5 +108,6 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
         void onItemClick(View view,int position);
         void onClearClick(View view,int position);
         void onReplenishMentcClick(View view,int position);
+        void onOneKeyClick(View view,int position);
     }
 }

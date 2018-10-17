@@ -1,4 +1,4 @@
-package com.tlp.vendspring.activity;
+package com.tlp.vendspring.activity.admin;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
+import com.tlp.vendspring.activity.ReplenishmentEditorActivity;
 import com.tlp.vendspring.adapter.RecycleShelfMangerAdapter;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
@@ -27,7 +28,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class AisleMangerActivity extends BaseActivity implements View.OnClickListener{
+public class ShelfMangerActivity extends BaseActivity implements View.OnClickListener{
 
     private Button btn_shop_onsale;
     private RecyclerView recyclerView;
@@ -38,14 +39,13 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelf_manger);
-        initTitle("货道管理");
+        initTitle("商品货架");
         init_view();
 
     }
     private void init_view()
     {
         btn_shop_onsale= (Button) findViewById(R.id.btn_shelf_manage_shop_onsale);
-        btn_shop_onsale.setVisibility(View.GONE);
         btn_shop_onsale.setOnClickListener(this);
         recyclerView= (RecyclerView) findViewById(R.id.ry_shelf_manager);
         recyclerView.addItemDecoration(new RecycleViewDivider(
@@ -60,8 +60,7 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
         {
             case R.id.btn_shelf_manage_shop_onsale:
                 //nextView(ShopEditorActivity.class);
-                Intent intent=new Intent(this,ShopEditorActivity.class);
-                startActivity(intent);
+               nextView(this,ShopOnSaleActivity.class);
                 break;
         }
     }
@@ -103,6 +102,11 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
         adapter.setOnItemClickLis(new RecycleShelfMangerAdapter.OnItemclickListenner() {
             @Override
             public void onItemClick(View view,int postion) {
+                Intent intent=new Intent(getApplicationContext(),ShopEditorActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("dateBean",shelfMangerInfoBean.getData().get(postion));
+                intent.putExtras(bundle);
+                startActivity(intent);
 
             }
 
@@ -115,7 +119,15 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
 
             @Override
             public void onReplenishMentcClick(View view,int position) {
+                Intent intent=new Intent(getApplicationContext(), ReplenishmentEditorActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("dateBean",shelfMangerInfoBean.getData().get(position));
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
 
+            @Override
+            public void onOneKeyClick(View view, int position) {
 
             }
         });

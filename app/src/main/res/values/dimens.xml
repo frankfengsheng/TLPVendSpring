@@ -19,4 +19,5 @@
     <dimen name="ms_shop_editor_editext_width">300px</dimen>
     <dimen name="ms_shop_editor_editext_heigh">100px</dimen>
     <dimen name="ms_left_text_size">25sp</dimen>
+    <dimen name="ms_aisle_item_textsize">18sp</dimen>
 </resources>

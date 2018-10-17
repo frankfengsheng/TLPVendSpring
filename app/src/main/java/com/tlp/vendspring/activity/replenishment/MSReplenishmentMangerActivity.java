@@ -1,30 +1,28 @@
-package com.tlp.vendspring.activity;
+package com.tlp.vendspring.activity.replenishment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.tcn.funcommon.vend.controller.TcnVendEventID;
-import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.vendspring.R;
 import com.tlp.vendspring.BaseActivity;
+import com.tlp.vendspring.activity.admin.AisleMangerActivity;
+import com.tlp.vendspring.activity.admin.ShelfMangerActivity;
 
 /**
  * create by feng
  */
-public class MSAdminMangerActivity extends BaseActivity implements View.OnClickListener {
+public class MSReplenishmentMangerActivity extends BaseActivity implements View.OnClickListener {
 
     private Button btn_shelf_manager;
     private Button btn_aisle_manager;
-    private Button btn_goods_manager;
-    private Button btn_exit;
+    private Button btn_inventory_change;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_manger);
+        setContentView(R.layout.activity_replenishment_manger);
         initTitle("菜单");
         init_view();
     }
@@ -33,12 +31,12 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
     {
         btn_shelf_manager= (Button) findViewById(R.id.ms_admin_menu_btn_shelf_manger);
         btn_aisle_manager= (Button) findViewById(R.id.ms_admin_menu_btn_aisle_manger);
-        btn_goods_manager= (Button) findViewById(R.id.ms_admin_menu_btn_goods_manger);
-        btn_exit= (Button) findViewById(R.id.ms_admin_menu_btn_exit);
+        btn_inventory_change= (Button) findViewById(R.id.ms_admin_menu_btn_inventory_change);
+
         btn_shelf_manager.setOnClickListener(this);
         btn_aisle_manager.setOnClickListener(this);
-        btn_goods_manager.setOnClickListener(this);
-        btn_exit.setOnClickListener(this);
+        btn_inventory_change.setOnClickListener(this);
+
     }
 
     @Override
@@ -52,14 +50,12 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
                startActivity(intent);
                 break;
             case R.id.ms_admin_menu_btn_aisle_manger:
+               nextView(getApplicationContext(),AisleMangerActivity.class);
+                break;
+            case R.id.ms_admin_menu_btn_inventory_change:
                 this.finish();
                 break;
-            case R.id.ms_admin_menu_btn_goods_manger:
-                this.finish();
-                break;
-            case R.id.ms_admin_menu_btn_exit:
-              gotodesk();
-                break;
+
         }
     }
 
@@ -68,12 +64,5 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
 
         super.onDestroy();
     }
-    //返回桌面
-    public void gotodesk(){
-        Intent home = new Intent(Intent.ACTION_MAIN);
-        home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        home.addCategory(Intent.CATEGORY_HOME);
-        startActivity(home);
 
-    }
 }

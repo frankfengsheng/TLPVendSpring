@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/white"
-    tools:context="com.tlp.vendspring.activity.MSAdminMangerActivity">
+    tools:context="com.tlp.vendspring.activity.admin.MSAdminMangerActivity">
     <include
         layout="@layout/ms_title_bar"/>
 
@@ -37,6 +37,7 @@
         android:textSize="@dimen/ms_menu_btn_text_size"
         android:textStyle="bold"
         android:text="@string/ms_menu_goods_managment"
+        android:visibility="gone"
         android:background="@color/background"/>
     <Button
         android:id="@+id/ms_admin_menu_btn_exit"
