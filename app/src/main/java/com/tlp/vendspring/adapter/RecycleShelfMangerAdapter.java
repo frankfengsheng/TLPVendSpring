@@ -28,24 +28,8 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
     public RecycleShelfMangerAdapter.MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.adapter_shelf_manger,null);
         MyHolder myHolder=new MyHolder(view);
-        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemclickListenner.onItemClick(v);
-            }
-        });
-        myHolder.tv_clear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemclickListenner.onClearClick(v);
-            }
-        });
-        myHolder.tv_replenish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemclickListenner.onReplenishMentcClick(v);
-            }
-        });
+
+
         return myHolder;
     }
 
@@ -54,7 +38,8 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
     }
 
     @Override
-    public void onBindViewHolder(MyHolder holder, int position) {
+    public void onBindViewHolder(final MyHolder holder, final int position) {
+
         Glide.with(context).load(list.get(position).getGoods_url()).into(holder.imageView);
         holder.tv_title.setText(list.get(position).getGoods_name());
         holder.tv_price.setText("￥"+list.get(position).getPrice_sales());
@@ -66,6 +51,28 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
             holder.tv_aisle.setText("货道号："+list.get(position).getChannel_start());
         }
         holder.tv_inventory.setText("库存"+list.get(position).getChannel_remain()+"");//库存
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=holder.getLayoutPosition();
+                itemclickListenner.onItemClick(holder.itemView,pos);
+            }
+        });
+        holder.tv_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=holder.getLayoutPosition();
+                itemclickListenner.onClearClick(v,pos);
+            }
+        });
+        holder.tv_replenish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos=holder.getLayoutPosition();
+                itemclickListenner.onClearClick(v,pos);
+            }
+        });
     }
 
     @Override
@@ -90,8 +97,8 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
 
     }
    public static interface OnItemclickListenner{
-        void onItemClick(View view);
-        void onClearClick(View view);
-        void onReplenishMentcClick(View view);
+        void onItemClick(View view,int position);
+        void onClearClick(View view,int position);
+        void onReplenishMentcClick(View view,int position);
     }
 }

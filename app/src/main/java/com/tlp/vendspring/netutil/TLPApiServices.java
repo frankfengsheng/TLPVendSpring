@@ -3,7 +3,10 @@ package com.tlp.vendspring.netutil;
 import com.tcn.background.Entity.MSLoginBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
+import com.tlp.vendspring.bean.MsGoodTypeInfoBean;
+import com.tlp.vendspring.bean.MsShelfGoodInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
+import com.tlp.vendspring.bean.MsShlefGoodInfoSubmitBean;
 
 import java.util.Map;
 
@@ -41,6 +44,27 @@ public interface TLPApiServices {
     @FormUrlEncoded
     @POST("api/Replenishment/empty_shelves/")
     Call<MsClearShelfInfoBean> clearShelfInfo(@FieldMap Map<String,String> map);
+
+    /***
+     * 获取商品类型
+     */
+    @FormUrlEncoded
+    @POST("api/Auxiliary/goods_type/")
+    Call<MsGoodTypeInfoBean> getGoodTypeInfo(@FieldMap Map<String,String> map);
+
+    /***
+     * 获取商品类型
+     */
+    @FormUrlEncoded
+    @POST("api/Auxiliary/goods_list/")
+    Call<MsShelfGoodInfoBean> getShelfGoodInfo(@FieldMap Map<String,String> map);
+
+    /***
+     * 获取商品类型
+     */
+    @FormUrlEncoded
+    @POST("api/Administrators/onshelf_Goods/")
+    Call<MsShlefGoodInfoSubmitBean> submitShelf(@FieldMap Map<String,String> map);
 
 
     }

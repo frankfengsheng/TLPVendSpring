@@ -3,6 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="ms_margin_left">50px</dimen>
+    <dimen name="ms_margin_top">30px</dimen>
     <dimen name="ms_menu_btn_width">700px</dimen>
     <dimen name="ms_menu_btn_heigh">100px</dimen>
     <dimen name="ms_menu_btn_margin_top">150px</dimen>
@@ -12,4 +14,9 @@
     <dimen name="ms_shelf_manger_marginleft">100dp</dimen>
     <dimen name="ms_shelf_manger_adapter_title_size">25sp</dimen>
     <dimen name="ms_shelf_manger_adapter_price_size">23sp</dimen>
+    <dimen name="ms_shelf_shop_editor_left_lineheigh">110px</dimen>
+    <dimen name="ms_shelf_shop_editor_left_width">300px</dimen>
+    <dimen name="ms_shop_editor_editext_width">300px</dimen>
+    <dimen name="ms_shop_editor_editext_heigh">100px</dimen>
+    <dimen name="ms_left_text_size">25sp</dimen>
 </resources>

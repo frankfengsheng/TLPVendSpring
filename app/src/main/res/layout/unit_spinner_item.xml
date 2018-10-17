@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/ms_shop_editor_editext_heigh"
+    android:textColor="@color/text_color_black"
+    android:gravity="center_vertical|left"
+    android:textSize="@dimen/ms_left_text_size"
+    android:padding="10dp"
+    android:paddingLeft="30dp"/>

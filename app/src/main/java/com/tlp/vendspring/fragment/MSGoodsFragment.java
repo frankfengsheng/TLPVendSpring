@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,7 +33,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 
-public class MSGoodsFragment extends Fragment {
+public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private View contentView;
     private PageRecyclerView pageRecyclerView;
     private PageRecyclerView.PageAdapter pageAdapter;
@@ -41,8 +42,9 @@ public class MSGoodsFragment extends Fragment {
     private MSGoodsInfoBean goodsInfoBean;
     private PageAdapterCallBack m_PageAdapterCallBack ;
 
-    private Goods_info goods_info;
-
+    private Goods_info gs_info;
+    private Button btn_last;
+    private Button btn_next;
     public MSGoodsFragment() {
         // Required empty public constructor
     }
@@ -75,6 +77,7 @@ public class MSGoodsFragment extends Fragment {
         GetGoodsInfo(getActivity().getApplicationContext());
 
     }
+
 
 
     private class PageAdapterCallBack implements PageRecyclerView.CallBack {
@@ -141,10 +144,14 @@ public class MSGoodsFragment extends Fragment {
         pageRecyclerView.setCustomized(true);
         //上一页下一页布局
         select_pager_layout= (LinearLayout) contentView.findViewById(R.id.select_page_layout);
+        btn_last= (Button) contentView.findViewById(R.id.select_pre);
+        btn_next= (Button) contentView.findViewById(R.id.select_next);
         //设置行列数
         pageRecyclerView.setPageSize(3,4);
         pageRecyclerView.setHasFixedSize(true);
 
+        btn_last.setOnClickListener(this);
+        btn_next.setOnClickListener(this);
         m_PageAdapterCallBack.setItemLayout(TlpUICommon.getInstance().getSelectionItemLayout());
         pageAdapter = pageRecyclerView.new PageAdapter(0,m_PageAdapterCallBack);
         pageAdapter.setDataList(30);
@@ -221,5 +228,23 @@ public class MSGoodsFragment extends Fragment {
             }
         });
         return null;
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.select_pre:
+                if (pageRecyclerView != null) {
+                    pageRecyclerView.pageDown();
+                }
+                break;
+            case R.id.select_next:
+                if (pageRecyclerView != null) {
+                    pageRecyclerView.pageUp();
+                }
+                break;
+        }
     }
 }

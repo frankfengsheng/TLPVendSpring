@@ -7,4 +7,5 @@
     <color name="wire">#5b9bd5</color>
     <color name="wire_result">#aa5b9bd5</color>
     <color name="tv_time">#e9f90e</color>
+    <color name="editext_border">#A1A1A1</color>
 </resources>

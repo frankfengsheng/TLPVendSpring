@@ -3,18 +3,15 @@ package com.tlp.vendspring.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
 import com.tlp.vendspring.adapter.RecycleShelfMangerAdapter;
-import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
 import com.tlp.vendspring.netutil.MSUserUtils;
@@ -30,7 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class ShelfMangerActivity extends BaseActivity implements View.OnClickListener{
+public class AisleMangerActivity extends BaseActivity implements View.OnClickListener{
 
     private Button btn_shop_onsale;
     private RecyclerView recyclerView;
@@ -41,13 +38,14 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelf_manger);
-        initTitle("货架");
+        initTitle("货道管理");
         init_view();
 
     }
     private void init_view()
     {
         btn_shop_onsale= (Button) findViewById(R.id.btn_shelf_manage_shop_onsale);
+        btn_shop_onsale.setVisibility(View.GONE);
         btn_shop_onsale.setOnClickListener(this);
         recyclerView= (RecyclerView) findViewById(R.id.ry_shelf_manager);
         recyclerView.addItemDecoration(new RecycleViewDivider(

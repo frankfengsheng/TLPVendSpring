@@ -83,6 +83,7 @@
         <activity
             android:name="com.tlp.vendspring.activity.ShelfMangerActivity"
             android:label="@string/title_activity_shelf_manger"></activity>
+        <activity android:name="com.tlp.vendspring.activity.ShopEditorActivity"/>
     </application>
 
 </manifest>
