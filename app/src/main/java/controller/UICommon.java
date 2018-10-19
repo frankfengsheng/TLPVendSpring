@@ -21,6 +21,7 @@ import com.tcn.funcommon.db.UtilsDB;
 import com.tcn.funcommon.media.ImageController;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.funcommon.vend.controller.VendEventInfo;
+import com.tcn.vendspring.MSMainActivity;
 import com.tcn.vendspring.MainAct;
 import com.tcn.vendspring.R;
 
@@ -832,7 +833,7 @@ public class UICommon {
                     break;
                 case VendEventID.RESTART_MAIN_ACTIVITY:
                     if (m_application != null) {
-                        Intent mIntent = new Intent(m_application,MainAct.class);
+                        Intent mIntent = new Intent(m_application,MSMainActivity.class);
                         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         m_application.startActivity(mIntent);
                     }
@@ -842,7 +843,7 @@ public class UICommon {
                     if (TcnShareUseData.getInstance().isAppForegroundCheck()) {
                         if (!TcnVendIF.getInstance().isAppForeground()) {
                             if (m_application != null) {
-                                Intent mIntentApp = new Intent(m_application,MainAct.class);
+                                Intent mIntentApp = new Intent(m_application,MSMainActivity.class);
                                 mIntentApp.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 m_application.startActivity(mIntentApp);
                             }

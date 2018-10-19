@@ -47,6 +47,9 @@ android {
         //轮播图
         compile 'com.youth.banner:banner:1.4.9'
         compile project(':background')
+        //二维码生成工具
+
+
     }
 }
 

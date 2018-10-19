@@ -205,7 +205,7 @@
         <TextView
             android:layout_width="@dimen/ms_shelf_shop_editor_left_width"
             android:layout_height="@dimen/ms_shop_editor_editext_heigh"
-            android:text="@string/ms_aisle_capacity"
+            android:text="@string/ms_aisle_state"
             android:gravity="center"
             android:textSize="@dimen/ms_left_text_size"
             android:textColor="@color/text_color_black"

@@ -43,14 +43,14 @@ public class RecycleShelfMangerAdapter extends RecyclerView.Adapter<RecycleShelf
         Glide.with(context).load(list.get(position).getGoods_url()).into(holder.imageView);
         holder.tv_title.setText(list.get(position).getGoods_name());
         holder.tv_price.setText("￥"+list.get(position).getPrice_sales());
-        holder.tv_stock.setText("存量："+list.get(position).getChannel_capacity()+"");//存量
+        holder.tv_stock.setText("容量："+list.get(position).getChannel_capacity()+"");//容量
         if(Integer.parseInt(list.get(position).getChannel_end())>Integer.parseInt(list.get(position).getChannel_start())) {
             holder.tv_aisle.setText("货道号："+list.get(position).getChannel_start()+"-"+list.get(position).getChannel_end());
         }else
         {
             holder.tv_aisle.setText("货道号："+list.get(position).getChannel_start());
         }
-        holder.tv_inventory.setText("库存"+list.get(position).getChannel_remain()+"");//库存
+        holder.tv_inventory.setText("库存： "+list.get(position).getChannel_remain()+"");//库存
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

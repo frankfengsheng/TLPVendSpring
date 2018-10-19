@@ -163,7 +163,7 @@
         android:layout_marginTop="@dimen/ms_margin_top"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150px"
         android:gravity="center_horizontal">
             <Button
                 android:id="@+id/btn_save"
@@ -171,6 +171,7 @@
                 android:layout_height="100px"
                 android:layout_marginLeft="@dimen/ms_margin_left"
                 android:layout_marginBottom="@dimen/ms_margin_left"
+                android:layout_alignParentBottom="true"
                 android:textSize="@dimen/ms_left_text_size"
                 android:text="@string/ms_save"/>
             <Button

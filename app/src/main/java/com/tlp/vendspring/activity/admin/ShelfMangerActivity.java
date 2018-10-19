@@ -11,13 +11,15 @@ import android.widget.Button;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
+import com.tlp.vendspring.activity.MSLoginMenu;
 import com.tlp.vendspring.activity.ReplenishmentEditorActivity;
 import com.tlp.vendspring.adapter.RecycleShelfMangerAdapter;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.netutil.ToastUtil;
+import com.tlp.vendspring.util.DialogUtil;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 import com.tlp.vendspring.view.RecycleViewDivider;
 
 import java.util.HashMap;
@@ -34,6 +36,8 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
     private RecyclerView recyclerView;
     RecycleShelfMangerAdapter adapter;
     MsShelfMangerInfoBean shelfMangerInfoBean;
+    private Button btn_onkey_replenishment;
+    private Button btn_inventory_change;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +50,17 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
     private void init_view()
     {
         btn_shop_onsale= (Button) findViewById(R.id.btn_shelf_manage_shop_onsale);
+        if(MSLoginMenu.INDENTITY==1)btn_shop_onsale.setVisibility(View.GONE);//如果身份为补货员不显示上架商品
+        btn_onkey_replenishment= (Button) findViewById(R.id.btn_shelf_manage_a_key_replenishment);
+        btn_inventory_change= (Button) findViewById(R.id.btn_shelf_manage_inventory_change);
         btn_shop_onsale.setOnClickListener(this);
         recyclerView= (RecyclerView) findViewById(R.id.ry_shelf_manager);
         recyclerView.addItemDecoration(new RecycleViewDivider(
-                getApplicationContext(), LinearLayoutManager.VERTICAL, 2, getResources().getColor(R.color.text_gray)));
-       btn_shop_onsale.setOnClickListener(this);
+                getApplicationContext(), LinearLayoutManager.VERTICAL, 1, getResources().getColor(R.color.text_gray)));
+
+        btn_shop_onsale.setOnClickListener(this);
+        btn_onkey_replenishment.setOnClickListener(this);
+        btn_inventory_change.setOnClickListener(this);
 
     }
 
@@ -61,6 +71,17 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
             case R.id.btn_shelf_manage_shop_onsale:
                 //nextView(ShopEditorActivity.class);
                nextView(this,ShopOnSaleActivity.class);
+                break;
+            case R.id.btn_shelf_manage_a_key_replenishment:
+                new DialogUtil().showDialog(ShelfMangerActivity.this, "确定补满当前设备全部货道？", new DialogUtil.OnDialogSureClick() {
+                    @Override
+                    public void sureClick() {
+                        oneKeyReplenishment(getApplicationContext());
+                    }
+                });
+                break;
+            case R.id.btn_shelf_manage_inventory_change:
+                nextView(this,InventoryChaneActivity.class);
                 break;
         }
     }
@@ -111,10 +132,15 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
             }
 
             @Override
-            public void onClearClick(View view,int position) {
+            public void onClearClick(View view, final int position) {
+                new DialogUtil().showDialog(ShelfMangerActivity.this, "确定清空该货架？", new DialogUtil.OnDialogSureClick() {
+                    @Override
+                    public void sureClick() {
+                        ClearShelfInfo(getApplicationContext(),shelfMangerInfoBean.getData().get(position).getChannel_start(),
+                                shelfMangerInfoBean.getData().get(position).getChannel_end());
+                    }
+                });
 
-                ClearShelfInfo(getApplicationContext(),shelfMangerInfoBean.getData().get(position).getChannel_start(),
-                        shelfMangerInfoBean.getData().get(position).getChannel_end());
             }
 
             @Override
@@ -127,8 +153,13 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
             }
 
             @Override
-            public void onOneKeyClick(View view, int position) {
-
+            public void onOneKeyClick(View view, final int position) {
+                new DialogUtil().showDialog(ShelfMangerActivity.this, "确定一键补货该货架？", new DialogUtil.OnDialogSureClick() {
+                    @Override
+                    public void sureClick() {
+                        oneKeyReplenishmentByAisle(getApplicationContext(),shelfMangerInfoBean.getData().get(position).getChannel_start(),shelfMangerInfoBean.getData().get(position).getChannel_end());
+                    }
+                });
             }
         });
     }
@@ -159,6 +190,64 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
 
             }
 
+            @Override
+            public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
+
+            }
+        });
+    }
+
+    /**
+     * 一键补货按货道
+     * @param context
+     * @return
+     */
+    public void oneKeyReplenishmentByAisle(final Context context,String start,String end){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("channel_start",start);
+        map.put("channel_end",end);
+        map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
+        Call<MsClearShelfInfoBean> call=loginInfoPost.oneKeyReplenishmentByAisle(map);
+        call.enqueue(new Callback<MsClearShelfInfoBean>() {
+            @Override
+            public void onResponse(Call<MsClearShelfInfoBean> call, Response<MsClearShelfInfoBean> response) {
+                MsClearShelfInfoBean clearShelfInfoBean=response.body();
+                if(clearShelfInfoBean.getStatus()==200){
+                    ToastUtil.showToast(context,"一键补货成功");
+                    GetShelfInfo(context);
+                }
+            }
+            @Override
+            public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
+
+            }
+        });
+    }
+
+    /**
+     * 一键补货整个设备
+     * @param context
+     * @return
+     */
+    public void oneKeyReplenishment(final Context context){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
+        Call<MsClearShelfInfoBean> call=loginInfoPost.oneKeyReplenishment(map);
+        call.enqueue(new Callback<MsClearShelfInfoBean>() {
+            @Override
+            public void onResponse(Call<MsClearShelfInfoBean> call, Response<MsClearShelfInfoBean> response) {
+                MsClearShelfInfoBean clearShelfInfoBean=response.body();
+                if(clearShelfInfoBean.getStatus()==200){
+                    ToastUtil.showToast(context,"一键补货成功");
+                    GetShelfInfo(context);
+                }
+            }
             @Override
             public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
 

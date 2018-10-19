@@ -1,4 +1,4 @@
-package com.tlp.vendspring.netutil;
+package com.tlp.vendspring.util;
 
 import android.content.Context;
 import android.widget.Toast;

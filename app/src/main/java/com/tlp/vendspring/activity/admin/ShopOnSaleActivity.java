@@ -18,9 +18,9 @@ import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsGoodTypeInfoBean;
 import com.tlp.vendspring.bean.MsShelfGoodInfoBean;
 import com.tlp.vendspring.bean.MsShlefGoodInfoSubmitBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.netutil.ToastUtil;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 
 import java.util.HashMap;
 import java.util.Map;

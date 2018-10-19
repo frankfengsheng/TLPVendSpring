@@ -18,9 +18,9 @@ import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.activity.admin.MSAdminMangerActivity;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.netutil.ToastUtil;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,6 +42,7 @@ public class MSLoginMenu extends TcnMainActivity implements OnClickListener {
 	private EditText edt_phoneNumber,edt_pwd;
 	private Button btn_login;
 	private Button btn_back;
+	public static int  INDENTITY=0;//身份0管理员  1补货员
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -143,8 +144,11 @@ public class MSLoginMenu extends TcnMainActivity implements OnClickListener {
 					MSUserUtils.getInstance().setUserId(getApplicationContext(),loginBean.getData().getUserid());
 					if(loginBean.getData().getType().equals("4"))
 					{
-
+						INDENTITY=1;
+						Intent intent=new Intent(getApplicationContext(),MSAdminMangerActivity.class);
+						startActivity(intent);
 					}else if(loginBean.getData().getType().equals("6")){
+						INDENTITY=0;
 						Intent intent=new Intent(getApplicationContext(),MSAdminMangerActivity.class);
 						startActivity(intent);
 					}

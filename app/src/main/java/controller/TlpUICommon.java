@@ -26,7 +26,7 @@ import com.tcn.vendspring.MainAct;
 import com.tcn.vendspring.R;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tcn.vendspring.netUtil.RetrofitClient;
-import com.tlp.vendspring.netutil.TLPApiServices;
+import com.tlp.vendspring.util.TLPApiServices;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -50,7 +50,6 @@ import com.tcn.vendspring.keyboard.DialogVerify;
 import com.tcn.vendspring.keyboard.FragmentVerify;
 import com.tcn.vendspring.pay.TlpDialogPay;
 import com.tcn.vendspring.shopping.FragmentSelection;
-import com.tlp.vendspring.MSMainActivity;
 
 import controller.UICommon;
 import controller.VendApplication;
@@ -412,7 +411,8 @@ public class MainAct extends TcnMainActivity {
 		/***********************************  shimmer end ***********************************/
 
 		if (null == m_DialogPay) {
-			m_DialogPay = new TlpDialogPay(MainAct.this);
+			m_DialogPay = new TlpDialogPay(MainAct.this,null,0,null,
+					null,null,null,null);
 			m_DialogPay.setOnDismissListener(m_DismissListener);
 			m_DialogPay.setOnShowListener(m_ShowListener);
 		}

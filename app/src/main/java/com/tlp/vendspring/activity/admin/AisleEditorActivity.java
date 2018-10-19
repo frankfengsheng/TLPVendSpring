@@ -2,30 +2,21 @@ package com.tlp.vendspring.activity.admin;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
+import com.tlp.vendspring.activity.MSLoginMenu;
 import com.tlp.vendspring.bean.AisleEditorResultbean;
 import com.tlp.vendspring.bean.AisleInfoBean;
-import com.tlp.vendspring.bean.MSGoodsInfoBean;
-import com.tlp.vendspring.bean.MsGoodTypeInfoBean;
-import com.tlp.vendspring.bean.MsShelfGoodInfoBean;
-import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
-import com.tlp.vendspring.bean.MsShlefGoodInfoSubmitBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.netutil.ToastUtil;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,16 +39,16 @@ public class AisleEditorActivity extends BaseActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aisle_editor);
-        initTitle("商品编辑");
+        initTitle("货道管理");
         init_view();
 
     }
     private void init_view()
     {
         dataBean= (AisleInfoBean.DataBean) getIntent().getSerializableExtra("dataBean");
-
         btn_save= (Button) findViewById(R.id.btn_save);
         btn_cancle= (Button) findViewById(R.id.btn_cancle);
+
         tv_guige= (TextView) findViewById(R.id.ms_tv_good_guige);
         tv_price= (TextView) findViewById(R.id.ms_tv_good_price);
         tv_baozhiqi= (TextView) findViewById(R.id.ms_tv_good_baozhiqi);
@@ -69,7 +60,12 @@ public class AisleEditorActivity extends BaseActivity implements View.OnClickLis
         radioGroup= (RadioGroup) findViewById(R.id.ms_rg_aisle_editor);
         rd_start= (RadioButton) findViewById(R.id.ms_rd_aisle_start_usering);
         rd_stop= (RadioButton) findViewById(R.id.ms_rd_aisle_stop_usering);
-
+        if(MSLoginMenu.INDENTITY==1){
+            btn_cancle.setVisibility(View.GONE);
+            btn_save.setVisibility(View.GONE);
+            rd_start.setEnabled(false);
+            rd_stop.setEnabled(false);
+        }
         radioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
         btn_save.setOnClickListener(this);
         btn_cancle.setOnClickListener(this);

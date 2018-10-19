@@ -57,7 +57,7 @@ public class ReplenishmentAisleAdapter extends RecyclerView.Adapter<Replenishmen
             @Override
             public void onClick(View v) {
                 int pos=holder.getLayoutPosition();
-                if(dataBean.getChannel_remains()>(Integer.parseInt(dataBean.getChannel_capacity())-Integer.parseInt(dataBean.getChannel_remain()))){
+                if(dataBean.getChannel_remains()>=(Integer.parseInt(dataBean.getChannel_capacity())-Integer.parseInt(dataBean.getChannel_remain()))){
                     Toast.makeText(context, "已经到了最大值", Toast.LENGTH_LONG).show();
                 }else {
                     dataBean.setChannel_remains(dataBean.getChannel_remains() + 1);

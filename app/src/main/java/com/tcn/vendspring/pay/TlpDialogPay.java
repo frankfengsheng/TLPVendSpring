@@ -4,11 +4,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -38,6 +40,7 @@ import com.tcn.funcommon.vend.controller.VendEventInfo;
 import com.tcn.uicommon.TcnUtility;
 import com.tcn.uicommon.resources.Resources;
 import com.tcn.vendspring.R;
+import com.tlp.vendspring.util.ZXingUtils;
 
 import org.w3c.dom.Text;
 
@@ -60,8 +63,20 @@ public class TlpDialogPay extends Dialog {
     private TextView tv_pay_money;
     private Button m_btn_back;
     CountDownTimer timer;
-    public TlpDialogPay(@NonNull Context context) {
+    private String url;
+    private int drawableResource;
+    TimerStopInterface timerStopInterface;
+    private String goodName,goodPrice,goodModle,goodUrl;
+    public TlpDialogPay(@NonNull Context context,String url,int drawableResource,TimerStopInterface timerStopInterface,
+                        String goodName,String goodPrice,String googModle,String goodUrl) {
         super(context,R.style.Dialog_bocop);
+        this.url=url;
+        this.drawableResource=drawableResource;
+        this.timerStopInterface=timerStopInterface;
+        this.goodName=goodName;
+        this.goodPrice=goodPrice;
+        this.goodModle=googModle;
+        this.goodUrl=goodUrl;
         init(context);
     }
 
@@ -75,11 +90,20 @@ public class TlpDialogPay extends Dialog {
         tv_goods_name= (TextView) findViewById(R.id.tlp_tv_pay_dialog_shopname);
         tv_colse_timer= (TextView) findViewById(R.id.tlp_tv_pay_dialog_close_time1);
         tv_pay_money= (TextView) findViewById(R.id.tlp_tv_pay_dialog_paymoney);
+
+        if(!TextUtils.isEmpty(goodName))tv_goods_name.setText(goodName);
+        if(!TextUtils.isEmpty(goodModle))tv_goods_guige.setText(goodModle);
+        if(!TextUtils.isEmpty(goodPrice))tv_pay_money.setText(goodPrice);
+
         m_btn_back= (Button) findViewById(R.id.tlp_btn_pay_dialog_back);
         TlpDialogPay.ButtonClick m_BtnClickListener = new TlpDialogPay.ButtonClick();
         m_btn_back.setOnClickListener(m_BtnClickListener);
-        Glide.with(context).load("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1537507541&di=3abdc0d55b25bc7a31da4b74289d8022&src=http://img.xiaoguoyigou.com/big/201402/3726dcda-94ab-4079-aed5-97d599e2c953.jpg").into(iv_pay_goods_picture);
-        Glide.with(context).load("http://www.tonglepai.cn/Public/Home/images/member_wx.jpg").into(iv_pay_erweima_picture);
+
+        Bitmap bitmap = ZXingUtils.createQRImage(url, 600, 600, BitmapFactory.decodeResource(context.getResources(),drawableResource));
+        iv_pay_erweima_picture.setImageBitmap(bitmap);
+
+        if(!TextUtils.isEmpty(goodUrl))Glide.with(context).load(goodUrl).into(iv_pay_goods_picture);
+       // Glide.with(context).load("http://www.tonglepai.cn/Public/Home/images/member_wx.jpg").into(iv_pay_erweima_picture);
         if ((TcnCommon.SCREEN_INCH[1]).equals(TcnShareUseData.getInstance().getScreenInch())) {
             try {
                 TcnVendIF.getInstance().LoggerDebug(TAG, "pay logo start");
@@ -123,7 +147,7 @@ public class TlpDialogPay extends Dialog {
             if (TcnShareUseData.getInstance().isFullScreen()) {
                 lp.height = 1820;
             } else {
-                lp.height = 1212;
+                lp.height = 912;
             }
             lp.y = 50;
         } else if (ImageController.SCREEN_TYPE_S1920X1080 == TcnVendIF.getInstance().getScreenType()) {
@@ -160,7 +184,7 @@ public class TlpDialogPay extends Dialog {
         } else if (ImageController.SCREEN_TYPE_S600X1024 == TcnVendIF.getInstance().getScreenType()) {
           //  lp.height = 628;
         } else if (ImageController.SCREEN_TYPE_S1024X600 == TcnVendIF.getInstance().getScreenType()) {
-            lp.width = 604;
+            lp.width = 704;
             lp.x = 420;
            // lp.height = 560;
             win.setGravity(Gravity.BOTTOM);
@@ -212,6 +236,7 @@ public class TlpDialogPay extends Dialog {
 
             @Override
             public void onFinish() {
+                if(timerStopInterface!=null) timerStopInterface.timerStop();
                 TcnVendIF.getInstance().reqEndEffectiveTime();
                 dismiss();
             }
@@ -232,7 +257,7 @@ public class TlpDialogPay extends Dialog {
             }
             else */
             if (id == R.id.tlp_btn_pay_dialog_back) {
-                TcnVendIF.getInstance().reqEndEffectiveTime();
+                timerStopInterface.timerStop();
                 dismiss();
             }
         }
@@ -249,5 +274,9 @@ public class TlpDialogPay extends Dialog {
     protected void onStop() {
         super.onStop();
         timer.cancel();
+    }
+    //通知倒计时结束
+  public   interface TimerStopInterface{
+        void timerStop();
     }
 }

@@ -16,6 +16,7 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
     private Button btn_shelf_manager;
     private Button btn_aisle_manager;
     private Button btn_goods_manager;
+    private Button btn_inventory_change;
     private Button btn_exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,12 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
         btn_shelf_manager= (Button) findViewById(R.id.ms_admin_menu_btn_shelf_manger);
         btn_aisle_manager= (Button) findViewById(R.id.ms_admin_menu_btn_aisle_manger);
         btn_goods_manager= (Button) findViewById(R.id.ms_admin_menu_btn_goods_manger);
+        btn_inventory_change= (Button) findViewById(R.id.ms_admin_menu_btn_inventory_change);
         btn_exit= (Button) findViewById(R.id.ms_admin_menu_btn_exit);
         btn_shelf_manager.setOnClickListener(this);
         btn_aisle_manager.setOnClickListener(this);
         btn_goods_manager.setOnClickListener(this);
+        btn_inventory_change.setOnClickListener(this);
         btn_exit.setOnClickListener(this);
     }
 
@@ -55,6 +58,9 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
                 break;
             case R.id.ms_admin_menu_btn_exit:
               gotodesk();
+                break;
+            case R.id.ms_admin_menu_btn_inventory_change:
+                nextView(getApplicationContext(),InventoryChaneActivity.class);
                 break;
         }
     }

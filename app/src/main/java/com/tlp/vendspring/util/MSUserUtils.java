@@ -1,10 +1,7 @@
-package com.tlp.vendspring.netutil;
+package com.tlp.vendspring.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 public class MSUserUtils {
 

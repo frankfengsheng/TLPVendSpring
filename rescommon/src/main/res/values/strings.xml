@@ -774,6 +774,7 @@
     <string name="ms_goods_price">单价</string>
     <string name="ms_baozhiqi">保质期</string>
     <string name="ms_aisle_capacity">货道容量</string>
+    <string name="ms_sure">确定</string>
     <string name="ms_save">保存</string>
     <string name="ms_cancle">取消</string>
     <string name="ms_aisle_number">货道号</string>
@@ -782,4 +783,5 @@
     <string name="ms_aisle_stop_using">禁用</string>
     <string name="ms_reset">重置</string>
     <string name="ms_clear_inventory">清空库存</string>
+    <string name="tip">消息提示</string>
 </resources>

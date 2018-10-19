@@ -1,8 +1,9 @@
-package com.tlp.vendspring.netutil;
+package com.tlp.vendspring.util;
 
 import com.tcn.background.Entity.MSLoginBean;
 import com.tlp.vendspring.bean.AisleEditorResultbean;
 import com.tlp.vendspring.bean.AisleInfoBean;
+import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.MsGoodTypeInfoBean;
@@ -10,6 +11,7 @@ import com.tlp.vendspring.bean.MsReplenishmentAisleResult;
 import com.tlp.vendspring.bean.MsShelfGoodInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
 import com.tlp.vendspring.bean.MsShlefGoodInfoSubmitBean;
+import com.tlp.vendspring.bean.PaySuccessulGetAisleNumberInfoBean;
 
 import java.util.Map;
 
@@ -94,5 +96,52 @@ public interface TLPApiServices {
     @FormUrlEncoded
     @POST("api/Replenishment/replenishment/")
     Call<MsClearShelfInfoBean> replenishmentPost(@FieldMap Map<String,String> map);
+
+    /***
+     * 管理员补货员一键补货，按货道（
+     */
+    @FormUrlEncoded
+    @POST("api/Replenishment/quick_replenishment/")
+    Call<MsClearShelfInfoBean> oneKeyReplenishmentByAisle(@FieldMap Map<String,String> map);
+
+    /***
+     * 管理员补货员一键补货
+     */
+    @FormUrlEncoded
+    @POST("api/Replenishment/quick_replenishments/")
+    Call<MsClearShelfInfoBean> oneKeyReplenishment(@FieldMap Map<String,String> map);
+
+    /***
+     * 管理员补货员修改库存
+     */
+    @FormUrlEncoded
+    @POST("api/Replenishment/update_channelremain/")
+    Call<MsClearShelfInfoBean> changeInventory(@FieldMap Map<String,String> map);
+
+    /***
+     * 生成支付订单
+     */
+    @FormUrlEncoded
+    @POST("api/Channelpayment/wx_alipay_payment/")
+    Call<GetPayOrderNumberResultInfoBean> getPayOrderNumber(@FieldMap Map<String,String> map);
+
+
+
+    /***
+     * 支付成功，设备获取出货货道号
+     */
+    @FormUrlEncoded
+    @POST("api/Channelpayment/shipments_machine/")
+    Call<PaySuccessulGetAisleNumberInfoBean> paySuccessGetAisleNumber(@FieldMap Map<String,String> map);
+
+
+    /***
+     * 设备出货成功
+     */
+    @FormUrlEncoded
+    @POST("api/Channelpayment/shipments_success/")
+    Call<MsClearShelfInfoBean> shipSucessed(@FieldMap Map<String,String> map);
+
+
 }
 

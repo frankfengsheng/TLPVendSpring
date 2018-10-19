@@ -3,7 +3,9 @@ package com.tlp.vendspring.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,15 +15,21 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tcn.funcommon.db.Goods_info;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
 import com.tcn.vendspring.R;
+import com.tcn.vendspring.pay.TlpDialogPay;
+import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.MSUIUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
+import com.tlp.vendspring.bean.MsClearShelfInfoBean;
+import com.tlp.vendspring.bean.PaySuccessulGetAisleNumberInfoBean;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,6 +53,12 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private Goods_info gs_info;
     private Button btn_last;
     private Button btn_next;
+    private TlpDialogPay m_DialogPay = null;
+    private  String orderNumber;//订单号
+    private String aisleNumber;
+
+    Handler handler=new Handler();
+    MSGoodsInfoBean.DataBean selectgoodBean;
     public MSGoodsFragment() {
         // Required empty public constructor
     }
@@ -72,13 +86,19 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private void init_view(){
         mTvPageSize= (TextView) contentView.findViewById(R.id.select_page);
         m_PageAdapterCallBack = new PageAdapterCallBack();
+
         initPage();
-        //网络获取
-        GetGoodsInfo(getActivity().getApplicationContext());
+
 
     }
 
-
+    Runnable runnable=new Runnable() {
+        @Override
+        public void run() {
+            CheckPayState(getActivity(),orderNumber);
+            handler.postDelayed(this,2000);
+        }
+    };
 
     private class PageAdapterCallBack implements PageRecyclerView.CallBack {
 
@@ -107,6 +127,11 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
 
         @Override
         public void onItemClickListener(View view, int position) {
+           // TcnVendIF.getInstance().reqSelectGoods(position);
+            //TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
+            selectgoodBean=goodsInfoBean.getData().get(position);
+            getOrderNumber(getActivity(),goodsInfoBean.getData().get(position).getGoods_id(),goodsInfoBean.getData().get(position).getPrice_sales(),goodsInfoBean.getData().get(position).getGoods_name());
+
             //itemClick(position);
         }
 
@@ -193,13 +218,22 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         view.startAnimation(set); */
       /*  TcnVendIF.getInstance().reqTouchSoundPlay();
         TcnVendIF.getInstance().reqSelectGoods(position);*/
-        TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
+       // TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //网络获取
+        GetGoodsInfo(getActivity().getApplicationContext());
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        pageAdapter.removeCallBack();
+
+
+
     }
 
     /**
@@ -231,6 +265,106 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     }
 
 
+    /**
+     * 生成支付订单
+     * @param context
+     * @return
+     */
+    public void getOrderNumber(final Context context, String good_id, String price_sales, final String goods_name){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("goods_id",good_id);
+        map.put("price_sales",price_sales);
+        map.put("goods_name",goods_name);
+        Call<GetPayOrderNumberResultInfoBean> call=loginInfoPost.getPayOrderNumber(map);
+        call.enqueue(new Callback<GetPayOrderNumberResultInfoBean>() {
+            @Override
+            public void onResponse(Call<GetPayOrderNumberResultInfoBean> call, Response<GetPayOrderNumberResultInfoBean> response) {
+                GetPayOrderNumberResultInfoBean bean=response.body();
+                if(bean!=null&&bean.getStatus()==200)
+                {
+                    orderNumber=bean.getData().getOrder_number();
+                    String url="http://wx.51mengshou.com/home/wxpay/index/orderno/"+orderNumber;
+                    if(!TextUtils.isEmpty(url)&&selectgoodBean!=null) {
+                        TlpDialogPay dialogPay = new TlpDialogPay(context, url, 0, timerStopInterface,selectgoodBean.getGoods_name(),
+                                selectgoodBean.getPrice_sales(),selectgoodBean.getGoods_model(),selectgoodBean.getGoods_url());
+                        dialogPay.show();
+                        handler.postDelayed(runnable, 0);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetPayOrderNumberResultInfoBean> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+
+    /**
+     * 查询支付状态
+     * @param context
+     * @return
+     */
+    public void CheckPayState(final Context context,String orderNumber){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("order_number",orderNumber);
+        Call<PaySuccessulGetAisleNumberInfoBean> call=loginInfoPost.paySuccessGetAisleNumber(map);
+        call.enqueue(new Callback<PaySuccessulGetAisleNumberInfoBean>() {
+            @Override
+            public void onResponse(Call<PaySuccessulGetAisleNumberInfoBean> call, Response<PaySuccessulGetAisleNumberInfoBean> response) {
+                PaySuccessulGetAisleNumberInfoBean bean=response.body();
+                if(bean.getData()!=null&&bean.getStatus()==200){
+                    aisleNumber=bean.getData().getChannel_num();
+                    paySucessedToShip(aisleNumber);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<PaySuccessulGetAisleNumberInfoBean> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    /**
+     * 出货成功通知服务器
+     * @param context
+     * @return
+     */
+    public void shipSucess(final Context context,String orderNumber,String channel_num){
+        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
+        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
+        Map map=new HashMap();
+        map.put("machine_code","10020030011");
+        map.put("order_number",orderNumber);
+        map.put("channel_num",channel_num);
+        Call<MsClearShelfInfoBean> call=loginInfoPost.shipSucessed(map);
+        call.enqueue(new Callback<MsClearShelfInfoBean>() {
+            @Override
+            public void onResponse(Call<MsClearShelfInfoBean> call, Response<MsClearShelfInfoBean> response) {
+               MsClearShelfInfoBean bean=response.body();
+               if(bean!=null&&bean.getStatus()==200){
+                   ToastUtil.showToast(context,"通知服务器成功");
+               }
+            }
+
+            @Override
+            public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
+
+            }
+        });
+
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -246,5 +380,33 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
                 }
                 break;
         }
+    }
+    TlpDialogPay.TimerStopInterface timerStopInterface=new TlpDialogPay.TimerStopInterface() {
+        @Override
+        public void timerStop() {
+            handler.removeCallbacks(runnable);
+        }
+    };
+    private void paySucessedToShip(String aisleNumber){
+        m_DialogPay.dismiss();
+        int aisleNO=Integer.parseInt(aisleNumber);
+        TcnVendIF.getInstance().ship(aisleNO,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
+        handler.removeCallbacks(runnable);
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        m_DialogPay.dismiss();
+    }
+    //出货成功
+    public void shipSucess(){
+        ToastUtil.showToast(getActivity(),"哎呀呀呀，出货成功了");
+        handler.removeCallbacks(runnable);
+        shipSucess(getActivity(),orderNumber,aisleNumber);
+    }
+    //出货失败
+    public void shipFailed(){
+        ToastUtil.showToast(getActivity(),"哎呦哟有，出货失败了");
+        handler.removeCallbacks(runnable);
     }
 }

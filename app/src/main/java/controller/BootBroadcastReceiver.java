@@ -8,6 +8,7 @@ import android.os.Message;
 
 import com.tcn.funcommon.TcnLog;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
+import com.tcn.vendspring.MSMainActivity;
 import com.tcn.vendspring.MainAct;
 
 /**
@@ -54,7 +55,7 @@ public class BootBroadcastReceiver extends BroadcastReceiver {
 
             switch (msg.what) {
                 case START_COMMAND:
-                    Intent mIntent = new Intent(m_context,MainAct.class);
+                    Intent mIntent = new Intent(m_context,MSMainActivity.class);
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     m_context.startActivity(mIntent);
                     break;

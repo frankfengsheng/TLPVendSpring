@@ -19,9 +19,9 @@ import com.tlp.vendspring.bean.MsGoodTypeInfoBean;
 import com.tlp.vendspring.bean.MsShelfGoodInfoBean;
 import com.tlp.vendspring.bean.MsShelfMangerInfoBean;
 import com.tlp.vendspring.bean.MsShlefGoodInfoSubmitBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.netutil.ToastUtil;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
+import com.tlp.vendspring.util.ToastUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,6 +76,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
             String end=dataBean.getChannel_end();
             edt_start.setText(start);
             edt_end.setText(end);
+            tv_aislecapacity.setText(dataBean.getChannel_capacity()+"");
         }
     }
     @Override
@@ -90,13 +91,12 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
                 String end=edt_end.getText().toString();
                 if(TextUtils.isEmpty(start)){
                     ToastUtil.showToast(this,"请输入起始货道号");
-                }else if(TextUtils.isEmpty(end)){
-                    ToastUtil.showToast(this,"请输入结束货道号");
                 }else if(TextUtils.isEmpty(goodId)){
                     ToastUtil.showToast(this,"请选择商品");
                 }else if(TextUtils.isEmpty(goodType)){
                     ToastUtil.showToast(this,"请选择商品类型");
                 }else {
+                    if(TextUtils.isEmpty(end))end=start;
                     submitGoodsInfo(getApplicationContext(),start,end,goodId,capacity,goodPrice,goodType);
                 }
                 break;
@@ -204,13 +204,13 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
                 tv_guige.setText(shelfGoodInfoBean.getData().get(position).getGoods_model());
                 tv_price.setText(shelfGoodInfoBean.getData().get(position).getPrice_sales());
                 tv_baozhiqi.setText(shelfGoodInfoBean.getData().get(position).getGoods_shelf_life());
-                tv_aislecapacity.setText(shelfGoodInfoBean.getCapacity());
+
 
                 goodId=shelfGoodInfoBean.getData().get(position).getGoods_id();
                 goodBaozhiqi=shelfGoodInfoBean.getData().get(position).getGoods_shelf_life();
                 goodPrice=shelfGoodInfoBean.getData().get(position).getPrice_sales();
                 goodGuige=shelfGoodInfoBean.getData().get(position).getGoods_model();
-                capacity=shelfGoodInfoBean.getCapacity();
+
 
             }
 

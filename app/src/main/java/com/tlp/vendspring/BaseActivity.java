@@ -55,4 +55,5 @@ public class BaseActivity extends FragmentActivity {
         context=null;
     }
 
+
 }

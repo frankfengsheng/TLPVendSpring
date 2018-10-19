@@ -45,11 +45,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan|stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver android:name="controller.BootBroadcastReceiver">
@@ -74,8 +70,14 @@
         <service android:name="controller.VendService" />
 
         <activity
-            android:name="com.tlp.vendspring.MSMainActivity"
-            android:label="@string/title_activity_tlpmain" />
+            android:name=".MSMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.tlp.vendspring.activity.MSLoginMenu" />
         <activity
             android:name="com.tlp.vendspring.activity.admin.MSAdminMangerActivity"
@@ -88,6 +90,7 @@
         <activity android:name="com.tlp.vendspring.activity.admin.AisleMangerActivity"/>
         <activity android:name="com.tlp.vendspring.activity.admin.AisleEditorActivity"/>
         <activity android:name="com.tlp.vendspring.activity.ReplenishmentEditorActivity"/>
+        <activity android:name="com.tlp.vendspring.activity.admin.InventoryChaneActivity"/>
     </application>
 
 </manifest>

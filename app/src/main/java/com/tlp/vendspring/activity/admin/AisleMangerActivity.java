@@ -14,9 +14,8 @@ import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
 import com.tlp.vendspring.adapter.RecycleAisleMangerAdapter;
 import com.tlp.vendspring.bean.AisleInfoBean;
-import com.tlp.vendspring.netutil.MSUserUtils;
-import com.tlp.vendspring.netutil.TLPApiServices;
-import com.tlp.vendspring.view.RecycleViewDivider;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.TLPApiServices;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +27,7 @@ import retrofit2.Retrofit;
 
 public class AisleMangerActivity extends BaseActivity implements View.OnClickListener{
 
-    private Button btn_shop_onsale;
+    private Button btn_shop_onsale,btn_inventorychange,btn_oneKey;
     private RecyclerView recyclerView;
     RecycleAisleMangerAdapter adapter;
     AisleInfoBean aisleInfoBean;
@@ -44,11 +43,13 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
     private void init_view()
     {
         btn_shop_onsale= (Button) findViewById(R.id.btn_shelf_manage_shop_onsale);
+        btn_inventorychange= (Button) findViewById(R.id.btn_shelf_manage_inventory_change);
+        btn_oneKey= (Button) findViewById(R.id.btn_shelf_manage_a_key_replenishment);
+        btn_inventorychange.setVisibility(View.GONE);
+        btn_oneKey.setVisibility(View.GONE);
         btn_shop_onsale.setVisibility(View.GONE);
         btn_shop_onsale.setOnClickListener(this);
         recyclerView= (RecyclerView) findViewById(R.id.ry_shelf_manager);
-        recyclerView.addItemDecoration(new RecycleViewDivider(
-                getApplicationContext(), LinearLayoutManager.VERTICAL, 2, getResources().getColor(R.color.text_gray)));
         btn_shop_onsale.setOnClickListener(this);
 
     }
@@ -64,7 +65,6 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
                 break;
         }
     }
-
     /**
      * 获取货架管理页面
      * @param context

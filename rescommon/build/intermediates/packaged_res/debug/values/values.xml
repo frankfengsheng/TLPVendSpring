@@ -539,6 +539,7 @@
     <string name="ms_shelf_management_shop_onsale">商品上架</string>
     <string name="ms_shop">商品</string>
     <string name="ms_shop_type">商品类型</string>
+    <string name="ms_sure">确定</string>
     <string name="name">名称：</string>
     <string name="new_psw">新密码</string>
     <string name="no">否</string>
@@ -814,6 +815,7 @@
     <string name="testcoil">测试所有货道</string>
     <string name="three">3</string>
     <string name="time">时间 —— 时间</string>
+    <string name="tip">消息提示</string>
     <string name="tip_aisle_enter">填写货道不能小于起始货道！</string>
     <string name="tip_alipay_account_empty">支付宝账号不能为空！</string>
     <string name="tip_alipay_key_empty">交易安全校验码不能为空！</string>
@@ -966,8 +968,8 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
 
     </style>
     <style name="Theme.CustomDialog" parent="android:style/Theme.Dialog">
@@ -1099,6 +1101,11 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">@dimen/function_bar_text_size_small</item>
+    </style>
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/text_color_gray</item>
     </style>
     <style name="input">
         <item name="android:layout_width">0px</item>
@@ -1385,7 +1392,7 @@
     </style>
     <style name="vervial_line">
         <item name="android:layout_width">1dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/text_color_gray</item>
     </style>
 </resources>
