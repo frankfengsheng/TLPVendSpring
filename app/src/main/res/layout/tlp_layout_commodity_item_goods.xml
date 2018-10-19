@@ -17,8 +17,14 @@
 		android:layout_height="250px"
 		android:layout_centerHorizontal="true"
 		android:src="@mipmap/default_ticket_poster_pic"
-		android:scaleType="fitXY"
 		/>
+        <ImageView
+            android:id="@+id/iv_sellout"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/sellout"
+            />
 
 
 	<TextView

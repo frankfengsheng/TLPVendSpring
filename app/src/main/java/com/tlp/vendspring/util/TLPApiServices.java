@@ -3,6 +3,7 @@ package com.tlp.vendspring.util;
 import com.tcn.background.Entity.MSLoginBean;
 import com.tlp.vendspring.bean.AisleEditorResultbean;
 import com.tlp.vendspring.bean.AisleInfoBean;
+import com.tlp.vendspring.bean.GetAdvertismentInfoBean;
 import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
@@ -143,5 +144,11 @@ public interface TLPApiServices {
     Call<MsClearShelfInfoBean> shipSucessed(@FieldMap Map<String,String> map);
 
 
+    /***
+     * 获取广告接口
+     */
+    @FormUrlEncoded
+    @POST("api/Channelpayment/advertising/")
+    Call<GetAdvertismentInfoBean> getAdvertising(@FieldMap Map<String,String> map);
 }
 

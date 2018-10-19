@@ -225,10 +225,10 @@ public class TlpDialogPay extends Dialog {
     }
 
     /**
-     * 开始 倒计时60s 倒计时结束之后关闭dialog
+     * 开始 倒计时90s 倒计时结束之后关闭dialog
      */
     private void starTimer(){
-       timer =new CountDownTimer(60*1000,1000) {
+          timer =new CountDownTimer(60*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 tv_colse_timer.setText(millisUntilFinished/1000+"s");
@@ -236,7 +236,6 @@ public class TlpDialogPay extends Dialog {
 
             @Override
             public void onFinish() {
-                if(timerStopInterface!=null) timerStopInterface.timerStop();
                 TcnVendIF.getInstance().reqEndEffectiveTime();
                 dismiss();
             }
@@ -257,7 +256,6 @@ public class TlpDialogPay extends Dialog {
             }
             else */
             if (id == R.id.tlp_btn_pay_dialog_back) {
-                timerStopInterface.timerStop();
                 dismiss();
             }
         }
