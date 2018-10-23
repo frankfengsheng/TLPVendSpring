@@ -101,7 +101,7 @@ public class MSBannerFragment extends Fragment  implements OnBannerListener {
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         Call<GetAdvertismentInfoBean> call=loginInfoPost.getAdvertising(map);
         call.enqueue(new Callback<GetAdvertismentInfoBean>() {
             @Override
@@ -121,6 +121,7 @@ public class MSBannerFragment extends Fragment  implements OnBannerListener {
     }
 
     private void refreshUI(GetAdvertismentInfoBean infoBean){
+        list_path.clear();
         for(GetAdvertismentInfoBean.DataBean bean:infoBean.getData()){
             list_path.add(bean.getUrl());
             list_title.add("");

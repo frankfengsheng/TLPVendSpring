@@ -22,7 +22,9 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface TLPApiServices {
-
+    //000000065
+    //10020030011
+    public static String MACHINE_CODE="10020030015";
     /***
      * 设备端展示商品
      */

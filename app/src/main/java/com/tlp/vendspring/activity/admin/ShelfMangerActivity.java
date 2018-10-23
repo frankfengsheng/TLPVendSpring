@@ -95,7 +95,7 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         Call<MsShelfMangerInfoBean> call=loginInfoPost.getShelfInfo(map);
         call.enqueue(new Callback<MsShelfMangerInfoBean>() {
@@ -173,7 +173,7 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("channel_start",start);
         map.put("channel_end",end);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
@@ -206,7 +206,7 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("channel_start",start);
         map.put("channel_end",end);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
@@ -236,7 +236,7 @@ public class ShelfMangerActivity extends BaseActivity implements View.OnClickLis
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         Call<MsClearShelfInfoBean> call=loginInfoPost.oneKeyReplenishment(map);
         call.enqueue(new Callback<MsClearShelfInfoBean>() {

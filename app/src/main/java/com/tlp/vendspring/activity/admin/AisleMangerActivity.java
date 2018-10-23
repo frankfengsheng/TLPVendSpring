@@ -74,7 +74,7 @@ public class AisleMangerActivity extends BaseActivity implements View.OnClickLis
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         Call<AisleInfoBean> call=loginInfoPost.getAisleInfo(map);
         call.enqueue(new Callback<AisleInfoBean>() {

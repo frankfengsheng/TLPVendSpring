@@ -653,32 +653,7 @@ public class TlpUICommon {
         return mNameList;
     }
 
-    /**
-     * 获取设备端展示商品
-     * @param context
-     * @return
-     */
-    public MSGoodsInfoBean GetGoodsInfo(final Context context){
-        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
-        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
-        Map map=new HashMap();
-        map.put("machine_code","10020030011");
-        Call<MSGoodsInfoBean> call=loginInfoPost.getgoods(map);
-        call.enqueue(new Callback<MSGoodsInfoBean>() {
-            @Override
-            public void onResponse(Call<MSGoodsInfoBean> call, Response<MSGoodsInfoBean> response) {
-                MSGoodsInfoBean goodsInfoBean=response.body();
-                Log.i("TLPJSON",response.body().getMsg());
-                Toast.makeText(context,response.body().getStatus()+response.body().getData().get(0).getGoods_name()+"",Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onFailure(Call<MSGoodsInfoBean> call, Throwable t) {
-
-            }
-        });
-            return null;
-    }
 
     public UIGoodsInfo getGoodsInfo(int position) {
         UIGoodsInfo mGoodsInfo = new UIGoodsInfo();

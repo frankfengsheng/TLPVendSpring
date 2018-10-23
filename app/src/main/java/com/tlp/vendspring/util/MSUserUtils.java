@@ -25,8 +25,20 @@ public class MSUserUtils {
    }
 
    public String getUserId(Context context){
-       SharedPreferences sharedPreferences=context.getSharedPreferences("userid",Context.MODE_PRIVATE);
+         SharedPreferences sharedPreferences=context.getSharedPreferences("userid",Context.MODE_PRIVATE);
         String userid=sharedPreferences.getString("userid",null);
+        return userid;
+    }
+
+    public void setMachineCode (Context context,String machineCode){
+        SharedPreferences sharedPreferences=context.getSharedPreferences("machinecode",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("userid",machineCode);
+        editor.commit();
+    }
+    public String getMachineCode(Context context){
+        SharedPreferences sharedPreferences=context.getSharedPreferences("machinecode",Context.MODE_PRIVATE);
+        String userid=sharedPreferences.getString("machinecode",null);
         return userid;
     }
 }

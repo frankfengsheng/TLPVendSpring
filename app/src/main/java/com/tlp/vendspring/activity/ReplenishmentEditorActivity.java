@@ -152,7 +152,7 @@ public class ReplenishmentEditorActivity extends BaseActivity implements View.On
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         map.put("channel_start",start);
         map.put("channel_end",end);
@@ -216,7 +216,7 @@ public class ReplenishmentEditorActivity extends BaseActivity implements View.On
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         map.put("goods_id",dataBean.getGoods_id());
         map.put("goods_name",dataBean.getGoods_name());

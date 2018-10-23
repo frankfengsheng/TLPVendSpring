@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 
 import com.tcn.funcommon.db.Goods_info;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
+import com.tcn.uicommon.dialog.LoadingDialog;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.pay.TlpDialogPay;
@@ -43,6 +45,7 @@ import retrofit2.Retrofit;
 
 
 public class MSGoodsFragment extends Fragment implements View.OnClickListener{
+
     private View contentView;
     private PageRecyclerView pageRecyclerView;
     private PageRecyclerView.PageAdapter pageAdapter;
@@ -50,7 +53,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private LinearLayout select_pager_layout;
     private MSGoodsInfoBean goodsInfoBean;
     private PageAdapterCallBack m_PageAdapterCallBack ;
-
     private Goods_info gs_info;
     private Button btn_last;
     private Button btn_next;
@@ -58,12 +60,15 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private  String orderNumber;//订单号
     private String aisleNumber;
     private TextView tv_noData;
-    CountDownTimer paytimer;//从弹出二维码支付页面开始90秒内一直刷新支付状态
+  //从弹出二维码支付页面开始90秒内一直刷新支付状态
     Handler handler=new Handler();
     MSGoodsInfoBean.DataBean selectgoodBean;
+    LoadingDialog loadingDialog;
+
     public MSGoodsFragment() {
         // Required empty public constructor
     }
+
     public static MSGoodsFragment newInstance(String param1, String param2) {
         MSGoodsFragment fragment = new MSGoodsFragment();
         Bundle args = new Bundle();
@@ -86,6 +91,8 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         return contentView;
     }
     private void init_view(){
+        loadingDialog=new LoadingDialog(getActivity(),"数据正在加载中","请稍后...");
+        loadingDialog.show();
         mTvPageSize= (TextView) contentView.findViewById(R.id.select_page);
         tv_noData= (TextView) contentView.findViewById(R.id.goods_shimmer_tv_loading);
         m_PageAdapterCallBack = new PageAdapterCallBack();
@@ -93,7 +100,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         handler.postDelayed(runnable2,1000*60*30);
 
     }
-
     Runnable runnable=new Runnable() {
         @Override
         public void run() {
@@ -101,7 +107,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
             handler.postDelayed(this,3000);
         }
     };
-
     Runnable runnable2=new Runnable() {
         @Override
         public void run() {
@@ -109,7 +114,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
             handler.postDelayed(this,1000*60*30);
         }
     };
-
     private class PageAdapterCallBack implements PageRecyclerView.CallBack {
 
         int res = 0;
@@ -249,10 +253,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     public void onPause() {
         super.onPause();
 
-
-
     }
-
     /**
      * 获取设备端展示商品
      * @param context
@@ -262,12 +263,12 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         Call<MSGoodsInfoBean> call=loginInfoPost.getgoods(map);
         call.enqueue(new Callback<MSGoodsInfoBean>() {
             @Override
             public void onResponse(Call<MSGoodsInfoBean> call, Response<MSGoodsInfoBean> response) {
-
+                if(loadingDialog!=null) loadingDialog.dismiss();
                 goodsInfoBean=response.body();
                 if(goodsInfoBean!=null&&goodsInfoBean.getStatus()==200&&goodsInfoBean.getData()!=null&&goodsInfoBean.getData().size()>0) {
                     tv_noData.setVisibility(View.GONE);
@@ -281,13 +282,12 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
 
             @Override
             public void onFailure(Call<MSGoodsInfoBean> call, Throwable t) {
+                if(loadingDialog!=null) loadingDialog.dismiss();
                 tv_noData.setText("数据加载失败，请重启售货机");
             }
         });
         return null;
     }
-
-
     /**
      * 生成支付订单
      * @param context
@@ -297,7 +297,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("goods_id",good_id);
         map.put("price_sales",price_sales);
         map.put("goods_name",goods_name);
@@ -328,7 +328,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
 
     }
 
-
     /**
      * 查询支付状态
      * @param context
@@ -338,14 +337,14 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("order_number",orderNumber);
         Call<PaySuccessulGetAisleNumberInfoBean> call=loginInfoPost.paySuccessGetAisleNumber(map);
         call.enqueue(new Callback<PaySuccessulGetAisleNumberInfoBean>() {
             @Override
             public void onResponse(Call<PaySuccessulGetAisleNumberInfoBean> call, Response<PaySuccessulGetAisleNumberInfoBean> response) {
                 PaySuccessulGetAisleNumberInfoBean bean=response.body();
-                if(bean.getData()!=null&&bean.getStatus()==200){
+                if(bean!=null&&bean.getData()!=null&&bean.getStatus()==200){
                     aisleNumber=bean.getData().getChannel_num();
                     paySucessedToShip(aisleNumber);
 
@@ -369,7 +368,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("order_number",orderNumber);
         map.put("channel_num",channel_num);
         Call<MsClearShelfInfoBean> call=loginInfoPost.shipSucessed(map);
@@ -381,13 +380,11 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
                    ToastUtil.showToast(context,"通知服务器成功");
                }
             }
-
             @Override
             public void onFailure(Call<MsClearShelfInfoBean> call, Throwable t) {
 
             }
         });
-
     }
     @Override
     public void onClick(View v) {
@@ -417,7 +414,6 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     public void onDestroy() {
         super.onDestroy();
         if(m_DialogPay!=null)m_DialogPay.dismiss();
-        if(paytimer!=null)paytimer.cancel();
 
     }
     //出货成功
@@ -430,6 +426,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     //出货失败
     public void shipFailed(){
         //ToastUtil.showToast(getActivity(),"哎呦哟有，出货失败了");
+        GetGoodsInfo(getActivity());
         handler.removeCallbacks(runnable);
     }
 
@@ -437,7 +434,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
      * 开始 倒计时120s 倒计时结束之后关闭支付状态查询
      */
     private void starPayTimer(){
-        paytimer =new CountDownTimer(120*1000,1000) {
+        CountDownTimer   paytimer =new CountDownTimer(120*1000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
 

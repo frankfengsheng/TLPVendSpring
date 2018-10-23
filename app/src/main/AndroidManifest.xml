@@ -91,6 +91,7 @@
         <activity android:name="com.tlp.vendspring.activity.admin.AisleEditorActivity"/>
         <activity android:name="com.tlp.vendspring.activity.ReplenishmentEditorActivity"/>
         <activity android:name="com.tlp.vendspring.activity.admin.InventoryChaneActivity"/>
+        <activity android:name="com.tlp.vendspring.MSInputMachineCodeActivity"/>
     </application>
 
 </manifest>

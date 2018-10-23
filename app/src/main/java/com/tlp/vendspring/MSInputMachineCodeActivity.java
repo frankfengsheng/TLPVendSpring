@@ -1,4 +1,4 @@
-package com.tlp.vendspring.activity;
+package com.tlp.vendspring;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,7 +37,7 @@ import retrofit2.Retrofit;
  * @author Administrator
  *
  */
-public class MSLoginMenu extends TcnMainActivity implements OnClickListener {
+public class MSInputMachineCodeActivity extends TcnMainActivity implements OnClickListener {
 
 	private EditText edt_phoneNumber,edt_pwd;
 	private Button btn_login;
@@ -46,7 +46,7 @@ public class MSLoginMenu extends TcnMainActivity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ms_loginmenu);
+		setContentView(R.layout.ms_machine_code_input);
 
 		btn_login= (Button) findViewById(R.id.login_btn);
 		btn_back= (Button) findViewById(R.id.login_back);

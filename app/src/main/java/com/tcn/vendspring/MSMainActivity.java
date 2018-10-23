@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
@@ -36,9 +37,12 @@ import com.tcn.vendspring.R;
 import com.tcn.vendspring.help.DialogHelp;
 import com.tcn.vendspring.keyboard.DialogVerify;
 import com.tcn.vendspring.pay.TlpDialogPay;
+import com.tlp.vendspring.MSInputMachineCodeActivity;
 import com.tlp.vendspring.activity.MSLoginMenu;
 import com.tlp.vendspring.fragment.MSBannerFragment;
 import com.tlp.vendspring.fragment.MSGoodsFragment;
+import com.tlp.vendspring.util.MSUserUtils;
+import com.tlp.vendspring.util.ToastUtil;
 
 import controller.UICommon;
 import controller.VendService;
@@ -54,7 +58,6 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
     private static final int SHOW_SHIPSUCCESS_DIALOG = 5;
     private static int m_listData_count = 0;
     private boolean m_bHasData = false;
-
     private RelativeLayout rl_title;
     FragmentTransaction transaction;
     FragmentManager fragmentManager;
@@ -245,8 +248,11 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
                             m_OutDialog.setText(getString(R.string.notify_shipping));
                         }
                     }
-                    m_OutDialog.setNumber(String.valueOf(cEventInfo.m_lParam1));
-                    m_OutDialog.show();
+                       if(MSMainActivity.this!=null&&m_OutDialog!=null) {
+                           m_OutDialog.setNumber(String.valueOf(cEventInfo.m_lParam1));
+                           m_OutDialog.show();
+                       }
+
                     break;
 
                 case TcnVendEventID.COMMAND_SHIPMENT_SUCCESS:
@@ -314,9 +320,8 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
                 case TcnVendEventID.CMD_PLAY_SCREEN_VIDEO:
                     //setPlayStandbyVideo();
                     break;
-
                 case TcnVendEventID.COMMAND_DOOR_IS_OPEND:
-                    TcnUtility.getToast(MSMainActivity.this, getString(R.string.tip_close_door));
+                    ToastUtil.showToast(MSMainActivity.this, getString(R.string.tip_close_door));
                     break;
                 case TcnVendEventID.PROMPT_INFO:
                     TcnUtility.getToast(MSMainActivity.this, cEventInfo.m_lParam4);
@@ -443,5 +448,16 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
         Dialog dialog = builder.create();
         dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
         dialog.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //判断有没有绑定设备ID
+        String machineCode=MSUserUtils.getInstance().getMachineCode(getApplicationContext());
+        if(TextUtils.isEmpty(machineCode)){
+            Intent intent=new Intent(this, MSInputMachineCodeActivity.class);
+            startActivity(intent);
+        }
     }
 }

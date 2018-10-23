@@ -82,7 +82,7 @@ public class InventoryChaneActivity extends BaseActivity implements View.OnClick
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code","10020030011");
+        map.put("machine_code",TLPApiServices.MACHINE_CODE);
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         map.put("channel_start",start);
         map.put("channel_end",end);

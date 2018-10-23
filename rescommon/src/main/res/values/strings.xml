@@ -783,5 +783,6 @@
     <string name="ms_aisle_stop_using">禁用</string>
     <string name="ms_reset">重置</string>
     <string name="ms_clear_inventory">清空库存</string>
+    <string name="ms_machine_code">设备编码</string>
     <string name="tip">消息提示</string>
 </resources>

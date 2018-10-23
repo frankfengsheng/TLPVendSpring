@@ -11,8 +11,6 @@ import android.content.SharedPreferences;
 public class TcnShareUseData {
     private static TcnShareUseData m_Instance = null;
     public Context m_context = null;
-
-
     public static synchronized TcnShareUseData getInstance() {
         if (null == m_Instance) {
             m_Instance = new TcnShareUseData();
@@ -23,8 +21,6 @@ public class TcnShareUseData {
     public void init(Context context) {
         m_context = context;
     }
-
-
     /**
      *@desc 获取登录密码
      *@author Jiancheng,Song
@@ -544,7 +540,6 @@ public class TcnShareUseData {
         editor.putString("Version", ver);
         editor.commit();
     }
-
 
     /**
      *@desc 获取机器id号
