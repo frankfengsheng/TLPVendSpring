@@ -85,13 +85,7 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
     private void init_view(){
 
         rl_title= (RelativeLayout) findViewById(R.id.tlp_rl_main_titlebar);
-        fragmentManager=this.getFragmentManager();
-        transaction=fragmentManager.beginTransaction();
-        MSBannerFragment bannerfragment= MSBannerFragment.newInstance(null,null);
-        goodsFragment= MSGoodsFragment.newInstance(null,null);
-        transaction.add(R.id.tlp_ly_advertisement_fragment,bannerfragment);
-        transaction.add(R.id.tlp_ly_goods,goodsFragment);
-        transaction.commit();
+
 
         rl_title.setOnClickListener(this);
 
@@ -459,5 +453,12 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
             Intent intent=new Intent(this, MSInputMachineCodeActivity.class);
             startActivity(intent);
         }
+        fragmentManager=this.getFragmentManager();
+        transaction=fragmentManager.beginTransaction();
+        MSBannerFragment bannerfragment= MSBannerFragment.newInstance(null,null);
+        goodsFragment= MSGoodsFragment.newInstance(null,null);
+        transaction.add(R.id.tlp_ly_advertisement_fragment,bannerfragment);
+        transaction.add(R.id.tlp_ly_goods,goodsFragment);
+        transaction.commit();
     }
 }

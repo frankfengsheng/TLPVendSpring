@@ -3,6 +3,7 @@ package com.tlp.vendspring.util;
 import com.tcn.background.Entity.MSLoginBean;
 import com.tlp.vendspring.bean.AisleEditorResultbean;
 import com.tlp.vendspring.bean.AisleInfoBean;
+import com.tlp.vendspring.bean.BindingMachineCodeResultBean;
 import com.tlp.vendspring.bean.GetAdvertismentInfoBean;
 import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
@@ -22,9 +23,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface TLPApiServices {
-    //000000065
-    //10020030011
-    public static String MACHINE_CODE="10020030015";
+
     /***
      * 设备端展示商品
      */
@@ -152,5 +151,13 @@ public interface TLPApiServices {
     @FormUrlEncoded
     @POST("api/Channelpayment/advertising/")
     Call<GetAdvertismentInfoBean> getAdvertising(@FieldMap Map<String,String> map);
+
+    /**
+     * 绑定设备编号
+     */
+
+    @FormUrlEncoded
+    @POST("api/Channelpayment/binding_equipment/")
+    Call<BindingMachineCodeResultBean> BindingMachineCode(@FieldMap Map<String,String> map);
 }
 

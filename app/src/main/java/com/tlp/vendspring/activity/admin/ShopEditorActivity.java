@@ -114,7 +114,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(getApplicationContext()));
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         Call<MsGoodTypeInfoBean> call=loginInfoPost.getGoodTypeInfo(map);
         call.enqueue(new Callback<MsGoodTypeInfoBean>() {
@@ -142,7 +142,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(getApplicationContext()));
         map.put("userid", MSUserUtils.getInstance().getUserId(getApplicationContext()));
         Call<MsShelfGoodInfoBean> call=loginInfoPost.getShelfGoodInfo(map);
         call.enqueue(new Callback<MsShelfGoodInfoBean>() {
@@ -242,7 +242,7 @@ public class ShopEditorActivity extends BaseActivity implements View.OnClickList
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(getApplicationContext()));
         map.put("channel_start", start);
         map.put("channel_end",end);
         map.put("goods_id", goodid);

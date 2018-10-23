@@ -521,6 +521,7 @@
     <string name="ms_aisle_stop_using">禁用</string>
     <string name="ms_baozhiqi">保质期</string>
     <string name="ms_cancle">取消</string>
+    <string name="ms_cancle_binding">解除设备绑定</string>
     <string name="ms_clear_inventory">清空库存</string>
     <string name="ms_goods_price">单价</string>
     <string name="ms_guige">规格</string>

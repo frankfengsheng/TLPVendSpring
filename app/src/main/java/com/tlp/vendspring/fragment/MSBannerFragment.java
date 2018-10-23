@@ -12,6 +12,7 @@ import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.bean.GetAdvertismentInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
+import com.tlp.vendspring.util.MSUserUtils;
 import com.tlp.vendspring.util.TLPApiServices;
 import com.tlp.vendspring.util.ToastUtil;
 import com.youth.banner.Banner;
@@ -101,7 +102,7 @@ public class MSBannerFragment extends Fragment  implements OnBannerListener {
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code", MSUserUtils.getInstance().getMachineCode(context));
         Call<GetAdvertismentInfoBean> call=loginInfoPost.getAdvertising(map);
         call.enqueue(new Callback<GetAdvertismentInfoBean>() {
             @Override

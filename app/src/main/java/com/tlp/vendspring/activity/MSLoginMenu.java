@@ -134,7 +134,7 @@ public class MSLoginMenu extends TcnMainActivity implements OnClickListener {
 		Map map=new HashMap();
 		map.put("tel",phoneNumber);
 		map.put("pwd",pwd);
-		map.put("machine_code",TLPApiServices.MACHINE_CODE);
+		map.put("machine_code",MSUserUtils.getInstance().getMachineCode(getApplicationContext()));
 		Call<MSLoginBean> call=loginInfoPost.login(map);
 		call.enqueue(new Callback<MSLoginBean>() {
 			@Override

@@ -1,5 +1,6 @@
 package com.tlp.vendspring;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,6 +18,7 @@ import com.tcn.uicommon.view.TcnMainActivity;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.activity.admin.MSAdminMangerActivity;
+import com.tlp.vendspring.bean.BindingMachineCodeResultBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.util.MSUserUtils;
 import com.tlp.vendspring.util.TLPApiServices;
@@ -39,7 +41,7 @@ import retrofit2.Retrofit;
  */
 public class MSInputMachineCodeActivity extends TcnMainActivity implements OnClickListener {
 
-	private EditText edt_phoneNumber,edt_pwd;
+	private EditText edt_phoneNumber;
 	private Button btn_login;
 	private Button btn_back;
 	public static int  INDENTITY=0;//身份0管理员  1补货员
@@ -51,23 +53,10 @@ public class MSInputMachineCodeActivity extends TcnMainActivity implements OnCli
 		btn_login= (Button) findViewById(R.id.login_btn);
 		btn_back= (Button) findViewById(R.id.login_back);
 		edt_phoneNumber= (EditText) findViewById(R.id.login_edit_phone);
-		edt_pwd= (EditText) findViewById(R.id.login_edit_pwd);
 		btn_login.setOnClickListener(this);
 		btn_back.setOnClickListener(this);
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		TcnVendIF.getInstance().registerListener(m_vendListener);
-		//startShowTimer(60000);
-	}
-
-	@Override
-	protected void onPause() {
-		TcnVendIF.getInstance().unregisterListener(m_vendListener);
-		super.onPause();
-	}
 
 	@Override
 	protected void onDestroy() {
@@ -80,7 +69,6 @@ public class MSInputMachineCodeActivity extends TcnMainActivity implements OnCli
 			btn_back.setOnClickListener(null);
 			btn_back=null;
 		}
-		edt_pwd=null;
 		edt_phoneNumber=null;
 		super.onDestroy();
 	}
@@ -92,76 +80,50 @@ public class MSInputMachineCodeActivity extends TcnMainActivity implements OnCli
 			this.finish();
 		} else if (id == R.id.login_btn) {
 			String phoneNumber=edt_phoneNumber.getText().toString();
-			String pwd=edt_pwd.getText().toString();
 			if(TextUtils.isEmpty(phoneNumber)){
-				ToastUtil.showToast(getApplicationContext(),"帐号不能为空");
-			}else if(TextUtils.isEmpty(pwd)) {
-				ToastUtil.showToast(getApplicationContext(),"密码不能为空");
+				ToastUtil.showToast(getApplicationContext(),"设备编号不能为空");
 			}else {
-				LoginInfo(phoneNumber,pwd,"");
+				bindingMachineCode(this,phoneNumber);
 			}
 		}
 	}
 
-	private VendListener m_vendListener = new VendListener();
-	private class VendListener implements TcnVendIF.VendEventListener {
-		@Override
-		public void VendEvent(VendEventInfo cEventInfo) {
-			switch (cEventInfo.m_iEventID) {
-				case TcnVendEventID.COMMAND_DOOR_SWITCH:
-					if (cEventInfo.m_lParam1 == TcnVendIF.COMMAND_CLOSE_DOOR) {
-						finish();
-					}
-					break;
-				case TcnVendEventID.CMD_READ_DOOR_STATUS:
-					if (TcnVendEventResultID.DO_CLOSE == cEventInfo.m_lParam1) {
-						finish();
-					}
-					break;
-				default:
-					break;
-			}
-		}
-	}
+
 	/**
-	 * 获取设备端展示商品
+	 * 绑定设备编号
 	 * @param
 	 * @return
 	 */
-	public MSGoodsInfoBean LoginInfo(String phoneNumber,String pwd,String machine_code){
+	public void bindingMachineCode(final Context context, String machineCode){
 		Retrofit retrofit =new RetrofitClient().getRetrofit(getApplicationContext());
 		TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
 		Map map=new HashMap();
-		map.put("tel",phoneNumber);
-		map.put("pwd",pwd);
-		map.put("machine_code",TLPApiServices.MACHINE_CODE);
-		Call<MSLoginBean> call=loginInfoPost.login(map);
-		call.enqueue(new Callback<MSLoginBean>() {
+		map.put("machine_code",machineCode);
+		Call<BindingMachineCodeResultBean> call=loginInfoPost.BindingMachineCode(map);
+		call.enqueue(new Callback<BindingMachineCodeResultBean>() {
 			@Override
-			public void onResponse(Call<MSLoginBean> call, Response<MSLoginBean> response) {
-				MSLoginBean loginBean=response.body();
-				if(loginBean.getStatus()==1){
-					MSUserUtils.getInstance().setUserId(getApplicationContext(),loginBean.getData().getUserid());
-					if(loginBean.getData().getType().equals("4"))
-					{
-						INDENTITY=1;
-						Intent intent=new Intent(getApplicationContext(),MSAdminMangerActivity.class);
-						startActivity(intent);
-					}else if(loginBean.getData().getType().equals("6")){
-						INDENTITY=0;
-						Intent intent=new Intent(getApplicationContext(),MSAdminMangerActivity.class);
-						startActivity(intent);
+			public void onResponse(Call<BindingMachineCodeResultBean> call, Response<BindingMachineCodeResultBean> response) {
+				BindingMachineCodeResultBean bean = response.body();
+				if (bean != null) {
+					if(bean.getStatus()==200) {
+						if(bean.getData()!=null){
+							MSUserUtils.getInstance().setMachineCode(context,bean.getData().getMachine_code());
+						}
+						ToastUtil.showToast(context, bean.getMsg());
+						finish();
+					}else {
+						if(bean!=null)ToastUtil.showToast(context, bean.getMsg());
 					}
-					ToastUtil.showToast(getApplicationContext(),loginBean.getMsg());
 				}else {
-					ToastUtil.showToast(getApplicationContext(),loginBean.getMsg());
+					ToastUtil.showToast(context,"绑定失败请重试");
 				}
-			}
-			@Override
-			public void onFailure(Call<MSLoginBean> call, Throwable t) {
 
 			}
+			@Override
+			public void onFailure(Call<BindingMachineCodeResultBean> call, Throwable t) {
+				ToastUtil.showToast(context,"绑定失败请重试");
+			}
 		});
-		return null;
+
 	}
 }

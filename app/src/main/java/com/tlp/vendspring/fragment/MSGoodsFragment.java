@@ -31,6 +31,7 @@ import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.MSUIUtils;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.PaySuccessulGetAisleNumberInfoBean;
+import com.tlp.vendspring.util.MSUserUtils;
 import com.tlp.vendspring.util.TLPApiServices;
 import com.tlp.vendspring.util.ToastUtil;
 
@@ -263,7 +264,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code", MSUserUtils.getInstance().getMachineCode(context));
         Call<MSGoodsInfoBean> call=loginInfoPost.getgoods(map);
         call.enqueue(new Callback<MSGoodsInfoBean>() {
             @Override
@@ -297,7 +298,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
         map.put("goods_id",good_id);
         map.put("price_sales",price_sales);
         map.put("goods_name",goods_name);
@@ -337,7 +338,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
         map.put("order_number",orderNumber);
         Call<PaySuccessulGetAisleNumberInfoBean> call=loginInfoPost.paySuccessGetAisleNumber(map);
         call.enqueue(new Callback<PaySuccessulGetAisleNumberInfoBean>() {
@@ -368,7 +369,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
-        map.put("machine_code",TLPApiServices.MACHINE_CODE);
+        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
         map.put("order_number",orderNumber);
         map.put("channel_num",channel_num);
         Call<MsClearShelfInfoBean> call=loginInfoPost.shipSucessed(map);

@@ -97,7 +97,7 @@
                 android:text="@string/ms_login_phone"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/ms_left_text_size"
                 android:layout_centerVertical="true"/>
             <EditText
                 android:id="@+id/login_edit_phone"
@@ -129,7 +129,7 @@
                 android:text="@string/ms_login_pwd"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/ms_left_text_size"
                 android:layout_centerVertical="true"/>
             <EditText
                 android:id="@+id/login_edit_pwd"

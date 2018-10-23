@@ -1,7 +1,11 @@
 package com.tlp.vendspring.util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
+
+import com.tlp.vendspring.MSInputMachineCodeActivity;
 
 public class MSUserUtils {
 
@@ -33,12 +37,12 @@ public class MSUserUtils {
     public void setMachineCode (Context context,String machineCode){
         SharedPreferences sharedPreferences=context.getSharedPreferences("machinecode",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.putString("userid",machineCode);
+        editor.putString("machinecode",machineCode);
         editor.commit();
     }
     public String getMachineCode(Context context){
         SharedPreferences sharedPreferences=context.getSharedPreferences("machinecode",Context.MODE_PRIVATE);
-        String userid=sharedPreferences.getString("machinecode",null);
-        return userid;
+        String machinecode=sharedPreferences.getString("machinecode",null);
+        return machinecode;
     }
 }

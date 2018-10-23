@@ -784,5 +784,6 @@
     <string name="ms_reset">重置</string>
     <string name="ms_clear_inventory">清空库存</string>
     <string name="ms_machine_code">设备编码</string>
+    <string name="ms_cancle_binding">解除设备绑定</string>
     <string name="tip">消息提示</string>
 </resources>
