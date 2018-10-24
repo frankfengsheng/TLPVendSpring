@@ -159,5 +159,13 @@ public interface TLPApiServices {
     @FormUrlEncoded
     @POST("api/Channelpayment/binding_equipment/")
     Call<BindingMachineCodeResultBean> BindingMachineCode(@FieldMap Map<String,String> map);
+
+    /**
+     * 绑定设备编号
+     */
+
+    @FormUrlEncoded
+    @POST("api/Channelpayment/equipment_binding/")
+    Call<BindingMachineCodeResultBean> CancleBindingMachineCode(@FieldMap Map<String,String> map);
 }
 

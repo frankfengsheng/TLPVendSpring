@@ -25,12 +25,14 @@ import com.tcn.uicommon.dialog.LoadingDialog;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.pay.TlpDialogPay;
+import com.tlp.vendspring.activity.admin.ShelfMangerActivity;
 import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
 import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.MSUIUtils;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
 import com.tlp.vendspring.bean.PaySuccessulGetAisleNumberInfoBean;
+import com.tlp.vendspring.util.DialogUtil;
 import com.tlp.vendspring.util.MSUserUtils;
 import com.tlp.vendspring.util.TLPApiServices;
 import com.tlp.vendspring.util.ToastUtil;
@@ -146,11 +148,13 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         public void onItemClickListener(View view, int position) {
            // TcnVendIF.getInstance().reqSelectGoods(position);
             //TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
-            if(Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain())>0) {
-                selectgoodBean = goodsInfoBean.getData().get(position);
-                getOrderNumber(getActivity(), goodsInfoBean.getData().get(position).getGoods_id(), goodsInfoBean.getData().get(position).getPrice_sales(), goodsInfoBean.getData().get(position).getGoods_name());
-            }else {
-                ToastUtil.showToast(getActivity(),"该商品已售罄");
+            if(goodsInfoBean!=null&&goodsInfoBean.getData()!=null) {
+                if (Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain()) > 0) {
+                    selectgoodBean = goodsInfoBean.getData().get(position);
+                    getOrderNumber(getActivity(), goodsInfoBean.getData().get(position).getGoods_id(), goodsInfoBean.getData().get(position).getPrice_sales(), goodsInfoBean.getData().get(position).getGoods_name());
+                } else {
+                    ToastUtil.showToast(getActivity(), "该商品已售罄");
+                }
             }
             //itemClick(position);
         }
@@ -318,6 +322,8 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
                         starPayTimer();//开启倒计时
                         handler.postDelayed(runnable, 0);
                     }
+                }else if(bean!=null&&bean.getStatus()==198){
+                   ToastUtil.showToast(context,"设备已停用,暂时不能购买");
                 }
             }
 

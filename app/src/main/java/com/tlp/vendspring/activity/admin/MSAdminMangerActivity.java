@@ -115,7 +115,7 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
         map.put("machine_code",machineCode);
-        Call<BindingMachineCodeResultBean> call=loginInfoPost.BindingMachineCode(map);
+        Call<BindingMachineCodeResultBean> call=loginInfoPost.CancleBindingMachineCode(map);
         call.enqueue(new Callback<BindingMachineCodeResultBean>() {
             @Override
             public void onResponse(Call<BindingMachineCodeResultBean> call, Response<BindingMachineCodeResultBean> response) {

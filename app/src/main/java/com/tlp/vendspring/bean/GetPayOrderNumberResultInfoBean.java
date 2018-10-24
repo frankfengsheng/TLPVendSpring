@@ -43,6 +43,7 @@ public class GetPayOrderNumberResultInfoBean {
          */
 
         private String order_number;
+        private String status;
 
         public String getOrder_number() {
             return order_number;
@@ -50,6 +51,14 @@ public class GetPayOrderNumberResultInfoBean {
 
         public void setOrder_number(String order_number) {
             this.order_number = order_number;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
         }
     }
 }
