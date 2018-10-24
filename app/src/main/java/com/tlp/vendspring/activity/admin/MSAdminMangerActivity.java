@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.tcn.vendspring.R;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tlp.vendspring.BaseActivity;
+import com.tlp.vendspring.activity.MSLoginMenu;
 import com.tlp.vendspring.bean.BindingMachineCodeResultBean;
 import com.tlp.vendspring.util.DialogUtil;
 import com.tlp.vendspring.util.MSUserUtils;
@@ -50,6 +51,10 @@ public class MSAdminMangerActivity extends BaseActivity implements View.OnClickL
         btn_inventory_change= (Button) findViewById(R.id.ms_admin_menu_btn_inventory_change);
         btn_cancle_binding= (Button) findViewById(R.id.ms_admin_menu_btn_cancle_binding);
         btn_exit= (Button) findViewById(R.id.ms_admin_menu_btn_exit);
+        if(MSLoginMenu.INDENTITY==1){
+            btn_cancle_binding.setVisibility(View.GONE);
+            btn_exit.setVisibility(View.GONE);
+        }
         btn_shelf_manager.setOnClickListener(this);
         btn_aisle_manager.setOnClickListener(this);
         btn_goods_manager.setOnClickListener(this);

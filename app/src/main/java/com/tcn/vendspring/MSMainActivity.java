@@ -88,6 +88,14 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
 
 
         rl_title.setOnClickListener(this);
+        rl_title.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),LoginMenu.class);
+                startActivity(intent);
+                return false;
+            }
+        });
 
     }
 

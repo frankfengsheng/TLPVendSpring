@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\AndroidWorkspace\VendSpring\background\src\main\assets"/><source path="E:\AndroidWorkspace\VendSpring\background\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\AndroidWorkspace\VendSpring\background\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\TLPVendSpring\background\src\main\assets"/><source path="E:\TLPVendSpring\background\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\TLPVendSpring\background\src\debug\assets"/></dataSet></merger>

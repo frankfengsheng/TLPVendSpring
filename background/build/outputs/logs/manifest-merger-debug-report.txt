@@ -1,301 +1,301 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
 	package
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:3:5-33
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:3:5-33
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:1-139:12
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:5:5-137:19
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:5:5-137:19
 	android:supportsRtl
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:8:9-35
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:8:9-35
 	android:label
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:7:9-41
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:7:9-41
 	android:allowBackup
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:6:9-35
 activity#com.tcn.background.LoginMenu
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:9:9-13:76
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:9:9-13:76
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:12:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:12:13-44
 	android:windowSoftInputMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:13:13-64
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:13:13-64
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:11:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:11:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:10:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:10:13-38
 activity#com.tcn.background.AisleDisplay
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:14:9-17:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:14:9-17:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:17:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:17:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:16:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:16:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:15:13-41
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:15:13-41
 activity#com.tcn.background.PrepareMoney
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:18:9-21:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:18:9-21:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:21:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:21:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:20:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:20:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:19:13-41
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:19:13-41
 activity#com.tcn.background.InformationConfig
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:22:9-25:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:22:9-25:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:25:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:25:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:24:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:24:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:23:13-46
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:23:13-46
 activity#com.tcn.background.AislePics
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:26:9-29:76
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:26:9-29:76
 	android:windowSoftInputMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:29:13-64
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:29:13-64
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:28:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:28:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:27:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:27:13-38
 activity#com.tcn.background.AisleSlotAd
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:30:9-33:76
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:30:9-33:76
 	android:windowSoftInputMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:33:13-64
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:33:13-64
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:32:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:32:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:31:13-40
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:31:13-40
 activity#com.tcn.background.PasswordManage
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:34:9-37:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:34:9-37:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:37:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:37:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:36:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:36:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:35:13-43
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:35:13-43
 activity#com.tcn.background.AisleManage
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:38:9-40:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:38:9-40:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:40:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:40:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:39:13-40
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:39:13-40
 activity#com.tcn.background.ManageGoods
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:41:9-44:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:41:9-44:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:44:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:44:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:43:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:43:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:42:13-40
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:42:13-40
 activity#com.tcn.background.GoodsEdit
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:45:9-47:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:45:9-47:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:47:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:47:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:46:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:46:13-38
 activity#com.tcn.background.SlotInfoModifyActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:48:9-50:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:48:9-50:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:50:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:50:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:49:13-51
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:49:13-51
 activity#com.tcn.background.MenuActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:51:9-54:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:51:9-54:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:54:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:54:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:53:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:53:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:52:13-41
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:52:13-41
 activity#com.tcn.background.PaySettingActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:55:9-58:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:55:9-58:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:58:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:58:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:57:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:57:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:56:13-47
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:56:13-47
 activity#com.tcn.background.SerialPortSetting
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:59:9-62:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:59:9-62:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:62:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:62:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:61:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:61:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:60:13-46
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:60:13-46
 activity#com.tcn.background.DebugMode
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:63:9-66:60
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:63:9-66:60
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:66:13-48
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:66:13-48
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:65:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:65:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:64:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:64:13-38
 activity#com.tcn.background.Updatepro
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:67:9-70:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:67:9-70:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:70:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:70:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:69:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:69:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:68:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:68:13-38
 activity#com.tcn.background.Setting
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:71:9-73:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:71:9-73:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:73:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:73:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:72:13-36
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:72:13-36
 activity#com.tcn.background.exit
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:74:9-76:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:74:9-76:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:76:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:76:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:75:13-33
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:75:13-33
 activity#com.tcn.background.MenuSettingsActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:77:9-79:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:77:9-79:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:79:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:79:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:78:13-49
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:78:13-49
 activity#com.tcn.background.MenuSettingsDriveActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:80:9-83:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:80:9-83:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:83:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:83:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:82:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:82:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:81:13-54
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:81:13-54
 activity#com.tcn.background.MenuSettingsSpringActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:84:9-87:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:84:9-87:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:87:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:87:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:86:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:86:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:85:13-55
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:85:13-55
 activity#com.tcn.background.MenuSettingsLiftActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:88:9-91:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:88:9-91:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:91:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:91:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:90:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:90:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:89:13-53
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:89:13-53
 activity#com.tcn.background.MenuSettingsLatticeActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:92:9-95:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:92:9-95:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:95:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:95:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:94:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:94:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:93:13-56
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:93:13-56
 activity#com.tcn.background.MenuSettingsCoffActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:96:9-99:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:96:9-99:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:99:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:99:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:98:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:98:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:97:13-53
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:97:13-53
 activity#com.tcn.background.MenuSettingsSnakeActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:100:9-103:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:100:9-103:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:103:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:103:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:102:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:102:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:101:13-54
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:101:13-54
 activity#com.tcn.background.MenuLightBarActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:104:9-107:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:104:9-107:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:107:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:107:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:106:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:106:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:105:13-49
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:105:13-49
 activity#com.tcn.background.SalesDataActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:108:9-111:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:108:9-111:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:111:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:111:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:110:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:110:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:109:13-46
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:109:13-46
 activity#com.tcn.background.GoodsBank
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:112:9-114:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:112:9-114:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:114:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:114:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:113:13-38
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:113:13-38
 activity#com.tcn.background.ReplenishActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:115:9-117:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:115:9-117:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:117:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:117:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:116:13-46
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:116:13-46
 activity#com.tcn.background.GoodsSelect
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:118:9-120:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:118:9-120:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:120:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:120:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:119:13-40
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:119:13-40
 activity#com.tcn.background.FuncConfig
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:121:9-124:56
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:121:9-124:56
 	android:launchMode
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:124:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:124:13-44
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:123:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:123:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:122:13-39
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:122:13-39
 activity#com.tcn.background.StockCapacityActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:125:9-127:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:125:9-127:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:127:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:127:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:126:13-50
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:126:13-50
 activity#com.tcn.background.StockReplenishActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:128:9-130:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:128:9-130:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:130:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:130:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:129:13-51
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:129:13-51
 activity#com.tcn.background.ErrSlotActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:131:9-133:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:131:9-133:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:133:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:133:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:132:13-44
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:132:13-44
 activity#com.tcn.background.TLPAisleDisplayActivity
-ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:134:9-136:82
+ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:134:9-136:82
 	android:configChanges
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:136:13-70
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:136:13-70
 	android:name
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml:135:13-52
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml:135:13-52
 uses-sdk
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		ADDED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
-		INJECTED from E:\AndroidWorkspace\VendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		ADDED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml
+		INJECTED from E:\TLPVendSpring\background\src\main\AndroidManifest.xml

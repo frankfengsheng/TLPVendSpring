@@ -161,7 +161,7 @@ public interface TLPApiServices {
     Call<BindingMachineCodeResultBean> BindingMachineCode(@FieldMap Map<String,String> map);
 
     /**
-     * 绑定设备编号
+     * 取消绑定设备编号
      */
 
     @FormUrlEncoded
