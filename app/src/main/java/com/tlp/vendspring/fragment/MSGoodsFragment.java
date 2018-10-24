@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tcn.funcommon.db.Goods_info;
+import com.tcn.funcommon.vend.controller.TcnVendEventID;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.uicommon.dialog.LoadingDialog;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
@@ -97,7 +98,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         handler.postDelayed(runnable2,1000*60*30);
 
     }
-  
+
     Runnable runnable2=new Runnable() {
         @Override
         public void run() {
@@ -134,28 +135,31 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         }
         @Override
         public void onItemClickListener(View view, int position) {
-           // TcnVendIF.getInstance().reqSelectGoods(position);
             //TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
-           // handler.removeCallbacks(runnable);
-            if(goodsInfoBean!=null&&goodsInfoBean.getData()!=null) {
-                if (Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain()) > 0) {
-                    selectgoodBean = goodsInfoBean.getData().get(position);
-                    new MSNetUtils(getActivity(), new MSNetUtils.PayStateCallBack() {
-                        @Override
-                        public void paySucess(String aisleNumber, String orderNumber) {
-                          paySucessedToShip(aisleNumber);
-                        }
+           //判断是否锁机
+          /*  if (TcnVendIF.getInstance().isMachineLocked()) {
+                TcnVendIF.getInstance().sendMsgToUI(TcnVendEventID.CMD_MACHINE_LOCKED, -1, -1, -1, getActivity().getString(com.tcn.funcommon.R.string.tip_machine_locked));
+            }else {*/
+                if (goodsInfoBean != null && goodsInfoBean.getData() != null) {
+                    if (Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain()) > 0) {
+                        selectgoodBean = goodsInfoBean.getData().get(position);
+                        new MSNetUtils(getActivity(), new MSNetUtils.PayStateCallBack() {
+                            @Override
+                            public void paySucess(String aisleNumber, String orderNumber) {
+                                paySucessedToShip(aisleNumber);
+                            }
 
-                        @Override
-                        public void payFailed() {
+                            @Override
+                            public void payFailed() {
 
-                        }
-                    }).getOrderNumber(getActivity(),selectgoodBean.getGoods_id(),selectgoodBean.getPrice_sales(),selectgoodBean.getGoods_name(),
-                            selectgoodBean.getGoods_model(),selectgoodBean.getGoods_url());
-                } else {
-                    ToastUtil.showToast(getActivity(), "该商品已售罄");
+                            }
+                        }).getOrderNumber(getActivity(), selectgoodBean.getGoods_id(), selectgoodBean.getPrice_sales(), selectgoodBean.getGoods_name(),
+                                selectgoodBean.getGoods_model(), selectgoodBean.getGoods_url());
+                    } else {
+                        ToastUtil.showToast(getActivity(), "该商品已售罄");
+                    }
                 }
-            }
+
 
         }
 

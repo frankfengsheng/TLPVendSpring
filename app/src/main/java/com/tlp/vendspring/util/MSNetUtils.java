@@ -119,18 +119,12 @@ public class MSNetUtils {
                     payStateCallBack.paySucess(aisleNumber,orderNumber);
                     if(m_DialogPay!=null)m_DialogPay.dismiss();
 
-                }else {
-                     handler.removeCallbacks(runnable);
-                    payStateCallBack.payFailed();
-                    if(m_DialogPay!=null)m_DialogPay.dismiss();
                 }
             }
 
             @Override
             public void onFailure(Call<PaySuccessulGetAisleNumberInfoBean> call, Throwable t) {
-                payStateCallBack.payFailed();
-                handler.removeCallbacks(runnable);
-                if(m_DialogPay!=null)m_DialogPay.dismiss();
+
             }
         });
 
