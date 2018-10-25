@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
 
+import com.tcn.uicommon.dialog.LoadingDialog;
 import com.tcn.vendspring.netUtil.RetrofitClient;
 import com.tcn.vendspring.pay.TlpDialogPay;
 import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;

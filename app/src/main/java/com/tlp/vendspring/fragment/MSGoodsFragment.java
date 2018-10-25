@@ -55,13 +55,14 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private Button btn_last;
     private Button btn_next;
     private TlpDialogPay m_DialogPay = null;
-    private  String orderNumber;//订单号
-    private String aisleNumber;
+    public static String mOrderNumber;//订单号
+    public static String mAisleNumber;
     private TextView tv_noData;
   //从弹出二维码支付页面开始90秒内一直刷新支付状态
     Handler handler=new Handler();
     MSGoodsInfoBean.DataBean selectgoodBean;
     LoadingDialog loadingDialog;
+
 
     public MSGoodsFragment() {
         // Required empty public constructor
@@ -146,6 +147,8 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
                         new MSNetUtils(getActivity(), new MSNetUtils.PayStateCallBack() {
                             @Override
                             public void paySucess(String aisleNumber, String orderNumber) {
+                                MSGoodsFragment.mOrderNumber=orderNumber;
+                                MSGoodsFragment.mAisleNumber=aisleNumber;
                                 paySucessedToShip(aisleNumber);
                             }
 
@@ -280,19 +283,18 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         return null;
     }
 
-
     /**
      * 出货成功通知服务器
      * @param context
      * @return
      */
-    public void shipSucess(final Context context,String orderNumber,String channel_num){
+    public void shipSuc(final Context context,String orderNumber,String channel_num){
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
         map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
-        map.put("order_number",orderNumber);
-        map.put("channel_num",channel_num);
+        map.put("order_number",mOrderNumber);
+        map.put("channel_num",mAisleNumber);
         Call<MsClearShelfInfoBean> call=loginInfoPost.shipSucessed(map);
         call.enqueue(new Callback<MsClearShelfInfoBean>() {
             @Override
@@ -337,12 +339,14 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         if(m_DialogPay!=null)m_DialogPay.dismiss();
 
     }
+
     //出货成功
     public void shipSucess(){
+        shipSuc(getActivity(),mOrderNumber,mAisleNumber);
         GetGoodsInfo(getActivity());
 
-        shipSucess(getActivity(),orderNumber,aisleNumber);
     }
+
     //出货失败
     public void shipFailed(){
 

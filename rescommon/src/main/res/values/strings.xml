@@ -786,4 +786,5 @@
     <string name="ms_machine_code">设备编码</string>
     <string name="ms_cancle_binding">解除设备绑定</string>
     <string name="tip">消息提示</string>
+    <string name="ms_machine_name">猛售-智能售货机</string>
 </resources>

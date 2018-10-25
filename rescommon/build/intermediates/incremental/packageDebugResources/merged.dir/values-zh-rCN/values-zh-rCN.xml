@@ -28,7 +28,7 @@
     <string name="alipay">支付宝支付</string>
     <string name="all_sales_money">累计销售金额：0.0</string>
     <string name="all_sales_num">累计销售数量：0</string>
-    <string name="app_name">猛兽自动售货机</string>
+    <string name="app_name">猛售自动售货机</string>
     <string name="back">返回</string>
     <string name="backgroound_cancel">取消</string>
     <string name="backgroound_clear_fault">清除故障</string>
@@ -524,7 +524,7 @@
     <string name="startcheck">开始检测</string>
     <string name="tcn_add">添加</string>
     <string name="tcn_delete">删除</string>
-    <string name="tcn_log">猛兽自动售货机</string>
+    <string name="tcn_log">猛售自动售货机</string>
     <string name="tcn_welcome">欢迎使用中吉自动售货机，请选择商品！</string>
     <string name="temperature">输入温度超出设定值几小时锁定机器</string>
     <string name="testcoil">测试所有货道</string>
