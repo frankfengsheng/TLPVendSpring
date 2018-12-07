@@ -21,19 +21,18 @@ android {
                     output.outputFile = new File(output.outputFile.parent, "vendspring" + "-" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk");
                 }
                 }*/
-                variant ->
-                    variant.outputs.all { output ->
+                /*variant -> variant.outputs.all { output ->
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             // 输出apk名称为ForWatch_v1.1(2)_2016-09-28_15-54-35.apk
                             def version = "v${versionName}-${versionCode}"
                             def endIndex = outputFile.name.indexOf('.apk')
                             def apkName = outputFile.name.substring(0, endIndex);
-                            /* def fileName = "${apkName}_${version}_${buildTime()}_${revision()}.apk"
+                            *//* def fileName = "${apkName}_${version}_${buildTime()}_${revision()}.apk"
                             //output.outputFile = new File(outputFile.parent, fileName)
-                            outputFileName = fileName*/
+                            outputFileName = fileName*//*
                         }
-                    }
+                    }*/
             }
             debug {
             }
@@ -54,5 +53,5 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:+'
+    compile 'com.android.support.constraint:constraint-layout:+'
 }
