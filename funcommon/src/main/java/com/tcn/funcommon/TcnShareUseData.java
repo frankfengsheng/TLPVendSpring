@@ -2733,7 +2733,7 @@ public class TcnShareUseData {
      */
     public int getShipFailCountLock() {
         SharedPreferences sp = m_context.getSharedPreferences("info_config", Context.MODE_PRIVATE);
-        int count = sp.getInt("ShipFailCountLock", 5);
+        int count = sp.getInt("ShipFailCountLock", 9);
         return count;
     }
 

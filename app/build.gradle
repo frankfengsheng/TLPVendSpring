@@ -50,8 +50,20 @@ android {
 
 
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
     compile 'com.android.support.constraint:constraint-layout:+'
 }
+/*configurations.all { resolutionStrategy.eachDependency { details ->
+    def requested = details.requested
+    if (requested.group == 'com.android.support') {
+        if (!requested.name.startsWith("multidex")) {
+            //这里写你想统一的版本是多少，前提是你sdk里有
+            details.useVersion '25.0.0'
+        } } } }*/
+

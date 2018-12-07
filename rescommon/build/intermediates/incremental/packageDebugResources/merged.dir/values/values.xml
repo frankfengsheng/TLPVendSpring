@@ -528,6 +528,7 @@
     <string name="ms_login_phone">帐号</string>
     <string name="ms_login_pwd">密码</string>
     <string name="ms_machine_code">设备编码</string>
+    <string name="ms_machine_name">猛售-智能售货机</string>
     <string name="ms_menu_a_key_replenishment">一键补货</string>
     <string name="ms_menu_aisle_management">货道管理</string>
     <string name="ms_menu_exit">退出售货机</string>

@@ -17,6 +17,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -47,6 +48,8 @@ import com.tlp.vendspring.util.ToastUtil;
 import controller.UICommon;
 import controller.VendService;
 
+import static com.tcn.funcommon.vend.controller.TcnVendEventResultID.DO_OPEN;
+
 
 public class MSMainActivity extends FragmentActivity implements View.OnClickListener{
 
@@ -61,7 +64,6 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
     private RelativeLayout rl_title;
     FragmentTransaction transaction;
     FragmentManager fragmentManager;
-
     private OutDialog m_OutDialog = null;
     private LoadingDialog m_LoadingDialog = null;
     private TlpDialogPay m_DialogPay = null;
@@ -70,6 +72,7 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
     private ShopSuccessDialog m_shopSuccessDialog;
     private UsbProgressDialog m_upProgress;
     MSGoodsFragment goodsFragment;
+    private TextView  tv_machine_code;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,9 +88,17 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
     private void init_view(){
 
         rl_title= (RelativeLayout) findViewById(R.id.tlp_rl_main_titlebar);
-
-
+        tv_machine_code= (TextView) findViewById(R.id.ms_tv_machine_code);
+        tv_machine_code.setText("设备编号："+MSUserUtils.getInstance().getMachineCode(getApplicationContext()));
         rl_title.setOnClickListener(this);
+        rl_title.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),LoginMenu.class);
+                startActivity(intent);
+                return false;
+            }
+        });
 
     }
 
@@ -347,6 +358,12 @@ public class MSMainActivity extends FragmentActivity implements View.OnClickList
                     break;
                 case TcnVendEventID.CMD_MACHINE_LOCKED:
                     TcnUtility.getToast(MSMainActivity.this, cEventInfo.m_lParam4);
+                    break;
+                case TcnVendEventID.CMD_READ_DOOR_STATUS:
+                    if(cEventInfo.m_lParam1==DO_OPEN){
+                        Intent in = new Intent(MSMainActivity.this, MSLoginMenu.class);
+                        startActivity(in);
+                    }
                     break;
                 default:
                     break;

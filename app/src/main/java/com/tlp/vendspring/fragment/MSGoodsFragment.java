@@ -5,34 +5,29 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tcn.funcommon.db.Goods_info;
+import com.tcn.funcommon.vend.controller.TcnVendEventID;
 import com.tcn.funcommon.vend.controller.TcnVendIF;
 import com.tcn.uicommon.dialog.LoadingDialog;
 import com.tcn.uicommon.recycleview.PageRecyclerView;
 import com.tcn.vendspring.R;
-import com.tcn.vendspring.pay.TlpDialogPay;
-import com.tlp.vendspring.activity.admin.ShelfMangerActivity;
-import com.tlp.vendspring.bean.GetPayOrderNumberResultInfoBean;
-import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tcn.vendspring.netUtil.RetrofitClient;
+import com.tcn.vendspring.pay.TlpDialogPay;
 import com.tlp.vendspring.MSUIUtils;
+import com.tlp.vendspring.bean.MSGoodsInfoBean;
 import com.tlp.vendspring.bean.MsClearShelfInfoBean;
-import com.tlp.vendspring.bean.PaySuccessulGetAisleNumberInfoBean;
-import com.tlp.vendspring.util.DialogUtil;
+import com.tlp.vendspring.util.MSNetUtils;
 import com.tlp.vendspring.util.MSUserUtils;
 import com.tlp.vendspring.util.TLPApiServices;
 import com.tlp.vendspring.util.ToastUtil;
@@ -60,13 +55,14 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
     private Button btn_last;
     private Button btn_next;
     private TlpDialogPay m_DialogPay = null;
-    private  String orderNumber;//订单号
-    private String aisleNumber;
+    public static String mOrderNumber;//订单号
+    public static String mAisleNumber;
     private TextView tv_noData;
   //从弹出二维码支付页面开始90秒内一直刷新支付状态
     Handler handler=new Handler();
     MSGoodsInfoBean.DataBean selectgoodBean;
     LoadingDialog loadingDialog;
+
 
     public MSGoodsFragment() {
         // Required empty public constructor
@@ -103,13 +99,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         handler.postDelayed(runnable2,1000*60*30);
 
     }
-    Runnable runnable=new Runnable() {
-        @Override
-        public void run() {
-            CheckPayState(getActivity(),orderNumber);
-            handler.postDelayed(this,3000);
-        }
-    };
+
     Runnable runnable2=new Runnable() {
         @Override
         public void run() {
@@ -146,17 +136,34 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         }
         @Override
         public void onItemClickListener(View view, int position) {
-           // TcnVendIF.getInstance().reqSelectGoods(position);
             //TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
-            if(goodsInfoBean!=null&&goodsInfoBean.getData()!=null) {
-                if (Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain()) > 0) {
-                    selectgoodBean = goodsInfoBean.getData().get(position);
-                    getOrderNumber(getActivity(), goodsInfoBean.getData().get(position).getGoods_id(), goodsInfoBean.getData().get(position).getPrice_sales(), goodsInfoBean.getData().get(position).getGoods_name());
-                } else {
-                    ToastUtil.showToast(getActivity(), "该商品已售罄");
+           //判断是否锁机
+          /*  if (TcnVendIF.getInstance().isMachineLocked()) {
+                TcnVendIF.getInstance().sendMsgToUI(TcnVendEventID.CMD_MACHINE_LOCKED, -1, -1, -1, getActivity().getString(com.tcn.funcommon.R.string.tip_machine_locked));
+            }else {*/
+                if (goodsInfoBean != null && goodsInfoBean.getData() != null) {
+                    if (Integer.parseInt(goodsInfoBean.getData().get(position).getChannel_remain()) > 0) {
+                        selectgoodBean = goodsInfoBean.getData().get(position);
+                        new MSNetUtils(getActivity(), new MSNetUtils.PayStateCallBack() {
+                            @Override
+                            public void paySucess(String aisleNumber, String orderNumber) {
+                                MSGoodsFragment.mOrderNumber=orderNumber;
+                                MSGoodsFragment.mAisleNumber=aisleNumber;
+                                paySucessedToShip(aisleNumber);
+                            }
+
+                            @Override
+                            public void payFailed() {
+
+                            }
+                        }).getOrderNumber(getActivity(), selectgoodBean.getGoods_id(), selectgoodBean.getPrice_sales(), selectgoodBean.getGoods_name(),
+                                selectgoodBean.getGoods_model(), selectgoodBean.getGoods_url());
+                    } else {
+                        ToastUtil.showToast(getActivity(), "该商品已售罄");
+                    }
                 }
-            }
-            //itemClick(position);
+
+
         }
 
         @Override
@@ -170,13 +177,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
 
                 return;
             }
-            if(event.getAction() == MotionEvent.ACTION_UP) {
-                itemClick(position);
-                ImageView mImageView = (ImageView)view.findViewById(R.id.img);
-                if (mImageView != null) {
-                    mImageView.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.in_translate_top));
-                }
-            }
+
         }
 
         @Override
@@ -228,24 +229,7 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
 
     }
 
-    private void itemClick(int position) {
-		/*AnimationSet set =new AnimationSet(true);
-      //  ScaleAnimation scaleAnim = new ScaleAnimation (1.0f,0.0f,1.0f,0.0f,0.5f,0.5f);
-        VendIF.getInstance().LoggerDebug(TAG, "----onItemClick left: "+left+" top: "+top);
-        TranslateAnimation tranAnim = new TranslateAnimation(
-                Animation.ABSOLUTE,
-                768,Animation.ABSOLUTE,view.getLeft(),
-                Animation.ABSOLUTE,0,
-                Animation.ABSOLUTE,0);
-        set.addAnimation(tranAnim);
-        set.setInterpolator(new DecelerateInterpolator());
-        set.setDuration(800);
-        stopPageTimer();
-        view.startAnimation(set); */
-      /*  TcnVendIF.getInstance().reqTouchSoundPlay();
-        TcnVendIF.getInstance().reqSelectGoods(position);*/
-       // TcnVendIF.getInstance().ship(position+1,"00 FF 01 FE AA 55","","00 FF 01 FE AA 55");
-    }
+
 
     @Override
     public void onResume() {
@@ -278,11 +262,16 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
                 if(goodsInfoBean!=null&&goodsInfoBean.getStatus()==200&&goodsInfoBean.getData()!=null&&goodsInfoBean.getData().size()>0) {
                     tv_noData.setVisibility(View.GONE);
                     pageAdapter.setDataList(goodsInfoBean.getData().size());
+                    pageRecyclerView.setVisibility(View.VISIBLE);
+                }else if(goodsInfoBean!=null&&goodsInfoBean.getData()==null){
+                    pageRecyclerView.setVisibility(View.GONE);
+                    tv_noData.setVisibility(View.VISIBLE);
+                    tv_noData.setText("此设备暂无数据，请在管理员后台页面添加");
                 }else {
-                    tv_noData.setText("数据加载失败，请重启售货机");
+                    pageRecyclerView.setVisibility(View.GONE);
+                    tv_noData.setVisibility(View.VISIBLE);
+                    tv_noData.setText("此设备暂无数据，请在管理员后台页面添加");
                 }
-               /* Log.i("TLPJSON",response.body().getMsg());
-                Toast.makeText(context,response.body().getStatus()+response.body().getData().get(0).getGoods_name()+"",Toast.LENGTH_SHORT).show();*/
             }
 
             @Override
@@ -293,91 +282,19 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         });
         return null;
     }
-    /**
-     * 生成支付订单
-     * @param context
-     * @return
-     */
-    public void getOrderNumber(final Context context, String good_id, String price_sales, final String goods_name){
-        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
-        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
-        Map map=new HashMap();
-        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
-        map.put("goods_id",good_id);
-        map.put("price_sales",price_sales);
-        map.put("goods_name",goods_name);
-        Call<GetPayOrderNumberResultInfoBean> call=loginInfoPost.getPayOrderNumber(map);
-        call.enqueue(new Callback<GetPayOrderNumberResultInfoBean>() {
-            @Override
-            public void onResponse(Call<GetPayOrderNumberResultInfoBean> call, Response<GetPayOrderNumberResultInfoBean> response) {
-                GetPayOrderNumberResultInfoBean bean=response.body();
-                if(bean!=null&&bean.getStatus()==200)
-                {
-                    orderNumber=bean.getData().getOrder_number();
-                    String url="http://wx.51mengshou.com/home/showg/index/orderno/"+orderNumber;
-                    if(!TextUtils.isEmpty(url)&&selectgoodBean!=null) {
-                         m_DialogPay = new TlpDialogPay(context, url,0, null,selectgoodBean.getGoods_name(),
-                                selectgoodBean.getPrice_sales(),selectgoodBean.getGoods_model(),selectgoodBean.getGoods_url());
-                        m_DialogPay.show();
-                        starPayTimer();//开启倒计时
-                        handler.postDelayed(runnable, 0);
-                    }
-                }else if(bean!=null&&bean.getStatus()==198){
-                   ToastUtil.showToast(context,"设备已停用,暂时不能购买");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<GetPayOrderNumberResultInfoBean> call, Throwable t) {
-
-            }
-        });
-
-    }
-
-    /**
-     * 查询支付状态
-     * @param context
-     * @return
-     */
-    public void CheckPayState(final Context context,String orderNumber){
-        Retrofit retrofit =new RetrofitClient().getRetrofit(context);
-        TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
-        Map map=new HashMap();
-        map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
-        map.put("order_number",orderNumber);
-        Call<PaySuccessulGetAisleNumberInfoBean> call=loginInfoPost.paySuccessGetAisleNumber(map);
-        call.enqueue(new Callback<PaySuccessulGetAisleNumberInfoBean>() {
-            @Override
-            public void onResponse(Call<PaySuccessulGetAisleNumberInfoBean> call, Response<PaySuccessulGetAisleNumberInfoBean> response) {
-                PaySuccessulGetAisleNumberInfoBean bean=response.body();
-                if(bean!=null&&bean.getData()!=null&&bean.getStatus()==200){
-                    aisleNumber=bean.getData().getChannel_num();
-                    paySucessedToShip(aisleNumber);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<PaySuccessulGetAisleNumberInfoBean> call, Throwable t) {
-
-            }
-        });
-
-    }
 
     /**
      * 出货成功通知服务器
      * @param context
      * @return
      */
-    public void shipSucess(final Context context,String orderNumber,String channel_num){
+    public void shipSuc(final Context context,String orderNumber,String channel_num){
         Retrofit retrofit =new RetrofitClient().getRetrofit(context);
         TLPApiServices loginInfoPost=retrofit.create(TLPApiServices.class);
         Map map=new HashMap();
         map.put("machine_code",MSUserUtils.getInstance().getMachineCode(context));
-        map.put("order_number",orderNumber);
-        map.put("channel_num",channel_num);
+        map.put("order_number",mOrderNumber);
+        map.put("channel_num",mAisleNumber);
         Call<MsClearShelfInfoBean> call=loginInfoPost.shipSucessed(map);
         call.enqueue(new Callback<MsClearShelfInfoBean>() {
             @Override
@@ -410,12 +327,11 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         }
     }
     private void paySucessedToShip(String aisleNumber){
-        m_DialogPay.dismiss();
         if(!TextUtils.isEmpty(aisleNumber)) {
             int aisleNO = Integer.parseInt(aisleNumber);
             TcnVendIF.getInstance().ship(aisleNO, "00 FF 01 FE AA 55", "", "00 FF 01 FE AA 55");
         }
-        handler.removeCallbacks(runnable);
+
     }
     @Override
     public void onDestroy() {
@@ -423,35 +339,19 @@ public class MSGoodsFragment extends Fragment implements View.OnClickListener{
         if(m_DialogPay!=null)m_DialogPay.dismiss();
 
     }
+
     //出货成功
     public void shipSucess(){
-        //ToastUtil.showToast(getActivity(),"哎呀呀呀，出货成功了");
+        shipSuc(getActivity(),mOrderNumber,mAisleNumber);
         GetGoodsInfo(getActivity());
-        handler.removeCallbacks(runnable);
-        shipSucess(getActivity(),orderNumber,aisleNumber);
+
     }
+
     //出货失败
     public void shipFailed(){
-        //ToastUtil.showToast(getActivity(),"哎呦哟有，出货失败了");
+
         GetGoodsInfo(getActivity());
-        handler.removeCallbacks(runnable);
     }
 
-    /**
-     * 开始 倒计时120s 倒计时结束之后关闭支付状态查询
-     */
-    private void starPayTimer(){
-        CountDownTimer   paytimer =new CountDownTimer(120*1000,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
 
-            }
-
-            @Override
-            public void onFinish() {
-                if(getActivity()!=null) handler.removeCallbacks(runnable);
-                cancel();
-            }
-        }.start();
-    }
 }

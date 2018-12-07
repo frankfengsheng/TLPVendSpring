@@ -34,7 +34,7 @@ import retrofit2.Retrofit;
 
 
 /**
- * 猛兽登录菜单界面
+ * 猛售登录菜单界面
  * create by feng
  * @author Administrator
  *

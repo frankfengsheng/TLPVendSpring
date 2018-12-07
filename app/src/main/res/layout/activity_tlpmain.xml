@@ -10,13 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="50px">
         <TextView
+            android:id="@+id/ms_tv_machine_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:text="@string/tlp_equipment_number"
+            android:text="@string/ms_machine_name"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/ms_tv_machine_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:text="@string/tlp_equipment_number"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/>
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/tlp_ly_advertisement_fragment"
